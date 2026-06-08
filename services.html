@@ -31,6 +31,7 @@
   </script>
 
   <!-- Custom CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -481,69 +482,104 @@
   </main>
 
   <!-- ==========================================
-       GLOBAL FOOTER
-       ========================================== -->
-  <footer class="bg-[#0B0F19] border-t border-white/10 pt-16 pb-8 relative z-10">
-    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+     GLOBAL FOOTER (PRESERVED DESIGN WITH CONTACTS)
+     ========================================== -->
+  <footer class="bg-[#0B0F19] border-t border-white/10 pt-12 pb-6">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 items-start mb-8">
 
-      <!-- Left Column: Logo & Description -->
-      <div class="space-y-4">
-        <a href="index.html" class="flex items-center space-x-3">
-          <img src="assets/image/logo.jpg.jpeg" alt="AITS OFFICIAL Logo" class="h-10 w-auto object-contain">
-          <span class="text-2xl font-bold tracking-tight text-white font-heading">
-            AITS<span class="text-indigo-500 font-light">OFFICIAL</span>
+      <!-- Column 1: Logo & Tagline (lg:col-span-4) -->
+      <div class="lg:col-span-4 space-y-4">
+        <a href="index.html" class="flex items-center gap-2">
+          <img src="assets/image/logo.jpg.jpeg" alt="AITS Logo" class="h-10 w-auto rounded bg-white p-1">
+          <span class="text-2xl font-bold tracking-tight text-white flex items-center">
+            AITS<span class="text-indigo-500 font-medium">OFFICIAL</span>
           </span>
         </a>
-        <p class="text-gray-400 text-sm leading-relaxed">
+        <p class="text-sm text-slate-400 leading-relaxed">
           High-performance full-service digital marketing agency engineering organic traffic loops, local map scaling,
           and high-converting advertising pipelines.
         </p>
       </div>
 
-      <!-- Column 2: Expertise -->
-      <div>
-        <h4 class="text-white font-semibold text-sm tracking-wider uppercase mb-4">Expertise</h4>
-        <ul class="space-y-2 text-sm text-gray-400">
-          <li><a href="services.html" class="hover:text-indigo-400 transition-colors">Search Engine Optimization</a>
+      <!-- Column 2: EXPERTISE (lg:col-span-2) -->
+      <div class="lg:col-span-2 space-y-3">
+        <h4 class="text-xs font-bold text-white uppercase tracking-wider">EXPERTISE</h4>
+        <ul class="space-y-2 text-sm text-slate-400">
+          <li><a href="#" class="hover:text-white transition">Search Engine Optimization</a></li>
+          <li><a href="#" class="hover:text-white transition">Meta & Paid Ads</a></li>
+          <li><a href="#" class="hover:text-white transition">Local GMB Scaling</a></li>
+          <li><a href="#" class="hover:text-white transition">Web Development</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: AGENCY (lg:col-span-2) -->
+      <div class="lg:col-span-2 space-y-3">
+        <h4 class="text-xs font-bold text-white uppercase tracking-wider">AGENCY</h4>
+        <ul class="space-y-2 text-sm text-slate-400">
+          <li><a href="about.html" class="hover:text-white transition">Our Story</a></li>
+          <li><a href="courses.html" class="hover:text-white transition">AITS Courses</a></li>
+          <li><a href="projects.html" class="hover:text-white transition">Case Studies</a></li>
+          <li><a href="contact.html" class="hover:text-white transition">Get Proposal</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: CONNECT (Updated with Contact details & Icons) (lg:col-span-4) -->
+      <div class="lg:col-span-4 space-y-4">
+        <h4 class="text-xs font-bold text-white uppercase tracking-wider">CONNECT</h4>
+        <ul class="space-y-2 text-sm text-slate-400">
+          <li class="text-slate-300"><span class="font-semibold text-white">Owner:</span> Ali Hamza</li>
+          <li>
+            <span class="font-semibold text-white">Location:</span> Lahore, Pakistan
           </li>
-          <li><a href="services.html" class="hover:text-indigo-400 transition-colors">Meta & Paid Ads</a></li>
-          <li><a href="services.html" class="hover:text-indigo-400 transition-colors">Local GMB Scaling</a></li>
-          <li><a href="services.html" class="hover:text-indigo-400 transition-colors">Web Development</a></li>
+          <li>
+            <span class="font-semibold text-white">WhatsApp:</span>
+            <a href="https://wa.me/923225673641" target="_blank"
+              class="text-slate-400 hover:text-agencyCyan transition">+92 322 5673641</a>
+          </li>
+          <li>
+            <span class="font-semibold text-white">Email:</span>
+            <a href="mailto:ahamza.arshad100@gmail.com"
+              class="text-slate-400 hover:text-agencyCyan transition block md:inline overflow-hidden text-ellipsis">ahamza.arshad100@gmail.com</a>
+          </li>
         </ul>
+
+        <!-- Social Icons Grid right inside Connect column -->
+        <div class="pt-2 flex items-center gap-4 text-lg">
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/ali-hamza-mk-77b809363/" target="_blank" title="LinkedIn"
+            class="text-slate-400 hover:text-[#0077B5] hover:scale-110 transition duration-300">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <!-- Fiverr -->
+          <a href="https://www.fiverr.com/sellers/aits_official/" target="_blank" title="Fiverr Profile"
+            class="text-slate-400 hover:text-[#1dbf73] hover:scale-110 transition duration-300 font-extrabold text-sm tracking-tighter"
+            style="font-family: sans-serif;">
+            fiverr.
+          </a>
+          <!-- Twitter / X -->
+          <a href="https://x.com/AliHamza_SEO" target="_blank" title="Twitter / X"
+            class="text-slate-400 hover:text-white hover:scale-110 transition duration-300">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/ahamza.arshad100?igsh=MTRlaWt6OGVzemxjaQ==" target="_blank"
+            title="Instagram" class="text-slate-400 hover:text-[#E1306C] hover:scale-110 transition duration-300">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/share/18xs2PY3us/" target="_blank" title="Facebook"
+            class="text-slate-400 hover:text-[#1877F2] hover:scale-110 transition duration-300">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+        </div>
       </div>
 
-      <!-- Column 3: Agency -->
-      <div>
-        <h4 class="text-white font-semibold text-sm tracking-wider uppercase mb-4">Agency</h4>
-        <ul class="space-y-2 text-sm text-gray-400">
-          <li><a href="about.html" class="hover:text-indigo-400 transition-colors">Our Story</a></li>
-          <li><a href="courses.html" class="hover:text-indigo-400 transition-colors">AITS Courses</a></li>
-          <li><a href="#" class="hover:text-indigo-400 transition-colors">Case Studies</a></li>
-          <li><a href="contact.html" class="hover:text-indigo-400 transition-colors">Get Proposal</a></li>
-        </ul>
-      </div>
-
-      <!-- Column 4: Contact Info -->
-      <div>
-        <h4 class="text-white font-semibold text-sm tracking-wider uppercase mb-4">Connect</h4>
-        <ul class="space-y-2 text-sm text-gray-400">
-          <li><span class="text-gray-300 font-medium">Location:</span> Lahore, Pakistan</li>
-          <li><a href="contact.html" class="hover:text-indigo-400 transition-colors">Support Portal</a></li>
-          <li><a href="privacy.html" class="hover:text-indigo-400 transition-colors">Privacy Policy</a></li>
-        </ul>
-      </div>
     </div>
 
-    <!-- Bottom Copyright & Socials Bar -->
-    <div
-      class="max-w-7xl mx-auto px-6 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
-      <p class="text-xs text-gray-500">
-        &copy; 2026 AITS OFFICIAL. All rights reserved. Built for high-ticket performance.
-      </p>
-      <div class="flex items-center space-x-4 text-gray-400">
-        <a href="#" class="hover:text-white transition-colors"><i class="fab fa-linkedin text-lg"></i></a>
-        <a href="#" class="hover:text-white transition-colors"><i class="fab fa-twitter text-lg"></i></a>
-      </div>
+    <!-- Bottom Copyright Line -->
+    <div class="max-w-7xl mx-auto px-6 border-t border-white/5 pt-6 text-left">
+      <p class="text-xs text-slate-500">&copy; 2026 AITS OFFICIAL. All rights reserved. Built for high-ticket
+        performance.</p>
     </div>
   </footer>
 
