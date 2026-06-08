@@ -297,7 +297,73 @@
       </div>
     </section>
   </main>
+  <!-- Course Admission Form Section -->
+  <div class="card-glass border border-slate-800 rounded-xl p-6 lg:p-8 max-w-2xl mx-auto my-12 bg-slate-950/40">
+    <h3 class="text-2xl font-bold font-heading text-white mb-2 text-center">Course Admission Inquiry</h3>
+    <p class="text-slate-400 text-sm text-center mb-6">Fill out this form to secure your slot at Abdullah Institute of
+      Tech Skills (AITS).</p>
 
+    <form id="course-admission-form" class="space-y-5" action="https://api.web3forms.com/submit" method="POST">
+      <!-- Web3Forms Access Key -->
+      <input type="hidden" name="access_key" value="513870f7-f601-4fc9-b663-ed254760bea2">
+
+      <!-- Custom Subject Line for Gmail -->
+      <input type="hidden" name="subject" value="New Student Admission Inquiry - AITS">
+
+      <!-- Student Name -->
+      <div class="flex flex-col space-y-1.5">
+        <label for="student-name" class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Student Full
+          Name *</label>
+        <input type="text" id="student-name" name="student_name" placeholder="Ali Hamza" required
+          class="bg-slate-950/80 border border-slate-800 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-agencyViolet transition duration-300">
+      </div>
+
+      <!-- Student Email -->
+      <div class="flex flex-col space-y-1.5">
+        <label for="student-email" class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Email Address
+          *</label>
+        <input type="email" id="student-email" name="student_email" placeholder="example@gmail.com" required
+          class="bg-slate-950/80 border border-slate-800 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-agencyViolet transition duration-300">
+      </div>
+
+      <!-- WhatsApp / Phone Number -->
+      <div class="flex flex-col space-y-1.5">
+        <label for="student-phone" class="text-xs font-semibold text-slate-400 uppercase tracking-wider">WhatsApp Number
+          *</label>
+        <input type="tel" id="student-phone" name="student_phone" placeholder="+92 300 1234567" required
+          class="bg-slate-950/80 border border-slate-800 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-agencyViolet transition duration-300">
+      </div>
+
+      <!-- Select Course -->
+      <div class="flex flex-col space-y-1.5">
+        <label for="student-course" class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Select Course
+          Interested In *</label>
+        <select id="student-course" name="selected_course" required
+          class="bg-slate-950/80 border border-slate-800 rounded-lg px-4 py-3 text-sm text-slate-300 focus:outline-none focus:border-agencyViolet transition duration-300 appearance-none cursor-pointer">
+          <option value="" disabled selected>Choose a course...</option>
+          <option value="technical_seo">Technical & On-Page SEO Masterclass</option>
+          <option value="local_seo">Local SEO & Google Map Pack Scaling</option>
+          <option value="digital_marketing">Performance Marketing (Meta & Google Ads)</option>
+          <option value="web_dev">AI-Powered Web Development (HTML/CSS/NextJS)</option>
+        </select>
+      </div>
+
+      <!-- Student Message / Goals -->
+      <div class="flex flex-col space-y-1.5">
+        <label for="student-message" class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Your Learning
+          Goals / Prior Experience *</label>
+        <textarea id="student-message" name="student_message" rows="4" required
+          placeholder="Tell us briefly about your background and what you want to achieve from this course..."
+          class="bg-slate-950/80 border border-slate-800 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-agencyViolet transition duration-300 resize-none"></textarea>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit"
+        class="w-full py-4 rounded-xl bg-gradient-to-r from-agencyViolet to-agencyCyan text-white font-extrabold text-sm hover:scale-[1.01] active:scale-[0.99] transition shadow-lg shadow-agencyViolet/10 hover:shadow-cyan-500/20">
+        Submit Admission Request
+      </button>
+    </form>
+  </div>
   <!-- ==========================================
        GLOBAL FOOTER
        ========================================== -->
