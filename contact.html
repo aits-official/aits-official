@@ -228,7 +228,7 @@
               <div class="flex flex-col space-y-1.5">
                 <label for="client-name" class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Full Name
                   *</label>
-                <input type="text" id="client-name" placeholder="John Doe"
+                <input type="text" id="client-name" name="name" placeholder="John Doe" required
                   class="bg-slate-950/80 border border-slate-800 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-agencyViolet transition duration-300">
               </div>
 
@@ -236,25 +236,23 @@
               <div class="flex flex-col space-y-1.5">
                 <label for="client-email" class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Work
                   Email *</label>
-                <input type="email" id="client-email" placeholder="john@company.com"
+                <input type="email" id="client-email" name="email" placeholder="john@company.com" required
                   class="bg-slate-950/80 border border-slate-800 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-agencyViolet transition duration-300">
               </div>
 
               <!-- Website URL -->
               <div class="flex flex-col space-y-1.5">
                 <label for="client-website"
-                  class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Website
-                  URL (Optional)</label>
-                <input type="text" id="client-website" placeholder="https://company.com"
+                  class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Website URL (Optional)</label>
+                <input type="text" id="client-website" name="website" placeholder="https://company.com"
                   class="bg-slate-950/80 border border-slate-800 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-agencyViolet transition duration-300">
               </div>
 
               <!-- Service Needed -->
               <div class="flex flex-col space-y-1.5">
                 <label for="client-service"
-                  class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Service
-                  Needed *</label>
-                <select id="client-service"
+                  class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Service Needed *</label>
+                <select id="client-service" name="service" required
                   class="bg-slate-950/80 border border-slate-800 rounded-lg px-4 py-3 text-sm text-slate-300 focus:outline-none focus:border-agencyViolet transition duration-300 appearance-none cursor-pointer">
                   <option value="" disabled selected>Select an option...</option>
                   <option value="seo">Technical & International SEO Retainer</option>
@@ -269,7 +267,7 @@
               <div class="flex flex-col space-y-1.5">
                 <label for="client-message" class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Growth
                   Challenge & Context *</label>
-                <textarea id="client-message" rows="4"
+                <textarea id="client-message" name="message" rows="4" required
                   placeholder="Briefly describe your current traffic volumes, ad spend budgets, and primary bottleneck..."
                   class="bg-slate-950/80 border border-slate-800 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-agencyViolet transition duration-300 resize-none"></textarea>
               </div>
