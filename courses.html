@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Growth Academy & Masterclasses | AetherFlow Digital</title>
+  <meta name="description"
+    content="Learn technical SEO, advanced Meta and Google Ads, and Local Map Pack authority scaling directly from our agency experts.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            agencyDark: '#0B0F19',
+            agencySlate: '#1E293B',
+            agencyViolet: '#8B5CF6',
+            agencyCyan: '#06B6D4',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="bg-[#0B0F19] text-slate-100 overflow-x-hidden bg-grid-pattern">
+
+  <!-- ==========================================
+       HEADER (STICKY NAVIGATION)
+       ========================================== -->
+  <header id="navbar-header"
+    class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-[#0B0F19]/90 backdrop-blur-md border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <!-- Logo & Title Section -->
+      <a href="index.html" class="flex items-center space-x-3">
+        <img src="assets/image/logo.jpg.jpeg" alt="AITS OFFICIAL Logo" class="h-12 w-auto object-contain">
+        <span class="text-2xl font-bold tracking-tight text-white font-heading">
+          AITS<span class="text-indigo-500 font-light">OFFICIAL</span>
+        </span>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav class="hidden md:flex items-center space-x-8">
+        <a href="index.html" class="nav-link font-medium text-sm transition-colors duration-300 nav-link-hover">Home</a>
+        <a href="about.html" class="nav-link font-medium text-sm transition-colors duration-300 nav-link-hover">About
+          Us</a>
+        <a href="services.html"
+          class="nav-link font-medium text-sm transition-colors duration-300 nav-link-hover">Services</a>
+        <a href="projects.html" class="nav-link font-medium text-sm transition-colors duration-300 nav-link-hover">Case
+          Studies</a>
+        <a href="courses.html"
+          class="nav-link font-medium text-sm transition-colors duration-300 nav-link-hover">Courses</a>
+        <a href="contact.html"
+          class="nav-link font-medium text-sm transition-colors duration-300 nav-link-hover">Contact</a>
+      </nav>
+
+      <!-- CTA Button -->
+      <div class="hidden md:flex">
+        <a href="contact.html"
+          class="relative group px-5 py-2.5 rounded-lg overflow-hidden font-medium text-sm text-white transition-all shadow-md shadow-agencyViolet/10 hover:shadow-cyan-400/20">
+          <div
+            class="absolute inset-0 w-full h-full bg-gradient-to-r from-agencyViolet to-agencyCyan transition-all duration-300 group-hover:opacity-90">
+          </div>
+          <span class="relative">Free Audit Call</span>
+        </a>
+      </div>
+
+      <!-- Hamburger Button (Mobile Only) -->
+      <button id="mobile-menu-btn"
+        class="md:hidden text-slate-300 hover:text-white focus:outline-none p-1.5 rounded-lg border border-slate-800"
+        aria-expanded="false" aria-label="Toggle navigation menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Drawer Overlay -->
+  <div id="mobile-menu"
+    class="fixed inset-0 bg-agencyDark/95 backdrop-blur-lg z-50 hidden flex-col justify-between p-6 animate-fade-in-up">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-slate-800">
+        <span class="text-xl font-bold font-heading text-white">AETHER<span
+            class="gradient-text-violet-cyan">FLOW</span></span>
+        <button id="mobile-menu-close"
+          class="text-slate-400 hover:text-white focus:outline-none p-1.5 border border-slate-800 rounded-lg">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <nav class="flex flex-col space-y-5 mt-8 text-lg font-medium">
+        <a href="index.html" class="nav-link text-slate-300 hover:text-white py-2">Home</a>
+        <a href="about.html" class="nav-link text-slate-300 hover:text-white py-2">About Us</a>
+        <a href="services.html" class="nav-link text-slate-300 hover:text-white py-2">Services</a>
+        <a href="projects.html" class="nav-link text-slate-300 hover:text-white py-2">Case Studies</a>
+        <a href="courses.html" class="nav-link text-slate-300 hover:text-white py-2">Courses</a>
+        <a href="contact.html" class="nav-link text-slate-300 hover:text-white py-2">Contact Us</a>
+      </nav>
+    </div>
+    <div class="pt-6 border-t border-slate-800">
+      <a href="contact.html"
+        class="w-full block text-center bg-gradient-to-r from-agencyViolet to-agencyCyan text-white font-medium py-3 rounded-lg hover:shadow-cyan-400/20 transition-all">
+        Get a Proposal
+      </a>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       MAIN CONTENT
+       ========================================== -->
+  <main class="pt-32 pb-24 animate-fade-in-up">
+    <section class="max-w-7xl mx-auto px-6">
+
+      <!-- Page Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <span
+          class="text-xs font-bold uppercase tracking-wider text-agencyCyan bg-agencyCyan/10 border border-agencyCyan/20 rounded-full px-4 py-1.5 inline-block">Growth
+          Academy</span>
+        <h1 class="text-3xl sm:text-5xl font-extrabold font-heading text-white">Digital Masterclasses</h1>
+        <p class="text-slate-400">
+          Learn the exact technical playbooks and scaling methods our agency engineers use daily to scale partner
+          brands.
+        </p>
+      </div>
+
+      <!-- Courses Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- Course Card 1 -->
+        <div
+          class="card-glass rounded-2xl overflow-hidden border border-slate-800 flex flex-col justify-between group glow-hover">
+          <!-- Thumbnail area -->
+          <div
+            class="h-48 w-full bg-gradient-to-br from-slate-900 to-slate-950 flex flex-col justify-between p-6 border-b border-slate-800 relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-tr from-agencyViolet/10 to-transparent"></div>
+            <div class="flex items-center justify-between z-10">
+              <span
+                class="text-[10px] text-agencyViolet font-extrabold uppercase tracking-widest bg-agencyViolet/10 border border-agencyViolet/20 px-2 py-1 rounded">Advanced</span>
+              <span class="text-xs text-slate-400 font-mono">18 Hours Video</span>
+            </div>
+            <div class="z-10">
+              <span class="text-[10px] text-cyan-400 font-bold tracking-widest uppercase block mb-1">Search
+                Engineering</span>
+              <h3 class="text-xl font-bold font-heading text-white group-hover:text-cyan-400 transition-colors">Advanced
+                SEO Blueprint</h3>
+            </div>
+          </div>
+
+          <!-- Description and details -->
+          <div class="p-6 flex flex-col justify-between flex-grow">
+            <div class="space-y-4">
+              <p class="text-slate-400 text-sm leading-relaxed">
+                A technical search optimization blueprint detailing server-side crawl configuration, entity data
+                structure injection, edge redirects, and international directory systems.
+              </p>
+
+              <div class="flex items-center space-x-3 text-xs text-slate-300">
+                <span class="flex items-center">
+                  <svg class="w-4 h-4 mr-1 text-agencyViolet" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                  42 Modules
+                </span>
+                <span class="w-1.5 h-1.5 bg-slate-800 rounded-full"></span>
+                <span>Lifetime Access</span>
+              </div>
+            </div>
+
+            <!-- Price & Button -->
+            <div class="pt-6 mt-6 border-t border-slate-850 flex items-center justify-between">
+              <span class="text-2xl font-extrabold text-white font-heading">$497</span>
+              <a href="contact.html?enroll=seo"
+                class="px-5 py-2.5 rounded-lg bg-gradient-to-r from-agencyViolet to-agencyCyan text-white text-xs font-bold hover:scale-[1.03] transition-transform">
+                Enroll Now
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course Card 2 -->
+        <div
+          class="card-glass rounded-2xl overflow-hidden border border-slate-800 flex flex-col justify-between group glow-hover">
+          <!-- Thumbnail area -->
+          <div
+            class="h-48 w-full bg-gradient-to-br from-slate-900 to-slate-950 flex flex-col justify-between p-6 border-b border-slate-800 relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-tr from-agencyCyan/10 to-transparent"></div>
+            <div class="flex items-center justify-between z-10">
+              <span
+                class="text-[10px] text-agencyViolet font-extrabold uppercase tracking-widest bg-agencyViolet/10 border border-agencyViolet/20 px-2 py-1 rounded">Advanced</span>
+              <span class="text-xs text-slate-400 font-mono">14 Hours Video</span>
+            </div>
+            <div class="z-10">
+              <span class="text-[10px] text-cyan-400 font-bold tracking-widest uppercase block mb-1">Paid Ads</span>
+              <h3 class="text-xl font-bold font-heading text-white group-hover:text-cyan-400 transition-colors">Meta Ads
+                Mastery</h3>
+            </div>
+          </div>
+
+          <!-- Description and details -->
+          <div class="p-6 flex flex-col justify-between flex-grow">
+            <div class="space-y-4">
+              <p class="text-slate-400 text-sm leading-relaxed">
+                Master server-side conversion matching loops, offline lead signal feeds, machine learning optimization,
+                and dynamic testing matrices built to expand high scale targets.
+              </p>
+
+              <div class="flex items-center space-x-3 text-xs text-slate-300">
+                <span class="flex items-center">
+                  <svg class="w-4 h-4 mr-1 text-agencyViolet" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                  35 Modules
+                </span>
+                <span class="w-1.5 h-1.5 bg-slate-800 rounded-full"></span>
+                <span>Lifetime Access</span>
+              </div>
+            </div>
+
+            <!-- Price & Button -->
+            <div class="pt-6 mt-6 border-t border-slate-850 flex items-center justify-between">
+              <span class="text-2xl font-extrabold text-white font-heading">$397</span>
+              <a href="contact.html?enroll=meta"
+                class="px-5 py-2.5 rounded-lg bg-gradient-to-r from-agencyViolet to-agencyCyan text-white text-xs font-bold hover:scale-[1.03] transition-transform">
+                Enroll Now
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course Card 3 -->
+        <div
+          class="card-glass rounded-2xl overflow-hidden border border-slate-800 flex flex-col justify-between group glow-hover">
+          <!-- Thumbnail area -->
+          <div
+            class="h-48 w-full bg-gradient-to-br from-slate-900 to-slate-950 flex flex-col justify-between p-6 border-b border-slate-800 relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-tr from-agencyViolet/10 to-transparent"></div>
+            <div class="flex items-center justify-between z-10">
+              <span
+                class="text-[10px] text-cyan-400 font-extrabold uppercase tracking-widest bg-cyan-500/10 border border-cyan-500/20 px-2 py-1 rounded">Intermediate</span>
+              <span class="text-xs text-slate-400 font-mono">10 Hours Video</span>
+            </div>
+            <div class="z-10">
+              <span class="text-[10px] text-cyan-400 font-bold tracking-widest uppercase block mb-1">Local
+                Authority</span>
+              <h3 class="text-xl font-bold font-heading text-white group-hover:text-cyan-400 transition-colors">Local
+                SEO & GMB Scaling</h3>
+            </div>
+          </div>
+
+          <!-- Description and details -->
+          <div class="p-6 flex flex-col justify-between flex-grow">
+            <div class="space-y-4">
+              <p class="text-slate-400 text-sm leading-relaxed">
+                A blueprints map for localized search layouts, geo-coordinates schemas, Map Pack local rank
+                calculations, and review loop software scripts.
+              </p>
+
+              <div class="flex items-center space-x-3 text-xs text-slate-300">
+                <span class="flex items-center">
+                  <svg class="w-4 h-4 mr-1 text-agencyViolet" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                  28 Modules
+                </span>
+                <span class="w-1.5 h-1.5 bg-slate-800 rounded-full"></span>
+                <span>Lifetime Access</span>
+              </div>
+            </div>
+
+            <!-- Price & Button -->
+            <div class="pt-6 mt-6 border-t border-slate-850 flex items-center justify-between">
+              <span class="text-2xl font-extrabold text-white font-heading">$297</span>
+              <a href="contact.html?enroll=local"
+                class="px-5 py-2.5 rounded-lg bg-gradient-to-r from-agencyViolet to-agencyCyan text-white text-xs font-bold hover:scale-[1.03] transition-transform">
+                Enroll Now
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================
+       GLOBAL FOOTER
+       ========================================== -->
+  <footer class="bg-[#0B0F19] border-t border-white/10 pt-16 pb-8 relative z-10">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+
+      <!-- Left Column: Logo & Description -->
+      <div class="space-y-4">
+        <a href="index.html" class="flex items-center space-x-3">
+          <img src="assets/image/logo.jpg.jpeg" alt="AITS OFFICIAL Logo" class="h-10 w-auto object-contain">
+          <span class="text-2xl font-bold tracking-tight text-white font-heading">
+            AITS<span class="text-indigo-500 font-light">OFFICIAL</span>
+          </span>
+        </a>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          High-performance full-service digital marketing agency engineering organic traffic loops, local map scaling,
+          and high-converting advertising pipelines.
+        </p>
+      </div>
+
+      <!-- Column 2: Expertise -->
+      <div>
+        <h4 class="text-white font-semibold text-sm tracking-wider uppercase mb-4">Expertise</h4>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li><a href="services.html" class="hover:text-indigo-400 transition-colors">Search Engine Optimization</a>
+          </li>
+          <li><a href="services.html" class="hover:text-indigo-400 transition-colors">Meta & Paid Ads</a></li>
+          <li><a href="services.html" class="hover:text-indigo-400 transition-colors">Local GMB Scaling</a></li>
+          <li><a href="services.html" class="hover:text-indigo-400 transition-colors">Web Development</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Agency -->
+      <div>
+        <h4 class="text-white font-semibold text-sm tracking-wider uppercase mb-4">Agency</h4>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li><a href="about.html" class="hover:text-indigo-400 transition-colors">Our Story</a></li>
+          <li><a href="courses.html" class="hover:text-indigo-400 transition-colors">AITS Courses</a></li>
+          <li><a href="#" class="hover:text-indigo-400 transition-colors">Case Studies</a></li>
+          <li><a href="contact.html" class="hover:text-indigo-400 transition-colors">Get Proposal</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Contact Info -->
+      <div>
+        <h4 class="text-white font-semibold text-sm tracking-wider uppercase mb-4">Connect</h4>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li><span class="text-gray-300 font-medium">Location:</span> Lahore, Pakistan</li>
+          <li><a href="contact.html" class="hover:text-indigo-400 transition-colors">Support Portal</a></li>
+          <li><a href="privacy.html" class="hover:text-indigo-400 transition-colors">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom Copyright & Socials Bar -->
+    <div
+      class="max-w-7xl mx-auto px-6 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-xs text-gray-500">
+        &copy; 2026 AITS OFFICIAL. All rights reserved. Built for high-ticket performance.
+      </p>
+      <div class="flex items-center space-x-4 text-gray-400">
+        <a href="#" class="hover:text-white transition-colors"><i class="fab fa-linkedin text-lg"></i></a>
+        <a href="#" class="hover:text-white transition-colors"><i class="fab fa-twitter text-lg"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JS -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

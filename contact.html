@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us & Get a Proposal | AITS OFFICIAL</title>
+  <meta name="description"
+    content="Get in touch with AITS OFFICAL. Secure a customized growth roadmap and technical marketing audit for your brand.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            agencyDark: '#0B0F19',
+            agencySlate: '#1E293B',
+            agencyViolet: '#8B5CF6',
+            agencyCyan: '#06B6D4',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="bg-[#0B0F19] text-slate-100 overflow-x-hidden bg-grid-pattern">
+
+  <!-- ==========================================
+       HEADER (STICKY NAVIGATION)
+       ========================================== -->
+  <header id="navbar-header"
+    class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-[#0B0F19]/90 backdrop-blur-md border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <!-- Logo & Title Section -->
+      <a href="index.html" class="flex items-center space-x-3">
+        <img src="assets/image/logo.jpg.jpeg" alt="AITS OFFICIAL Logo" class="h-12 w-auto object-contain">
+        <span class="text-2xl font-bold tracking-tight text-white font-heading">
+          AITS<span class="text-indigo-500 font-light">OFFICIAL</span>
+        </span>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav class="hidden md:flex items-center space-x-8">
+        <a href="index.html" class="nav-link font-medium text-sm transition-colors duration-300 nav-link-hover">Home</a>
+        <a href="about.html" class="nav-link font-medium text-sm transition-colors duration-300 nav-link-hover">About
+          Us</a>
+        <a href="services.html"
+          class="nav-link font-medium text-sm transition-colors duration-300 nav-link-hover">Services</a>
+        <a href="projects.html" class="nav-link font-medium text-sm transition-colors duration-300 nav-link-hover">Case
+          Studies</a>
+        <a href="courses.html"
+          class="nav-link font-medium text-sm transition-colors duration-300 nav-link-hover">Courses</a>
+        <a href="contact.html"
+          class="nav-link font-medium text-sm transition-colors duration-300 nav-link-hover">Contact</a>
+      </nav>
+
+      <!-- CTA Button -->
+      <div class="hidden md:flex">
+        <a href="contact.html"
+          class="relative group px-5 py-2.5 rounded-lg overflow-hidden font-medium text-sm text-white transition-all shadow-md shadow-agencyViolet/10 hover:shadow-cyan-400/20">
+          <div
+            class="absolute inset-0 w-full h-full bg-gradient-to-r from-agencyViolet to-agencyCyan transition-all duration-300 group-hover:opacity-90">
+          </div>
+          <span class="relative">Free Audit Call</span>
+        </a>
+      </div>
+
+      <!-- Hamburger Button (Mobile Only) -->
+      <button id="mobile-menu-btn"
+        class="md:hidden text-slate-300 hover:text-white focus:outline-none p-1.5 rounded-lg border border-slate-800"
+        aria-expanded="false" aria-label="Toggle navigation menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Drawer Overlay -->
+  <div id="mobile-menu"
+    class="fixed inset-0 bg-agencyDark/95 backdrop-blur-lg z-50 hidden flex-col justify-between p-6 animate-fade-in-up">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-slate-800">
+        <span class="text-xl font-bold font-heading text-white">AETHER<span
+            class="gradient-text-violet-cyan">FLOW</span></span>
+        <button id="mobile-menu-close"
+          class="text-slate-400 hover:text-white focus:outline-none p-1.5 border border-slate-800 rounded-lg">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <nav class="flex flex-col space-y-5 mt-8 text-lg font-medium">
+        <a href="index.html" class="nav-link text-slate-300 hover:text-white py-2">Home</a>
+        <a href="about.html" class="nav-link text-slate-300 hover:text-white py-2">About Us</a>
+        <a href="services.html" class="nav-link text-slate-300 hover:text-white py-2">Services</a>
+        <a href="projects.html" class="nav-link text-slate-300 hover:text-white py-2">Case Studies</a>
+        <a href="courses.html" class="nav-link text-slate-300 hover:text-white py-2">Courses</a>
+        <a href="contact.html" class="nav-link text-slate-300 hover:text-white py-2">Contact Us</a>
+      </nav>
+    </div>
+    <div class="pt-6 border-t border-slate-800">
+      <a href="contact.html"
+        class="w-full block text-center bg-gradient-to-r from-agencyViolet to-agencyCyan text-white font-medium py-3 rounded-lg hover:shadow-cyan-400/20 transition-all">
+        Get a Proposal
+      </a>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       MAIN CONTENT
+       ========================================= -->
+  <main class="pt-32 pb-24">
+    <section class="max-w-7xl mx-auto px-6">
+
+      <!-- Grid Container for Split-Screen -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
+
+        <!-- Left Side: Agency Details -->
+        <div class="lg:col-span-5 flex flex-col justify-between space-y-12">
+
+          <div class="space-y-6">
+            <span
+              class="text-xs font-bold uppercase tracking-wider text-agencyViolet bg-agencyViolet/10 border border-agencyViolet/20 rounded-full px-4 py-1.5 inline-block">Partner
+              Up</span>
+            <h1 class="text-3xl sm:text-5xl font-extrabold font-heading text-white leading-tight">
+              Let's Engineer <br>
+              Your <span class="gradient-text-violet-cyan">Growth Pipeline</span>.
+            </h1>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              We review application inquiries manually. Submit details about your active traffic, marketing challenges,
+              and budget. Our strategy directors will respond with a custom scaling audit within 12 hours.
+            </p>
+          </div>
+
+          <!-- Contact Cards -->
+          <div class="space-y-6">
+            <div class="flex items-start space-x-4">
+              <div
+                class="w-10 h-10 rounded-lg bg-agencyViolet/15 border border-agencyViolet/30 flex items-center justify-center text-agencyViolet flex-shrink-0">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-sm">Direct Inquiries</h4>
+                <a href="ahamza.arshad100@gmail.com"
+                  class="text-slate-400 text-xs hover:text-cyan-400 transition-colors">ahamza.arshad100@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <div
+                class="w-10 h-10 rounded-lg bg-agencyCyan/15 border border-agencyCyan/30 flex items-center justify-center text-agencyCyan flex-shrink-0">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-sm">Get In Touch</h4>
+                <a href="tel:+923225673641" class="text-slate-400 text-xs hover:text-cyan-400 transition-colors">+92
+                  322 5673641</a>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <div
+                class="w-10 h-10 rounded-lg bg-agencyViolet/15 border border-agencyViolet/30 flex items-center justify-center text-agencyViolet flex-shrink-0">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-sm">Office Address</h4>
+                <p class="text-slate-400 text-xs">Ashianah Quiad HOusing Scheme, A block market DHA Town Phase 9,</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Graphic Widget (Embedded Glow Panel) -->
+          <div
+            class="relative rounded-2xl border border-slate-850 bg-slate-900/30 p-6 flex items-center space-x-4 overflow-hidden shadow-lg shadow-agencyCyan/5">
+            <div class="absolute -right-10 -bottom-10 w-32 h-32 radial-glow-cyan -z-10"></div>
+            <div
+              class="w-12 h-12 rounded-full bg-cyan-400/10 flex items-center justify-center text-cyan-400 flex-shrink-0 animate-pulse">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <div>
+              <h5 class="font-bold text-white text-sm">Secure Data Transfer</h5>
+              <p class="text-[11px] text-slate-500">Inquiry details are fully encrypted and protected under mutual NDA
+                protocols.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Side: Lead Gen Form -->
+        <div class="lg:col-span-7">
+          <div class="card-glass border border-slate-800 rounded-3xl p-6 sm:p-10 glow-violet">
+            <h3 class="text-2xl font-bold font-heading text-white mb-6">Proposal Application</h3>
+
+            <!-- Real-Time Interactive status indicator -->
+            <div id="form-status-message" class="hidden mb-6 p-4 rounded-xl border text-sm font-semibold"></div>
+
+            <form id="agency-lead-form" class="space-y-5">
+
+              <!-- Name -->
+              <div class="flex flex-col space-y-1.5">
+                <label for="client-name" class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Full Name
+                  *</label>
+                <input type="text" id="client-name" placeholder="John Doe"
+                  class="bg-slate-950/80 border border-slate-800 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-agencyViolet transition duration-300">
+              </div>
+
+              <!-- Email -->
+              <div class="flex flex-col space-y-1.5">
+                <label for="client-email" class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Work
+                  Email *</label>
+                <input type="email" id="client-email" placeholder="john@company.com"
+                  class="bg-slate-950/80 border border-slate-800 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-agencyViolet transition duration-300">
+              </div>
+
+              <!-- Website URL -->
+              <div class="flex flex-col space-y-1.5">
+                <label for="client-website"
+                  class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Website URL (Optional)</label>
+                <input type="text" id="client-website" placeholder="https://company.com"
+                  class="bg-slate-950/80 border border-slate-800 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-agencyViolet transition duration-300">
+              </div>
+
+              <!-- Service Needed -->
+              <div class="flex flex-col space-y-1.5">
+                <label for="client-service"
+                  class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Service Needed *</label>
+                <select id="client-service"
+                  class="bg-slate-950/80 border border-slate-800 rounded-lg px-4 py-3 text-sm text-slate-300 focus:outline-none focus:border-agencyViolet transition duration-300 appearance-none cursor-pointer">
+                  <option value="" disabled selected>Select an option...</option>
+                  <option value="seo">Technical & International SEO Retainer</option>
+                  <option value="ppc">Performance Ads Retainer (Meta/Google)</option>
+                  <option value="local">Local Map Pack scaling</option>
+                  <option value="combo">Full Accelerated Retainer (All-in-One)</option>
+                  <option value="course">Masterclass Access Inquiry</option>
+                </select>
+              </div>
+
+              <!-- Message -->
+              <div class="flex flex-col space-y-1.5">
+                <label for="client-message" class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Growth
+                  Challenge & Context *</label>
+                <textarea id="client-message" rows="4"
+                  placeholder="Briefly describe your current traffic volumes, ad spend budgets, and primary bottleneck..."
+                  class="bg-slate-950/80 border border-slate-800 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-agencyViolet transition duration-300 resize-none"></textarea>
+              </div>
+
+              <!-- Submit -->
+              <button type="submit"
+                class="w-full py-4 rounded-xl bg-gradient-to-r from-agencyViolet to-agencyCyan text-white font-extrabold text-sm hover:scale-[1.01] active:scale-[0.99] transition shadow-lg shadow-agencyViolet/10 hover:shadow-cyan-500/20">
+                Submit Strategy Request
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================
+       GLOBAL FOOTER
+       ========================================== -->
+  <footer class="bg-[#0B0F19] border-t border-white/10 pt-16 pb-8 relative z-10">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+
+      <!-- Left Column: Logo & Description -->
+      <div class="space-y-4">
+        <a href="index.html" class="flex items-center space-x-3">
+          <img src="assets/image/logo.jpg.jpeg" alt="AITS OFFICIAL Logo" class="h-10 w-auto object-contain">
+          <span class="text-2xl font-bold tracking-tight text-white font-heading">
+            AITS<span class="text-indigo-500 font-light">OFFICIAL</span>
+          </span>
+        </a>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          High-performance full-service digital marketing agency engineering organic traffic loops, local map scaling,
+          and high-converting advertising pipelines.
+        </p>
+      </div>
+
+      <!-- Column 2: Expertise -->
+      <div>
+        <h4 class="text-white font-semibold text-sm tracking-wider uppercase mb-4">Expertise</h4>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li><a href="services.html" class="hover:text-indigo-400 transition-colors">Search Engine Optimization</a>
+          </li>
+          <li><a href="services.html" class="hover:text-indigo-400 transition-colors">Meta & Paid Ads</a></li>
+          <li><a href="services.html" class="hover:text-indigo-400 transition-colors">Local GMB Scaling</a></li>
+          <li><a href="services.html" class="hover:text-indigo-400 transition-colors">Web Development</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Agency -->
+      <div>
+        <h4 class="text-white font-semibold text-sm tracking-wider uppercase mb-4">Agency</h4>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li><a href="about.html" class="hover:text-indigo-400 transition-colors">Our Story</a></li>
+          <li><a href="courses.html" class="hover:text-indigo-400 transition-colors">AITS Courses</a></li>
+          <li><a href="#" class="hover:text-indigo-400 transition-colors">Case Studies</a></li>
+          <li><a href="contact.html" class="hover:text-indigo-400 transition-colors">Get Proposal</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Contact Info -->
+      <div>
+        <h4 class="text-white font-semibold text-sm tracking-wider uppercase mb-4">Connect</h4>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li><span class="text-gray-300 font-medium">Location:</span> Lahore, Pakistan</li>
+          <li><a href="contact.html" class="hover:text-indigo-400 transition-colors">Support Portal</a></li>
+          <li><a href="privacy.html" class="hover:text-indigo-400 transition-colors">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom Copyright & Socials Bar -->
+    <div
+      class="max-w-7xl mx-auto px-6 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-xs text-gray-500">
+        &copy; 2026 AITS OFFICIAL. All rights reserved. Built for high-ticket performance.
+      </p>
+      <div class="flex items-center space-x-4 text-gray-400">
+        <a href="#" class="hover:text-white transition-colors"><i class="fab fa-linkedin text-lg"></i></a>
+        <a href="#" class="hover:text-white transition-colors"><i class="fab fa-twitter text-lg"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JS -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

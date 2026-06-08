@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AITS OFFICIAL| Premium Growth & Performance Marketing Agency</title>
+  <meta name="description"
+    content="AITS OFFICIAL is a high-performance marketing agency delivering exponential organic scale, paid media efficiency, and e-commerce growth.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            agencyDark: '#0B0F19',
+            agencySlate: '#1E293B',
+            agencyViolet: '#8B5CF6',
+            agencyCyan: '#06B6D4',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="bg-[#0B0F19] text-slate-100 overflow-x-hidden bg-grid-pattern">
+
+  <!-- ==========================================
+       HEADER (STICKY NAVIGATION)
+       ==========================================-->
+  <!-- HEADER (STICKY NAVIGATION) -->
+  <header id="navbar-header"
+    class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-[#0B0F19]/90 backdrop-blur-md border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <!-- Logo & Title Section -->
+      <a href="index.html" class="flex items-center space-x-3">
+        <img src="assets/image/logo.jpg.jpeg" alt="AITS OFFICIAL Logo" class="h-12 w-auto object-contain">
+        <span class="text-2xl font-bold tracking-tight text-white font-heading">
+          AITS<span class="text-indigo-500 font-light">OFFICIAL</span>
+        </span>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav class="hidden md:flex items-center space-x-8">
+        <a href="index.html" class="nav-link font-medium text-sm transition-colors duration-300 nav-link-hover">Home</a>
+        <a href="about.html" class="nav-link font-medium text-sm transition-colors duration-300 nav-link-hover">About
+          Us</a>
+        <a href="services.html"
+          class="nav-link font-medium text-sm transition-colors duration-300 nav-link-hover">Services</a>
+        <a href="projects.html" class="nav-link font-medium text-sm transition-colors duration-300 nav-link-hover">Case
+          Studies</a>
+        <a href="courses.html"
+          class="nav-link font-medium text-sm transition-colors duration-300 nav-link-hover">Courses</a>
+        <a href="contact.html"
+          class="nav-link font-medium text-sm transition-colors duration-300 nav-link-hover">Contact</a>
+      </nav>
+
+      <!-- CTA Button -->
+      <div class="hidden md:flex">
+        <a href="contact.html"
+          class="relative group px-5 py-2.5 rounded-lg overflow-hidden font-medium text-sm text-white transition-all shadow-md shadow-agencyViolet/10 hover:shadow-cyan-400/20">
+          <div
+            class="absolute inset-0 w-full h-full bg-gradient-to-r from-agencyViolet to-agencyCyan transition-all duration-300 group-hover:opacity-90">
+          </div>
+          <span class="relative">Free Audit Call</span>
+        </a>
+      </div>
+
+      <!-- Hamburger Button (Mobile Only) -->
+      <button id="mobile-menu-btn"
+        class="md:hidden text-slate-300 hover:text-white focus:outline-none p-1.5 rounded-lg border border-slate-800"
+        aria-expanded="false" aria-label="Toggle navigation menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Drawer Overlay -->
+  <div id="mobile-menu"
+    class="fixed inset-0 bg-agencyDark/95 backdrop-blur-lg z-50 hidden flex-col justify-between p-6 animate-fade-in-up">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-slate-800">
+        <span class="text-xl font-bold font-heading text-white">AETHER<span
+            class="gradient-text-violet-cyan">FLOW</span></span>
+        <button id="mobile-menu-close"
+          class="text-slate-400 hover:text-white focus:outline-none p-1.5 border border-slate-800 rounded-lg">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <nav class="flex flex-col space-y-5 mt-8 text-lg font-medium">
+        <a href="index.html" class="nav-link text-slate-300 hover:text-white py-2">Home</a>
+        <a href="about.html" class="nav-link text-slate-300 hover:text-white py-2">About Us</a>
+        <a href="services.html" class="nav-link text-slate-300 hover:text-white py-2">Services</a>
+        <a href="projects.html" class="nav-link text-slate-300 hover:text-white py-2">Case Studies</a>
+        <a href="courses.html" class="nav-link text-slate-300 hover:text-white py-2">Courses</a>
+        <a href="contact.html" class="nav-link text-slate-300 hover:text-white py-2">Contact Us</a>
+      </nav>
+    </div>
+    <div class="pt-6 border-t border-slate-800">
+      <a href="contact.html"
+        class="w-full block text-center bg-gradient-to-r from-agencyViolet to-agencyCyan text-white font-medium py-3 rounded-lg hover:shadow-cyan-400/20 transition-all">
+        Get a Proposal
+      </a>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       HERO SECTION
+       ========================================== -->
+  <!-- Hero Section Image -->
+  <!-- Hero Right Column - Dynamic Animate Slider Fix -->
+  <div class="relative w-full max-w-lg mx-auto">
+    <!-- Glow Effect Background -->
+    <div class="absolute inset-0 bg-gradient-to-tr from-indigo-500 to-cyan-500 rounded-2xl blur-xl opacity-20"></div>
+
+    <!-- Slider Container -->
+    <div
+      class="relative bg-[#1E293B]/60 border border-white/10 p-2 rounded-2xl shadow-2xl backdrop-blur-sm overflow-hidden h-[380px] md:h-[420px]">
+
+      <!-- Image 1 -->
+      <img src="assets/image/thunmb1.jpg" alt="AITS Team Work"
+        class="absolute inset-2 w-[calc(100%-16px)] h-[calc(100%-16px)] rounded-xl object-contain bg-[#1E293B] animate-fade-slider">
+
+      <!-- Image 2 -->
+      <img src="assets/image/thunmb2.jpg" alt="AITS Digital Marketing Strategy"
+        class="absolute inset-2 w-[calc(100%-16px)] h-[calc(100%-16px)] rounded-xl object-contain bg-[#1E293B] animate-fade-slider-delayed">
+
+    </div>
+  </div>
+
+  <style>
+    @keyframes fadeSlider {
+
+      0%,
+      45% {
+        opacity: 1;
+        z-index: 10;
+      }
+
+      55%,
+      100% {
+        opacity: 0;
+        z-index: 0;
+      }
+    }
+
+    @keyframes fadeSliderDelayed {
+
+      0%,
+      45% {
+        opacity: 0;
+        z-index: 0;
+      }
+
+      55%,
+      95% {
+        opacity: 1;
+        z-index: 10;
+      }
+
+      100% {
+        opacity: 0;
+        z-index: 0;
+      }
+    }
+
+    .animate-fade-slider {
+      animation: fadeSlider 8s infinite ease-in-out;
+    }
+
+    .animate-fade-slider-delayed {
+      animation: fadeSliderDelayed 8s infinite ease-in-out;
+    }
+  </style>
+  <!-- Image 1 -->
+  <img src="assets/image/thunmb1.jpg" alt="AITS Team Work"
+    class="absolute inset-2 w-[calc(100%-16px)] h-[calc(100%-16px)] rounded-xl object-cover animate-fade-slider">
+
+  <!-- Image 2 -->
+  <img src="assets/image/thunmb2.jpg" alt="AITS Digital Marketing Strategy"
+    class="absolute inset-2 w-[calc(100%-16px)] h-[calc(100%-16px)] rounded-xl object-cover animate-fade-slider-delayed">
+
+  </div>
+  </div>
+
+  <!-- Add this small Tailwind custom animation style block right under the container if not present globally -->
+  <style>
+    @keyframes fadeSlider {
+
+      0%,
+      45% {
+        opacity: 1;
+        z-index: 10;
+      }
+
+      55%,
+      100% {
+        opacity: 0;
+        z-index: 0;
+      }
+    }
+
+    @keyframes fadeSliderDelayed {
+
+      0%,
+      45% {
+        opacity: 0;
+        z-index: 0;
+      }
+
+      55%,
+      95% {
+        opacity: 1;
+        z-index: 10;
+      }
+
+      100% {
+        opacity: 0;
+        z-index: 0;
+      }
+    }
+
+    .animate-fade-slider {
+      animation: fadeSlider 8s infinite ease-in-out;
+    }
+
+    .animate-fade-slider-delayed {
+      animation: fadeSliderDelayed 8s infinite ease-in-out;
+    }
+  </style>
+  <main class="pt-24">
+    <section class="relative min-h-[90vh] flex items-center justify-center py-16 px-6 overflow-hidden">
+      <!-- Glow Gradients in background -->
+      <div
+        class="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] radial-glow-violet -z-10 rounded-full">
+      </div>
+      <div
+        class="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 w-[500px] h-[500px] radial-glow-cyan -z-10 rounded-full">
+      </div>
+
+      <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Hero Text -->
+        <div class="lg:col-span-7 flex flex-col space-y-6 text-center lg:text-left">
+          <div
+            class="inline-flex items-center space-x-2 bg-agencyViolet/10 border border-agencyViolet/20 rounded-full px-4 py-1.5 self-center lg:self-start">
+            <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+            <span class="text-xs font-semibold uppercase tracking-wider text-cyan-300">Data-Driven Growth Only</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold font-heading text-white leading-tight">
+            We Engineer Exponential <br class="hidden sm:inline">
+            <span class="gradient-text-violet-cyan">Growth & ROI</span> for E-Com & Tech Brands.
+          </h1>
+
+          <p class="text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0">
+            Ditch vanity metrics. Our custom search engineering systems, meta automation loops, and hyper-targeted
+            conversion frameworks scale revenue predictability.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+            <a href="contact.html"
+              class="w-full sm:w-auto text-center px-8 py-4 bg-gradient-to-r from-agencyViolet to-agencyCyan text-white font-semibold rounded-lg hover:scale-[1.02] active:scale-[0.98] transition-all shadow-lg shadow-agencyViolet/20 glow-violet">
+              Get a Proposal
+            </a>
+            <a href="courses.html"
+              class="w-full sm:w-auto text-center px-8 py-4 bg-slate-900 border border-slate-800 text-slate-300 font-semibold rounded-lg hover:bg-slate-800 hover:text-white transition-all">
+              Explore Courses
+            </a>
+          </div>
+        </div>
+
+        <!-- Premium SVG Dashboard Illustration (Right side) -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="relative w-full max-w-md p-6 card-glass rounded-2xl glow-cyan animate-fade-in-up">
+            <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+              <div class="flex items-center space-x-2">
+                <span class="w-3 h-3 rounded-full bg-red-500"></span>
+                <span class="w-3 h-3 rounded-full bg-yellow-500"></span>
+                <span class="w-3 h-3 rounded-full bg-green-500"></span>
+              </div>
+              <span class="text-xs text-slate-400 font-mono">live_roi_monitor.sh</span>
+            </div>
+
+            <div class="pt-6 space-y-6">
+              <!-- Graph SVG -->
+              <div
+                class="w-full h-48 bg-slate-950/50 rounded-xl p-4 relative overflow-hidden border border-slate-800/50">
+                <svg class="w-full h-full" viewBox="0 0 100 40" preserveAspectRatio="none">
+                  <!-- Grid Lines -->
+                  <line x1="0" y1="10" x2="100" y2="10" stroke="rgba(255,255,255,0.05)" stroke-width="0.5" />
+                  <line x1="0" y1="20" x2="100" y2="20" stroke="rgba(255,255,255,0.05)" stroke-width="0.5" />
+                  <line x1="0" y1="30" x2="100" y2="30" stroke="rgba(255,255,255,0.05)" stroke-width="0.5" />
+
+                  <!-- Gradient Area -->
+                  <defs>
+                    <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.4" />
+                      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0" />
+                    </linearGradient>
+                  </defs>
+                  <path d="M 0 35 Q 20 20 40 28 T 80 8 T 100 2 L 100 40 L 0 40 Z" fill="url(#chartGrad)" />
+
+                  <!-- Line Chart -->
+                  <path d="M 0 35 Q 20 20 40 28 T 80 8 T 100 2" fill="none" stroke="url(#lineGrad)" stroke-width="1.5"
+                    stroke-linecap="round" />
+                  <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#8B5CF6" />
+                    <stop offset="100%" stop-color="#06B6D4" />
+                  </linearGradient>
+
+                  <!-- Data Points -->
+                  <circle cx="40" cy="28" r="1.5" fill="#8B5CF6" />
+                  <circle cx="80" cy="8" r="1.5" fill="#06B6D4" />
+                  <circle cx="100" cy="2" r="1.5" fill="#22D3EE" class="animate-ping"
+                    style="transform-origin: 100px 2px;" />
+                </svg>
+                <div class="absolute top-2 right-2 text-right">
+                  <div class="text-[10px] text-slate-400 font-medium">Monthly Conversions</div>
+                  <div class="text-sm font-bold text-cyan-400 font-heading">+384%</div>
+                </div>
+              </div>
+
+              <!-- Metrics Stats row inside container -->
+              <div class="grid grid-cols-2 gap-4">
+                <div class="p-3 bg-slate-900/40 rounded-xl border border-slate-800/50">
+                  <span class="text-xs text-slate-400 block mb-1">Ad Spend ROI</span>
+                  <span class="text-lg font-bold font-heading text-white">5.8x Avg ROAS</span>
+                </div>
+                <div class="p-3 bg-slate-900/40 rounded-xl border border-slate-800/50">
+                  <span class="text-xs text-slate-400 block mb-1">Organic Leads</span>
+                  <span class="text-lg font-bold font-heading text-white">+240% / Mo</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         METRICS / STATS COUNTER ROW
+         ========================================== -->
+    <section class="py-12 bg-slate-950/60 border-y border-slate-900">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+          <div class="space-y-1">
+            <div class="stat-counter text-3xl sm:text-4xl md:text-5xl font-extrabold font-heading text-white"
+              data-target="8.4" data-float="true" data-prefix="" data-suffix="x">0x</div>
+            <div class="text-xs sm:text-sm text-cyan-400 font-semibold tracking-wider uppercase">Average ROI Delivered
+            </div>
+          </div>
+          <div class="space-y-1">
+            <div class="stat-counter text-3xl sm:text-4xl md:text-5xl font-extrabold font-heading text-white"
+              data-target="45" data-float="false" data-prefix="$" data-suffix="M+">$0M+</div>
+            <div class="text-xs sm:text-sm text-agencyViolet font-semibold tracking-wider uppercase">Ad Spend Managed
+            </div>
+          </div>
+          <div class="space-y-1">
+            <div class="stat-counter text-3xl sm:text-4xl md:text-5xl font-extrabold font-heading text-white"
+              data-target="180" data-float="false" data-prefix="" data-suffix="+">0+</div>
+            <div class="text-xs sm:text-sm text-cyan-400 font-semibold tracking-wider uppercase">Active E-Com Brands
+              Scaled</div>
+          </div>
+          <div class="space-y-1">
+            <div class="stat-counter text-3xl sm:text-4xl md:text-5xl font-extrabold font-heading text-white"
+              data-target="98" data-float="false" data-prefix="" data-suffix="%">0%</div>
+            <div class="text-xs sm:text-sm text-agencyViolet font-semibold tracking-wider uppercase">Client Retention
+              Rate</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         CORE AGENCY EXPERTISE OVERVIEW
+         ========================================== -->
+    <section class="py-24 px-6 relative">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+          <span
+            class="text-xs font-bold uppercase tracking-wider text-agencyViolet bg-agencyViolet/10 border border-agencyViolet/20 rounded-full px-4 py-1.5">What
+            We Do</span>
+          <h2 class="text-3xl sm:text-4xl font-bold font-heading text-white">Our Engineering Core Competencies</h2>
+          <p class="text-slate-400">
+            We focus exclusively on three hyper-effective core marketing disciplines, executing each to scientific
+            precision to guarantee compounding scalability.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Card 1: Technical & International SEO -->
+          <div class="card-glass rounded-2xl p-8 card-glass-hover flex flex-col justify-between group">
+            <div class="space-y-6">
+              <div
+                class="w-12 h-12 rounded-xl bg-agencyViolet/10 border border-agencyViolet/30 flex items-center justify-center text-agencyViolet group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold font-heading text-white">Technical & International SEO</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                Core crawler optimization, semantic entity structures, edge routing, and multilingual architectures
+                built to command authoritative high-intent terms.
+              </p>
+            </div>
+            <div class="pt-6 border-t border-slate-800/80 mt-8 flex items-center justify-between">
+              <a href="services.html"
+                class="text-cyan-400 text-xs font-semibold uppercase tracking-wider group-hover:underline flex items-center">
+                Explore Strategy
+                <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none"
+                  viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 2: Performance Marketing -->
+          <div class="card-glass rounded-2xl p-8 card-glass-hover flex flex-col justify-between group">
+            <div class="space-y-6">
+              <div
+                class="w-12 h-12 rounded-xl bg-agencyCyan/10 border border-agencyCyan/30 flex items-center justify-center text-agencyCyan group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold font-heading text-white">Performance Ads (Meta / Google)</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                Hyper-segmented programmatic ad flows, custom API signals feeding ML attribution, and robust copy
+                testing frameworks built to maximize raw contribution margin.
+              </p>
+            </div>
+            <div class="pt-6 border-t border-slate-800/80 mt-8 flex items-center justify-between">
+              <a href="services.html"
+                class="text-cyan-400 text-xs font-semibold uppercase tracking-wider group-hover:underline flex items-center">
+                Explore Paid Media
+                <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none"
+                  viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 3: Local SEO & GMB -->
+          <div class="card-glass rounded-2xl p-8 card-glass-hover flex flex-col justify-between group">
+            <div class="space-y-6">
+              <div
+                class="w-12 h-12 rounded-xl bg-agencyViolet/10 border border-agencyViolet/30 flex items-center justify-center text-agencyViolet group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold font-heading text-white">Local SEO & Google Business</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                Hyper-localized schema networks, citations architectures, review loops, and geofocused content maps
+                designed to dominate the physical Map Pack.
+              </p>
+            </div>
+            <div class="pt-6 border-t border-slate-800/80 mt-8 flex items-center justify-between">
+              <a href="services.html"
+                class="text-cyan-400 text-xs font-semibold uppercase tracking-wider group-hover:underline flex items-center">
+                Explore Local Systems
+                <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none"
+                  viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SOCIAL PROOF / TESTIMONIALS SLIDER
+         ========================================== -->
+    <section class="py-24 px-6 bg-slate-950/40 border-y border-slate-900 relative">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-16 space-y-4">
+          <span
+            class="text-xs font-bold uppercase tracking-wider text-agencyCyan bg-agencyCyan/10 border border-agencyCyan/20 rounded-full px-4 py-1.5">Social
+            Proof</span>
+          <h2 class="text-3xl sm:text-4xl font-bold font-heading text-white">What Our Partners Say</h2>
+        </div>
+
+        <div
+          class="slider-container relative overflow-hidden rounded-2xl border border-slate-850 bg-slate-900/40 backdrop-blur p-8 sm:p-12">
+          <div class="slider-track transition-transform duration-500">
+            <!-- Slide 1 -->
+            <div class="slider-slide w-full flex-shrink-0 flex flex-col items-center text-center space-y-6">
+              <div class="flex text-yellow-400 space-x-1">
+                <!-- Stars -->
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              </div>
+              <blockquote class="text-xl sm:text-2xl font-medium text-slate-100 italic">
+                "Working with AetherFlow has completely unlocked our organic channel. We saw +340% traffic in 8 months,
+                and our customer acquisition cost dropped by half. They are scaling data engineers, not standard
+                copywriters."
+              </blockquote>
+              <div class="flex flex-col items-center">
+                <div
+                  class="w-14 h-14 rounded-full bg-gradient-to-tr from-agencyViolet to-agencyCyan p-0.5 mb-3 shadow-md shadow-agencyViolet/10">
+                  <div
+                    class="w-full h-full rounded-full bg-slate-900 flex items-center justify-center font-bold text-cyan-400 font-heading">
+                    MW</div>
+                </div>
+                <div class="font-bold text-white">Marcus Wagner</div>
+                <div class="text-xs text-slate-400">VP of Growth, Horizon SaaS</div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slider-slide w-full flex-shrink-0 flex flex-col items-center text-center space-y-6">
+              <div class="flex text-yellow-400 space-x-1">
+                <!-- Stars -->
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              </div>
+              <blockquote class="text-xl sm:text-2xl font-medium text-slate-100 italic">
+                "Our ad spend scaling was stuck until we plugged in AetherFlow's Meta machine learning models. We scaled
+                budgets from $50k/mo to $250k/mo while stabilizing our average cost per conversion. Absolutely stellar
+                partners."
+              </blockquote>
+              <div class="flex flex-col items-center">
+                <div
+                  class="w-14 h-14 rounded-full bg-gradient-to-tr from-agencyViolet to-agencyCyan p-0.5 mb-3 shadow-md shadow-agencyViolet/10">
+                  <div
+                    class="w-full h-full rounded-full bg-slate-900 flex items-center justify-center font-bold text-cyan-400 font-heading">
+                    SL</div>
+                </div>
+                <div class="font-bold text-white">Sarah Lund</div>
+                <div class="text-xs text-slate-400">Head of Acquisition, Lumina Apparel</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Arrows -->
+          <div class="absolute inset-y-0 left-4 flex items-center z-10">
+            <button id="testimonial-prev"
+              class="w-10 h-10 rounded-full bg-slate-950/60 border border-slate-800 text-slate-300 hover:text-white flex items-center justify-center focus:outline-none transition hover:bg-slate-800"
+              aria-label="Previous testimonial">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+          </div>
+          <div class="absolute inset-y-0 right-4 flex items-center z-10">
+            <button id="testimonial-next"
+              class="w-10 h-10 rounded-full bg-slate-950/60 border border-slate-800 text-slate-300 hover:text-white flex items-center justify-center focus:outline-none transition hover:bg-slate-800"
+              aria-label="Next testimonial">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Dots Nav -->
+          <div id="testimonial-dots" class="flex justify-center space-x-2 mt-8 z-10 relative"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         CONVERSION BANNER
+         ========================================== -->
+    <section class="py-24 px-6 relative overflow-hidden">
+      <!-- Glow effect -->
+      <div
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-gradient-to-r from-agencyViolet/15 to-agencyCyan/15 blur-3xl -z-10 rounded-full">
+      </div>
+
+      <div
+        class="max-w-4xl mx-auto text-center card-glass rounded-3xl p-8 sm:p-16 border border-slate-800/80 glow-violet space-y-8">
+        <h2 class="text-3xl sm:text-5xl font-extrabold font-heading text-white leading-tight">
+          Ready to Engineer <br>
+          <span class="gradient-text-violet-cyan">Unfair Advantage</span>?
+        </h2>
+        <p class="text-slate-300 max-w-xl mx-auto">
+          Contact our partners today. We only onboard 2 clients per month to maintain absolute scaling quality. Get your
+          customized agency growth roadmap.
+        </p>
+        <div class="pt-4">
+          <a href="contact.html"
+            class="inline-block px-10 py-5 bg-gradient-to-r from-agencyViolet to-agencyCyan text-white font-bold rounded-xl hover:scale-[1.03] active:scale-[0.97] transition-all shadow-xl shadow-agencyViolet/30">
+            Secure Your Growth Proposal
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================
+       GLOBAL FOOTER
+       ========================================== -->
+  <footer class="bg-[#0B0F19] border-t border-white/10 pt-16 pb-8 relative z-10">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+
+      <!-- Left Column: Logo & Description -->
+      <div class="space-y-4">
+        <a href="index.html" class="flex items-center space-x-3">
+          <img src="assets/image/logo.jpg.jpeg" alt="AITS OFFICIAL Logo" class="h-10 w-auto object-contain">
+          <span class="text-2xl font-bold tracking-tight text-white font-heading">
+            AITS<span class="text-indigo-500 font-light">OFFICIAL</span>
+          </span>
+        </a>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          High-performance full-service digital marketing agency engineering organic traffic loops, local map scaling,
+          and high-converting advertising pipelines.
+        </p>
+      </div>
+
+      <!-- Column 2: Expertise -->
+      <div>
+        <h4 class="text-white font-semibold text-sm tracking-wider uppercase mb-4">Expertise</h4>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li><a href="services.html" class="hover:text-indigo-400 transition-colors">Search Engine Optimization</a>
+          </li>
+          <li><a href="services.html" class="hover:text-indigo-400 transition-colors">Meta & Paid Ads</a></li>
+          <li><a href="services.html" class="hover:text-indigo-400 transition-colors">Local GMB Scaling</a></li>
+          <li><a href="services.html" class="hover:text-indigo-400 transition-colors">Web Development</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Agency -->
+      <div>
+        <h4 class="text-white font-semibold text-sm tracking-wider uppercase mb-4">Agency</h4>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li><a href="about.html" class="hover:text-indigo-400 transition-colors">Our Story</a></li>
+          <li><a href="courses.html" class="hover:text-indigo-400 transition-colors">AITS Courses</a></li>
+          <li><a href="#" class="hover:text-indigo-400 transition-colors">Case Studies</a></li>
+          <li><a href="contact.html" class="hover:text-indigo-400 transition-colors">Get Proposal</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Contact Info -->
+      <div>
+        <h4 class="text-white font-semibold text-sm tracking-wider uppercase mb-4">Connect</h4>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li><span class="text-gray-300 font-medium">Location:</span> Lahore, Pakistan</li>
+          <li><a href="contact.html" class="hover:text-indigo-400 transition-colors">Support Portal</a></li>
+          <li><a href="privacy.html" class="hover:text-indigo-400 transition-colors">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom Copyright & Socials Bar -->
+    <div
+      class="max-w-7xl mx-auto px-6 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-xs text-gray-500">
+        &copy; 2026 AITS OFFICIAL. All rights reserved. Built for high-ticket performance.
+      </p>
+      <div class="flex items-center space-x-4 text-gray-400">
+        <a href="#" class="hover:text-white transition-colors"><i class="fab fa-linkedin text-lg"></i></a>
+        <a href="#" class="hover:text-white transition-colors"><i class="fab fa-twitter text-lg"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JS -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

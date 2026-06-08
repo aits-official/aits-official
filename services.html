@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services | AetherFlow Digital</title>
+  <meta name="description"
+    content="Explore our technical search engine marketing, high-performance meta and google advertising, and local market maps dominance systems.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            agencyDark: '#0B0F19',
+            agencySlate: '#1E293B',
+            agencyViolet: '#8B5CF6',
+            agencyCyan: '#06B6D4',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="bg-[#0B0F19] text-slate-100 overflow-x-hidden bg-grid-pattern">
+
+  <!-- ==========================================
+       HEADER (STICKY NAVIGATION)
+       ========================================== -->
+  <header id="navbar-header"
+    class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-[#0B0F19]/90 backdrop-blur-md border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <!-- Logo & Title Section -->
+      <a href="index.html" class="flex items-center space-x-3">
+        <img src="assets/image/logo.jpg.jpeg" alt="AITS OFFICIAL Logo" class="h-12 w-auto object-contain">
+        <span class="text-2xl font-bold tracking-tight text-white font-heading">
+          AITS<span class="text-indigo-500 font-light">OFFICIAL</span>
+        </span>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav class="hidden md:flex items-center space-x-8">
+        <a href="index.html" class="nav-link font-medium text-sm transition-colors duration-300 nav-link-hover">Home</a>
+        <a href="about.html" class="nav-link font-medium text-sm transition-colors duration-300 nav-link-hover">About
+          Us</a>
+        <a href="services.html"
+          class="nav-link font-medium text-sm transition-colors duration-300 nav-link-hover">Services</a>
+        <a href="projects.html" class="nav-link font-medium text-sm transition-colors duration-300 nav-link-hover">Case
+          Studies</a>
+        <a href="courses.html"
+          class="nav-link font-medium text-sm transition-colors duration-300 nav-link-hover">Courses</a>
+        <a href="contact.html"
+          class="nav-link font-medium text-sm transition-colors duration-300 nav-link-hover">Contact</a>
+      </nav>
+
+      <!-- CTA Button -->
+      <div class="hidden md:flex">
+        <a href="contact.html"
+          class="relative group px-5 py-2.5 rounded-lg overflow-hidden font-medium text-sm text-white transition-all shadow-md shadow-agencyViolet/10 hover:shadow-cyan-400/20">
+          <div
+            class="absolute inset-0 w-full h-full bg-gradient-to-r from-agencyViolet to-agencyCyan transition-all duration-300 group-hover:opacity-90">
+          </div>
+          <span class="relative">Free Audit Call</span>
+        </a>
+      </div>
+
+      <!-- Hamburger Button (Mobile Only) -->
+      <button id="mobile-menu-btn"
+        class="md:hidden text-slate-300 hover:text-white focus:outline-none p-1.5 rounded-lg border border-slate-800"
+        aria-expanded="false" aria-label="Toggle navigation menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Drawer Overlay -->
+  <div id="mobile-menu"
+    class="fixed inset-0 bg-agencyDark/95 backdrop-blur-lg z-50 hidden flex-col justify-between p-6 animate-fade-in-up">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-slate-800">
+        <span class="text-xl font-bold font-heading text-white">AETHER<span
+            class="gradient-text-violet-cyan">FLOW</span></span>
+        <button id="mobile-menu-close"
+          class="text-slate-400 hover:text-white focus:outline-none p-1.5 border border-slate-800 rounded-lg">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <nav class="flex flex-col space-y-5 mt-8 text-lg font-medium">
+        <a href="index.html" class="nav-link text-slate-300 hover:text-white py-2">Home</a>
+        <a href="about.html" class="nav-link text-slate-300 hover:text-white py-2">About Us</a>
+        <a href="services.html" class="nav-link text-slate-300 hover:text-white py-2">Services</a>
+        <a href="projects.html" class="nav-link text-slate-300 hover:text-white py-2">Case Studies</a>
+        <a href="courses.html" class="nav-link text-slate-300 hover:text-white py-2">Courses</a>
+        <a href="contact.html" class="nav-link text-slate-300 hover:text-white py-2">Contact Us</a>
+      </nav>
+    </div>
+    <div class="pt-6 border-t border-slate-800">
+      <a href="contact.html"
+        class="w-full block text-center bg-gradient-to-r from-agencyViolet to-agencyCyan text-white font-medium py-3 rounded-lg hover:shadow-cyan-400/20 transition-all">
+        Get a Proposal
+      </a>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       MAIN CONTENT
+       ========================================== -->
+  <main class="pt-32 pb-24">
+    <!-- Header Summary -->
+    <section class="max-w-4xl mx-auto px-6 text-center mb-20 space-y-4">
+      <span
+        class="text-xs font-bold uppercase tracking-wider text-agencyViolet bg-agencyViolet/10 border border-agencyViolet/20 rounded-full px-4 py-1.5 inline-block animate-pulse">Our
+        Offerings</span>
+      <h1 class="text-3xl sm:text-5xl font-extrabold font-heading text-white">
+        High-Performance <br class="hidden sm:inline">
+        <span class="gradient-text-violet-cyan">Marketing Engines</span> Built for Scale.
+      </h1>
+      <p class="text-slate-400 text-base max-w-xl mx-auto">
+        We build technical systems. Select a core scaling package or review our expertise breakdown below.
+      </p>
+    </section>
+
+    <!-- Services Grid Detailed -->
+    <section class="max-w-7xl mx-auto px-6 mb-32">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+        <!-- Service Card 1 -->
+        <div class="card-glass rounded-2xl p-8 border border-slate-800 flex flex-col justify-between group glow-hover">
+          <div class="space-y-6">
+            <div
+              class="w-14 h-14 rounded-xl bg-agencyViolet/15 border border-agencyViolet/30 flex items-center justify-center text-agencyViolet">
+              <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold font-heading text-white">Technical & International SEO</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              We design crawler optimization pathways, clean indexing signals, configure custom cloudfront edge
+              redirects, and translate structural content maps into global rankings.
+            </p>
+            <ul class="space-y-2.5 text-xs text-slate-300 font-medium">
+              <li class="flex items-center">
+                <span class="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></span>
+                Crawler Log & Rendering Audits
+              </li>
+              <li class="flex items-center">
+                <span class="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></span>
+                Semantic HTML Entity Maps
+              </li>
+              <li class="flex items-center">
+                <span class="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></span>
+                Multi-Language & hreflang Systems
+              </li>
+              <li class="flex items-center">
+                <span class="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></span>
+                Core Web Vitals Core Overhaul
+              </li>
+            </ul>
+          </div>
+          <div class="pt-8 mt-8 border-t border-slate-800">
+            <a href="contact.html?service=seo"
+              class="w-full text-center block py-3 rounded-lg border border-agencyViolet/40 text-slate-200 font-semibold text-sm hover:bg-agencyViolet/10 hover:border-agencyViolet transition-all">
+              Request SEO Roadmap
+            </a>
+          </div>
+        </div>
+
+        <!-- Service Card 2 -->
+        <div class="card-glass rounded-2xl p-8 border border-slate-800 flex flex-col justify-between group glow-hover">
+          <div class="space-y-6">
+            <div
+              class="w-14 h-14 rounded-xl bg-agencyCyan/15 border border-agencyCyan/30 flex items-center justify-center text-agencyCyan">
+              <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 002 2h2a2 2 0 002-2z" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold font-heading text-white">Performance Marketing (PPC)</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              We deploy automated custom scripts, model tracking metrics, feed direct CRM loops to ad engines, and
+              structure visual matrix testing templates that maximize profit parameters.
+            </p>
+            <ul class="space-y-2.5 text-xs text-slate-300 font-medium">
+              <li class="flex items-center">
+                <span class="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></span>
+                Meta CAPI & Google Offline Signal Matching
+              </li>
+              <li class="flex items-center">
+                <span class="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></span>
+                Programmatic Custom Audience Lookalikes
+              </li>
+              <li class="flex items-center">
+                <span class="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></span>
+                Weekly Creative Dynamic Splits
+              </li>
+              <li class="flex items-center">
+                <span class="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></span>
+                Predictable Attribution Frameworks
+              </li>
+            </ul>
+          </div>
+          <div class="pt-8 mt-8 border-t border-slate-800">
+            <a href="contact.html?service=ppc"
+              class="w-full text-center block py-3 rounded-lg border border-agencyCyan/40 text-slate-200 font-semibold text-sm hover:bg-agencyCyan/10 hover:border-agencyCyan transition-all">
+              Request Paid Media Audit
+            </a>
+          </div>
+        </div>
+
+        <!-- Service Card 3 -->
+        <div class="card-glass rounded-2xl p-8 border border-slate-800 flex flex-col justify-between group glow-hover">
+          <div class="space-y-6">
+            <div
+              class="w-14 h-14 rounded-xl bg-agencyViolet/15 border border-agencyViolet/30 flex items-center justify-center text-agencyViolet">
+              <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold font-heading text-white">Local SEO & GMB Optimization</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              We coordinate citation networks, build geo-density schema grids, write custom review automation loops, and
+              design localization templates to claim high Map Pack positions.
+            </p>
+            <ul class="space-y-2.5 text-xs text-slate-300 font-medium">
+              <li class="flex items-center">
+                <span class="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></span>
+                GMB API Multi-Node Optimization
+              </li>
+              <li class="flex items-center">
+                <span class="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></span>
+                Localized Coordinates Schema Setup
+              </li>
+              <li class="flex items-center">
+                <span class="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></span>
+                Automatic Citation Review Integrations
+              </li>
+              <li class="flex items-center">
+                <span class="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></span>
+                Geo-Localized Content Node Clusters
+              </li>
+            </ul>
+          </div>
+          <div class="pt-8 mt-8 border-t border-slate-800">
+            <a href="contact.html?service=local"
+              class="w-full text-center block py-3 rounded-lg border border-agencyViolet/40 text-slate-200 font-semibold text-sm hover:bg-agencyViolet/10 hover:border-agencyViolet transition-all">
+              Request Local Blueprint
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Pricing / Retainer Tiers -->
+    <section class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+        <span
+          class="text-xs font-bold uppercase tracking-wider text-agencyCyan bg-agencyCyan/10 border border-agencyCyan/20 rounded-full px-4 py-1.5 inline-block">Pricing
+          Tiers</span>
+        <h2 class="text-3xl font-bold font-heading text-white">Predictable, Transparent Retainers</h2>
+        <p class="text-slate-400">Choose the growth speed that aligns with your active business stage.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+
+        <!-- Package 1 -->
+        <div
+          class="card-glass rounded-3xl p-8 border border-slate-800 flex flex-col justify-between hover:border-slate-700 transition duration-300">
+          <div class="space-y-6">
+            <div>
+              <span class="text-xs font-bold uppercase text-slate-400 tracking-widest block mb-2">Early
+                Acceleration</span>
+              <h3 class="text-2xl font-bold font-heading text-white">Growth Retainer</h3>
+              <p class="text-slate-400 text-xs mt-1">For brands looking to stabilize and expand their initial organic
+                and paid pipelines.</p>
+            </div>
+
+            <div class="flex items-baseline py-4 border-y border-slate-800">
+              <span class="text-4xl font-extrabold text-white">$3,500</span>
+              <span class="text-slate-500 text-sm ml-2">/ month</span>
+            </div>
+
+            <ul class="space-y-3.5 text-xs text-slate-300">
+              <li class="flex items-center">
+                <svg class="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                </svg>
+                Core Technical SEO Setup
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                </svg>
+                Meta or Google Ad Operations
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                </svg>
+                Real-Time Looker Studio Panel
+              </li>
+              <li class="flex items-center text-slate-500">
+                <svg class="w-4 h-4 text-slate-700 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+                Offline conversions API routing
+              </li>
+              <li class="flex items-center text-slate-500">
+                <svg class="w-4 h-4 text-slate-700 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+                Dedicated Slack engineering path
+              </li>
+            </ul>
+          </div>
+          <div class="pt-6 mt-8">
+            <a href="contact.html?retainer=growth"
+              class="w-full text-center block py-3 rounded-xl bg-slate-900 border border-slate-800 text-white font-semibold text-sm hover:bg-slate-800 transition">
+              Get Started
+            </a>
+          </div>
+        </div>
+
+        <!-- Package 2 (Highlighted) -->
+        <div
+          class="card-glass rounded-3xl p-8 border-2 border-agencyViolet flex flex-col justify-between relative shadow-2xl shadow-agencyViolet/10 scale-100 md:scale-[1.03]">
+          <div
+            class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-agencyViolet to-agencyCyan text-white text-[10px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full">
+            Recommended
+          </div>
+
+          <div class="space-y-6">
+            <div>
+              <span class="text-xs font-bold uppercase text-cyan-400 tracking-widest block mb-2">Aggressive Scale</span>
+              <h3 class="text-2xl font-bold font-heading text-white">Accelerator Retainer</h3>
+              <p class="text-slate-300 text-xs mt-1">Our flagship system. Comprehensive SEO & ad management built to
+                scale ROI exponentially.</p>
+            </div>
+
+            <div class="flex items-baseline py-4 border-y border-slate-800">
+              <span class="text-4xl font-extrabold text-white">$6,500</span>
+              <span class="text-slate-500 text-sm ml-2">/ month</span>
+            </div>
+
+            <ul class="space-y-3.5 text-xs text-slate-200">
+              <li class="flex items-center">
+                <svg class="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                </svg>
+                Multi-Channel Technical SEO
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                </svg>
+                Full Paid Media Operations (Meta & Google)
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                </svg>
+                CAPI Offline Conversion Server Integration
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                </svg>
+                Weekly Content & Schema updates
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                </svg>
+                Dedicated Slack path & monthly reviews
+              </li>
+            </ul>
+          </div>
+          <div class="pt-6 mt-8">
+            <a href="contact.html?retainer=accelerator"
+              class="w-full text-center block py-3.5 rounded-xl bg-gradient-to-r from-agencyViolet to-agencyCyan text-white font-bold text-sm hover:scale-[1.02] transition-transform shadow-lg shadow-agencyViolet/20">
+              Apply to Scale
+            </a>
+          </div>
+        </div>
+
+        <!-- Package 3 -->
+        <div
+          class="card-glass rounded-3xl p-8 border border-slate-800 flex flex-col justify-between hover:border-slate-700 transition duration-300">
+          <div class="space-y-6">
+            <div>
+              <span class="text-xs font-bold uppercase text-slate-400 tracking-widest block mb-2">Custom
+                Infrastructure</span>
+              <h3 class="text-2xl font-bold font-heading text-white">Enterprise Scaling</h3>
+              <p class="text-slate-400 text-xs mt-1">For market leaders requesting custom tracking stacks and
+                multi-market scaling.</p>
+            </div>
+
+            <div class="flex items-baseline py-4 border-y border-slate-800">
+              <span class="text-4xl font-extrabold text-white">Custom</span>
+              <span class="text-slate-500 text-xs ml-2">contract bases</span>
+            </div>
+
+            <ul class="space-y-3.5 text-xs text-slate-300">
+              <li class="flex items-center">
+                <svg class="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                </svg>
+                Global Multilingual SEO systems
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                </svg>
+                Complete Omnichannel Paid Media (inc. TV/DOOH)
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                </svg>
+                Dedicated Senior Growth Strategist
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                </svg>
+                Custom database CRM automation loops
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                </svg>
+                24/7 priority emergency pathway
+              </li>
+            </ul>
+          </div>
+          <div class="pt-6 mt-8">
+            <a href="contact.html?retainer=enterprise"
+              class="w-full text-center block py-3 rounded-xl bg-slate-900 border border-slate-800 text-white font-semibold text-sm hover:bg-slate-800 transition">
+              Book Architecture Session
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================
+       GLOBAL FOOTER
+       ========================================== -->
+  <footer class="bg-[#0B0F19] border-t border-white/10 pt-16 pb-8 relative z-10">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+
+      <!-- Left Column: Logo & Description -->
+      <div class="space-y-4">
+        <a href="index.html" class="flex items-center space-x-3">
+          <img src="assets/image/logo.jpg.jpeg" alt="AITS OFFICIAL Logo" class="h-10 w-auto object-contain">
+          <span class="text-2xl font-bold tracking-tight text-white font-heading">
+            AITS<span class="text-indigo-500 font-light">OFFICIAL</span>
+          </span>
+        </a>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          High-performance full-service digital marketing agency engineering organic traffic loops, local map scaling,
+          and high-converting advertising pipelines.
+        </p>
+      </div>
+
+      <!-- Column 2: Expertise -->
+      <div>
+        <h4 class="text-white font-semibold text-sm tracking-wider uppercase mb-4">Expertise</h4>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li><a href="services.html" class="hover:text-indigo-400 transition-colors">Search Engine Optimization</a>
+          </li>
+          <li><a href="services.html" class="hover:text-indigo-400 transition-colors">Meta & Paid Ads</a></li>
+          <li><a href="services.html" class="hover:text-indigo-400 transition-colors">Local GMB Scaling</a></li>
+          <li><a href="services.html" class="hover:text-indigo-400 transition-colors">Web Development</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Agency -->
+      <div>
+        <h4 class="text-white font-semibold text-sm tracking-wider uppercase mb-4">Agency</h4>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li><a href="about.html" class="hover:text-indigo-400 transition-colors">Our Story</a></li>
+          <li><a href="courses.html" class="hover:text-indigo-400 transition-colors">AITS Courses</a></li>
+          <li><a href="#" class="hover:text-indigo-400 transition-colors">Case Studies</a></li>
+          <li><a href="contact.html" class="hover:text-indigo-400 transition-colors">Get Proposal</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Contact Info -->
+      <div>
+        <h4 class="text-white font-semibold text-sm tracking-wider uppercase mb-4">Connect</h4>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li><span class="text-gray-300 font-medium">Location:</span> Lahore, Pakistan</li>
+          <li><a href="contact.html" class="hover:text-indigo-400 transition-colors">Support Portal</a></li>
+          <li><a href="privacy.html" class="hover:text-indigo-400 transition-colors">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom Copyright & Socials Bar -->
+    <div
+      class="max-w-7xl mx-auto px-6 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-xs text-gray-500">
+        &copy; 2026 AITS OFFICIAL. All rights reserved. Built for high-ticket performance.
+      </p>
+      <div class="flex items-center space-x-4 text-gray-400">
+        <a href="#" class="hover:text-white transition-colors"><i class="fab fa-linkedin text-lg"></i></a>
+        <a href="#" class="hover:text-white transition-colors"><i class="fab fa-twitter text-lg"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JS -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

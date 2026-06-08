@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Studies & Projects | AetherFlow Digital</title>
+  <meta name="description"
+    content="Explore our performance marketing and technical search engine optimization case studies. Direct growth results from real campaigns.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            agencyDark: '#0B0F19',
+            agencySlate: '#1E293B',
+            agencyViolet: '#8B5CF6',
+            agencyCyan: '#06B6D4',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="bg-[#0B0F19] text-slate-100 overflow-x-hidden bg-grid-pattern">
+
+  <!-- ==========================================
+       HEADER (STICKY NAVIGATION)
+       ========================================== -->
+  <header id="navbar-header"
+    class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-[#0B0F19]/90 backdrop-blur-md border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <!-- Logo & Title Section -->
+      <a href="index.html" class="flex items-center space-x-3">
+        <img src="assets/image/logo.jpg.jpeg" alt="AITS OFFICIAL Logo" class="h-12 w-auto object-contain">
+        <span class="text-2xl font-bold tracking-tight text-white font-heading">
+          AITS<span class="text-indigo-500 font-light">OFFICIAL</span>
+        </span>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav class="hidden md:flex items-center space-x-8">
+        <a href="index.html" class="nav-link font-medium text-sm transition-colors duration-300 nav-link-hover">Home</a>
+        <a href="about.html" class="nav-link font-medium text-sm transition-colors duration-300 nav-link-hover">About
+          Us</a>
+        <a href="services.html"
+          class="nav-link font-medium text-sm transition-colors duration-300 nav-link-hover">Services</a>
+        <a href="projects.html" class="nav-link font-medium text-sm transition-colors duration-300 nav-link-hover">Case
+          Studies</a>
+        <a href="courses.html"
+          class="nav-link font-medium text-sm transition-colors duration-300 nav-link-hover">Courses</a>
+        <a href="contact.html"
+          class="nav-link font-medium text-sm transition-colors duration-300 nav-link-hover">Contact</a>
+      </nav>
+
+      <!-- CTA Button -->
+      <div class="hidden md:flex">
+        <a href="contact.html"
+          class="relative group px-5 py-2.5 rounded-lg overflow-hidden font-medium text-sm text-white transition-all shadow-md shadow-agencyViolet/10 hover:shadow-cyan-400/20">
+          <div
+            class="absolute inset-0 w-full h-full bg-gradient-to-r from-agencyViolet to-agencyCyan transition-all duration-300 group-hover:opacity-90">
+          </div>
+          <span class="relative">Free Audit Call</span>
+        </a>
+      </div>
+
+      <!-- Hamburger Button (Mobile Only) -->
+      <button id="mobile-menu-btn"
+        class="md:hidden text-slate-300 hover:text-white focus:outline-none p-1.5 rounded-lg border border-slate-800"
+        aria-expanded="false" aria-label="Toggle navigation menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Drawer Overlay -->
+  <div id="mobile-menu"
+    class="fixed inset-0 bg-agencyDark/95 backdrop-blur-lg z-50 hidden flex-col justify-between p-6 animate-fade-in-up">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-slate-800">
+        <span class="text-xl font-bold font-heading text-white">AETHER<span
+            class="gradient-text-violet-cyan">FLOW</span></span>
+        <button id="mobile-menu-close"
+          class="text-slate-400 hover:text-white focus:outline-none p-1.5 border border-slate-800 rounded-lg">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <nav class="flex flex-col space-y-5 mt-8 text-lg font-medium">
+        <a href="index.html" class="nav-link text-slate-300 hover:text-white py-2">Home</a>
+        <a href="about.html" class="nav-link text-slate-300 hover:text-white py-2">About Us</a>
+        <a href="services.html" class="nav-link text-slate-300 hover:text-white py-2">Services</a>
+        <a href="projects.html" class="nav-link text-slate-300 hover:text-white py-2">Case Studies</a>
+        <a href="courses.html" class="nav-link text-slate-300 hover:text-white py-2">Courses</a>
+        <a href="contact.html" class="nav-link text-slate-300 hover:text-white py-2">Contact Us</a>
+      </nav>
+    </div>
+    <div class="pt-6 border-t border-slate-800">
+      <a href="contact.html"
+        class="w-full block text-center bg-gradient-to-r from-agencyViolet to-agencyCyan text-white font-medium py-3 rounded-lg hover:shadow-cyan-400/20 transition-all">
+        Get a Proposal
+      </a>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       MAIN CONTENT
+       ========================================== -->
+  <main class="pt-32 pb-24 animate-fade-in-up">
+    <section class="max-w-7xl mx-auto px-6">
+      <!-- Page Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <span
+          class="text-xs font-bold uppercase tracking-wider text-agencyViolet bg-agencyViolet/10 border border-agencyViolet/20 rounded-full px-4 py-1.5 inline-block">Real
+          ROI Studies</span>
+        <h1 class="text-3xl sm:text-5xl font-extrabold font-heading text-white">Proven Case Studies</h1>
+        <p class="text-slate-400">
+          We focus on verifiable analytics. Browse direct scaling cases across SEO, paid marketing, and local listings.
+        </p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="flex flex-wrap items-center justify-center gap-3 mb-12">
+        <button
+          class="filter-btn px-6 py-2.5 rounded-full border text-sm font-semibold transition-all duration-300 bg-gradient-to-r from-agencyViolet to-agencyCyan text-white border-transparent"
+          data-filter="all">
+          All Campaigns
+        </button>
+        <button
+          class="filter-btn px-6 py-2.5 rounded-full border text-sm font-semibold transition-all duration-300 bg-slate-900/60 text-slate-400 border-slate-800 hover:text-white hover:border-slate-700"
+          data-filter="seo">
+          Search Engineering (SEO)
+        </button>
+        <button
+          class="filter-btn px-6 py-2.5 rounded-full border text-sm font-semibold transition-all duration-300 bg-slate-900/60 text-slate-400 border-slate-800 hover:text-white hover:border-slate-700"
+          data-filter="meta-ads">
+          Meta & Google Ads
+        </button>
+        <button
+          class="filter-btn px-6 py-2.5 rounded-full border text-sm font-semibold transition-all duration-300 bg-slate-900/60 text-slate-400 border-slate-800 hover:text-white hover:border-slate-700"
+          data-filter="local-seo">
+          Local SEO / GMB
+        </button>
+      </div>
+
+      <!-- Filterable Projects Grid -->
+      <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Project 1 -->
+        <div
+          class="project-card card-glass rounded-2xl p-6 border border-slate-800/80 flex flex-col justify-between transition-all duration-300 glow-hover"
+          data-category="seo">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span
+                class="text-[10px] text-cyan-400 font-extrabold uppercase tracking-widest bg-cyan-500/10 border border-cyan-500/20 px-2.5 py-1 rounded-md">Enterprise
+                SEO</span>
+              <span class="text-xs text-slate-500 font-medium">B2B SaaS</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold font-heading text-white">Horizon SaaS</h3>
+              <p class="text-slate-400 text-xs mt-1">Stagnant organic growth & high paid acquisition loops.</p>
+            </div>
+            <div class="space-y-2 border-t border-slate-850 pt-4">
+              <div>
+                <span class="text-[11px] text-slate-500 font-semibold block">The Challenge:</span>
+                <p class="text-xs text-slate-300 mt-0.5">Trapped in high-CPC keywords with basic site crawl errors.</p>
+              </div>
+              <div>
+                <span class="text-[11px] text-slate-500 font-semibold block">The Solution:</span>
+                <p class="text-xs text-slate-300 mt-0.5">Rebuilt crawl rendering engine, created local directories, and
+                  deployed structured semantic nodes.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Results Badge -->
+          <div class="mt-6 pt-4 border-t border-slate-850 flex items-center justify-between">
+            <span class="text-xs text-slate-400">Campaign Result</span>
+            <span
+              class="text-sm font-extrabold bg-gradient-to-r from-agencyViolet to-agencyCyan text-white px-3 py-1.5 rounded-lg shadow-md shadow-agencyViolet/10">+340%
+              Traffic</span>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div
+          class="project-card card-glass rounded-2xl p-6 border border-slate-800/80 flex flex-col justify-between transition-all duration-300 glow-hover"
+          data-category="meta-ads">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span
+                class="text-[10px] text-agencyViolet font-extrabold uppercase tracking-widest bg-agencyViolet/10 border border-agencyViolet/20 px-2.5 py-1 rounded-md">Paid
+                Media</span>
+              <span class="text-xs text-slate-500 font-medium">Direct-to-Consumer</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold font-heading text-white">Lumina Apparel</h3>
+              <p class="text-slate-400 text-xs mt-1">Direct retail brand unable to scale Meta ad allocations.</p>
+            </div>
+            <div class="space-y-2 border-t border-slate-850 pt-4">
+              <div>
+                <span class="text-[11px] text-slate-500 font-semibold block">The Challenge:</span>
+                <p class="text-xs text-slate-300 mt-0.5">High customer acquisition cost (CAC) capping budget scale.</p>
+              </div>
+              <div>
+                <span class="text-[11px] text-slate-500 font-semibold block">The Solution:</span>
+                <p class="text-xs text-slate-300 mt-0.5">Implemented server CAPI hooks, dynamic audience segments, and
+                  automated creative testing matrices.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Results Badge -->
+          <div class="mt-6 pt-4 border-t border-slate-850 flex items-center justify-between">
+            <span class="text-xs text-slate-400">Campaign Result</span>
+            <span
+              class="text-sm font-extrabold bg-gradient-to-r from-agencyViolet to-agencyCyan text-white px-3 py-1.5 rounded-lg shadow-md shadow-agencyViolet/10">5.8x
+              Avg ROAS</span>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div
+          class="project-card card-glass rounded-2xl p-6 border border-slate-800/80 flex flex-col justify-between transition-all duration-300 glow-hover"
+          data-category="local-seo">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span
+                class="text-[10px] text-cyan-400 font-extrabold uppercase tracking-widest bg-cyan-500/10 border border-cyan-500/20 px-2.5 py-1 rounded-md">Local
+                Scaling</span>
+              <span class="text-xs text-slate-500 font-medium">Healthcare Clinics</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold font-heading text-white">Apex Dental Care</h3>
+              <p class="text-slate-400 text-xs mt-1">Invisible in Map Pack queries within their target metro.</p>
+            </div>
+            <div class="space-y-2 border-t border-slate-850 pt-4">
+              <div>
+                <span class="text-[11px] text-slate-500 font-semibold block">The Challenge:</span>
+                <p class="text-xs text-slate-300 mt-0.5">Outranked by competitors with poor review rates.</p>
+              </div>
+              <div>
+                <span class="text-[11px] text-slate-500 font-semibold block">The Solution:</span>
+                <p class="text-xs text-slate-300 mt-0.5">Built citation network layers, geo-localized content maps, and
+                  automated patient feedback loop integrations.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Results Badge -->
+          <div class="mt-6 pt-4 border-t border-slate-850 flex items-center justify-between">
+            <span class="text-xs text-slate-400">Campaign Result</span>
+            <span
+              class="text-sm font-extrabold bg-gradient-to-r from-agencyViolet to-agencyCyan text-white px-3 py-1.5 rounded-lg shadow-md shadow-agencyViolet/10">+410%
+              GMB Calls</span>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div
+          class="project-card card-glass rounded-2xl p-6 border border-slate-800/80 flex flex-col justify-between transition-all duration-300 glow-hover"
+          data-category="meta-ads">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span
+                class="text-[10px] text-agencyViolet font-extrabold uppercase tracking-widest bg-agencyViolet/10 border border-agencyViolet/20 px-2.5 py-1 rounded-md">E-Commerce
+                PPC</span>
+              <span class="text-xs text-slate-500 font-medium">Electronics</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold font-heading text-white">Vapor Tech Group</h3>
+              <p class="text-slate-400 text-xs mt-1">Declining track metrics and ad policy restrictions.</p>
+            </div>
+            <div class="space-y-2 border-t border-slate-850 pt-4">
+              <div>
+                <span class="text-[11px] text-slate-500 font-semibold block">The Challenge:</span>
+                <p class="text-xs text-slate-300 mt-0.5">iOS privacy shifts dropping data quality and lookalike
+                  accuracy.</p>
+              </div>
+              <div>
+                <span class="text-[11px] text-slate-500 font-semibold block">The Solution:</span>
+                <p class="text-xs text-slate-300 mt-0.5">Integrated third-party attribution servers and first-party
+                  customer tags to refine data delivery.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Results Badge -->
+          <div class="mt-6 pt-4 border-t border-slate-850 flex items-center justify-between">
+            <span class="text-xs text-slate-400">Campaign Result</span>
+            <span
+              class="text-sm font-extrabold bg-gradient-to-r from-agencyViolet to-agencyCyan text-white px-3 py-1.5 rounded-lg shadow-md shadow-agencyViolet/10">+220%
+              Revenue</span>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div
+          class="project-card card-glass rounded-2xl p-6 border border-slate-800/80 flex flex-col justify-between transition-all duration-300 glow-hover"
+          data-category="seo">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span
+                class="text-[10px] text-cyan-400 font-extrabold uppercase tracking-widest bg-cyan-500/10 border border-cyan-500/20 px-2.5 py-1 rounded-md">Global
+                SEO</span>
+              <span class="text-xs text-slate-500 font-medium">Logistics</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold font-heading text-white">Globex Shipping</h3>
+              <p class="text-slate-400 text-xs mt-1">Missing out on high-intent international traffic.</p>
+            </div>
+            <div class="space-y-2 border-t border-slate-850 pt-4">
+              <div>
+                <span class="text-[11px] text-slate-500 font-semibold block">The Challenge:</span>
+                <p class="text-xs text-slate-300 mt-0.5">Poor multiregional mapping and crawl blocks across key nodes.
+                </p>
+              </div>
+              <div>
+                <span class="text-[11px] text-slate-500 font-semibold block">The Solution:</span>
+                <p class="text-xs text-slate-300 mt-0.5">Deployed hreflang maps, structured regional folders, and built
+                  global content loops.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Results Badge -->
+          <div class="mt-6 pt-4 border-t border-slate-850 flex items-center justify-between">
+            <span class="text-xs text-slate-400">Campaign Result</span>
+            <span
+              class="text-sm font-extrabold bg-gradient-to-r from-agencyViolet to-agencyCyan text-white px-3 py-1.5 rounded-lg shadow-md shadow-agencyViolet/10">100k+
+              Visits/Mo</span>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div
+          class="project-card card-glass rounded-2xl p-6 border border-slate-800/80 flex flex-col justify-between transition-all duration-300 glow-hover"
+          data-category="local-seo">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span
+                class="text-[10px] text-cyan-400 font-extrabold uppercase tracking-widest bg-cyan-500/10 border border-cyan-500/20 px-2.5 py-1 rounded-md">Local
+                SEO</span>
+              <span class="text-xs text-slate-500 font-medium">Legal Services</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold font-heading text-white">Premier Law Firm</h3>
+              <p class="text-slate-400 text-xs mt-1">Stagnant local intake pipelines & low map ranks.</p>
+            </div>
+            <div class="space-y-2 border-t border-slate-850 pt-4">
+              <div>
+                <span class="text-[11px] text-slate-500 font-semibold block">The Challenge:</span>
+                <p class="text-xs text-slate-300 mt-0.5">Dominated by deep-pocket local directory sites.</p>
+              </div>
+              <div>
+                <span class="text-[11px] text-slate-500 font-semibold block">The Solution:</span>
+                <p class="text-xs text-slate-300 mt-0.5">Built geo-density content nodes, structured practice-area
+                  schemas, and cleaned listing records.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Results Badge -->
+          <div class="mt-6 pt-4 border-t border-slate-850 flex items-center justify-between">
+            <span class="text-xs text-slate-400">Campaign Result</span>
+            <span
+              class="text-sm font-extrabold bg-gradient-to-r from-agencyViolet to-agencyCyan text-white px-3 py-1.5 rounded-lg shadow-md shadow-agencyViolet/10">+185%
+              Leads</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================
+       GLOBAL FOOTER
+       ========================================== -->
+  <footer class="bg-[#0B0F19] border-t border-white/10 pt-16 pb-8 relative z-10">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+
+      <!-- Left Column: Logo & Description -->
+      <div class="space-y-4">
+        <a href="index.html" class="flex items-center space-x-3">
+          <img src="assets/image/logo.jpg.jpeg" alt="AITS OFFICIAL Logo" class="h-10 w-auto object-contain">
+          <span class="text-2xl font-bold tracking-tight text-white font-heading">
+            AITS<span class="text-indigo-500 font-light">OFFICIAL</span>
+          </span>
+        </a>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          High-performance full-service digital marketing agency engineering organic traffic loops, local map scaling,
+          and high-converting advertising pipelines.
+        </p>
+      </div>
+
+      <!-- Column 2: Expertise -->
+      <div>
+        <h4 class="text-white font-semibold text-sm tracking-wider uppercase mb-4">Expertise</h4>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li><a href="services.html" class="hover:text-indigo-400 transition-colors">Search Engine Optimization</a>
+          </li>
+          <li><a href="services.html" class="hover:text-indigo-400 transition-colors">Meta & Paid Ads</a></li>
+          <li><a href="services.html" class="hover:text-indigo-400 transition-colors">Local GMB Scaling</a></li>
+          <li><a href="services.html" class="hover:text-indigo-400 transition-colors">Web Development</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Agency -->
+      <div>
+        <h4 class="text-white font-semibold text-sm tracking-wider uppercase mb-4">Agency</h4>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li><a href="about.html" class="hover:text-indigo-400 transition-colors">Our Story</a></li>
+          <li><a href="courses.html" class="hover:text-indigo-400 transition-colors">AITS Courses</a></li>
+          <li><a href="#" class="hover:text-indigo-400 transition-colors">Case Studies</a></li>
+          <li><a href="contact.html" class="hover:text-indigo-400 transition-colors">Get Proposal</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Contact Info -->
+      <div>
+        <h4 class="text-white font-semibold text-sm tracking-wider uppercase mb-4">Connect</h4>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li><span class="text-gray-300 font-medium">Location:</span> Lahore, Pakistan</li>
+          <li><a href="contact.html" class="hover:text-indigo-400 transition-colors">Support Portal</a></li>
+          <li><a href="privacy.html" class="hover:text-indigo-400 transition-colors">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom Copyright & Socials Bar -->
+    <div
+      class="max-w-7xl mx-auto px-6 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-xs text-gray-500">
+        &copy; 2026 AITS OFFICIAL. All rights reserved. Built for high-ticket performance.
+      </p>
+      <div class="flex items-center space-x-4 text-gray-400">
+        <a href="#" class="hover:text-white transition-colors"><i class="fab fa-linkedin text-lg"></i></a>
+        <a href="#" class="hover:text-white transition-colors"><i class="fab fa-twitter text-lg"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JS -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
