@@ -1,475 +1,337 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Growth Academy & Masterclasses | AetherFlow Digital</title>
-  <meta name="description"
-    content="Learn technical SEO, advanced Meta and Google Ads, and Local Map Pack authority scaling directly from our agency experts.">
+  <title>Technical Academics — AITS Training Programs & Specialized Bootcamps</title>
 
-  <!-- Tailwind CSS CDN -->
+  <!-- TAILWIND FRAMEWORK CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      darkMode: 'class',
       theme: {
         extend: {
           colors: {
-            agencyDark: '#0B0F19',
-            agencySlate: '#1E293B',
-            agencyViolet: '#8B5CF6',
-            agencyCyan: '#06B6D4',
+            brand: {
+              blue: '#2563eb',
+              lightBlue: '#3b82f6',
+              darkBg: '#090d16',
+              cardBg: '#111827',
+              borderGray: '#1f2937'
+            }
           },
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-            heading: ['Outfit', 'sans-serif'],
+          animation: {
+            'reveal': 'revealUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards'
+          },
+          keyframes: {
+            revealUp: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            }
           }
         }
       }
     }
   </script>
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- PREMIUM GOOGLE FONTS & STYLES -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=400;500;600;700;800&display=swap');
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .premium-transition {
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .glow-card:hover {
+      box-shadow: 0 0 40px -5px rgba(37, 99, 235, 0.25);
+      border-color: rgba(59, 130, 246, 0.4);
+    }
+  </style>
 </head>
 
-<body class="bg-[#0B0F19] text-slate-100 overflow-x-hidden bg-grid-pattern">
+<body class="bg-brand-darkBg text-gray-300 antialiased selection:bg-brand-blue selection:text-white overflow-x-hidden">
 
-  <!-- ==========================================
-       HEADER (STICKY NAVIGATION)
-       ========================================== -->
-  <header id="navbar-header"
-    class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-[#0B0F19]/90 backdrop-blur-md border-b border-white/10">
+  <!-- ========================================== -->
+  <!-- 1. FIXED HEADER / NAVIGATION BAR          -->
+  <!-- ========================================== -->
+  <nav
+    class="fixed top-0 left-0 w-full z-50 bg-brand-darkBg/80 backdrop-blur-md border-b border-brand-borderGray premium-transition">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-      <!-- Logo & Title Section -->
-      <a href="index.html" class="flex items-center space-x-3">
-        <img src="assets/image/logo.jpg.jpeg" alt="AITS OFFICIAL Logo" class="h-12 w-auto object-contain">
-        <span class="text-2xl font-bold tracking-tight text-white font-heading">
-          AITS<span class="text-indigo-500 font-light">OFFICIAL</span>
-        </span>
+
+      <!-- SMART LOGO (VERIFIED FROM image_b25106.png) -->
+      <a href="index.html" class="flex items-center space-x-3 group">
+        <div
+          class="relative w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center font-bold text-white text-lg shadow-lg transform group-hover:scale-105 premium-transition">
+          A
+          <img src="images/logo.jpg" alt="AITS"
+            class="absolute inset-0 w-full h-full object-contain rounded-lg opacity-0" onload="this.style.opacity='1'"
+            onerror="this.src='images/logo.png'">
+        </div>
+        <div class="flex flex-col">
+          <span
+            class="text-white font-extrabold text-lg tracking-tight leading-none group-hover:text-brand-lightBlue premium-transition">AITS</span>
+          <span class="text-brand-lightBlue text-[10px] uppercase tracking-widest font-bold mt-1">Software House</span>
+        </div>
       </a>
 
-      <!-- Desktop Nav Menu -->
-      <nav class="hidden md:flex items-center space-x-8">
-        <a href="index.html" class="nav-link font-medium text-sm transition-colors duration-300 nav-link-hover">Home</a>
-        <a href="about.html" class="nav-link font-medium text-sm transition-colors duration-300 nav-link-hover">About
+      <!-- DESKTOP MENU LINKS -->
+      <div class="hidden lg:flex items-center space-x-8">
+        <a href="index.html"
+          class="text-xs uppercase tracking-wider font-semibold text-gray-400 hover:text-white transition-colors duration-200">Home</a>
+        <a href="about.html"
+          class="text-xs uppercase tracking-wider font-semibold text-gray-400 hover:text-white transition-colors duration-200">About
           Us</a>
-        <a href="services.html"
-          class="nav-link font-medium text-sm transition-colors duration-300 nav-link-hover">Services</a>
-        <a href="projects.html" class="nav-link font-medium text-sm transition-colors duration-300 nav-link-hover">Case
-          Studies</a>
+        <a href="portfolio.html"
+          class="text-xs uppercase tracking-wider font-semibold text-gray-400 hover:text-white transition-colors duration-200">Portfolio</a>
+        <a href="projects.html"
+          class="text-xs uppercase tracking-wider font-semibold text-gray-400 hover:text-white transition-colors duration-200">Projects</a>
         <a href="courses.html"
-          class="nav-link font-medium text-sm transition-colors duration-300 nav-link-hover">Courses</a>
+          class="text-xs uppercase tracking-wider font-bold text-brand-lightBlue border-b-2 border-brand-blue pb-1 premium-transition">Courses</a>
+        <a href="booking.html"
+          class="text-xs uppercase tracking-wider font-bold text-gray-300 hover:text-brand-lightBlue transition-colors duration-200">Services
+          Booking</a>
         <a href="contact.html"
-          class="nav-link font-medium text-sm transition-colors duration-300 nav-link-hover">Contact</a>
-      </nav>
+          class="text-xs uppercase tracking-wider font-semibold text-gray-400 hover:text-white transition-colors duration-200">Contact</a>
 
-      <!-- CTA Button -->
-      <div class="hidden md:flex">
-        <a href="contact.html"
-          class="relative group px-5 py-2.5 rounded-lg overflow-hidden font-medium text-sm text-white transition-all shadow-md shadow-agencyViolet/10 hover:shadow-cyan-400/20">
-          <div
-            class="absolute inset-0 w-full h-full bg-gradient-to-r from-agencyViolet to-agencyCyan transition-all duration-300 group-hover:opacity-90">
-          </div>
-          <span class="relative">Free Audit Call</span>
+        <a href="tel:+923225673641"
+          class="text-xs font-bold text-white border-l border-gray-800 pl-6 hover:text-brand-lightBlue transition-colors">
+          +92 322 5673641
         </a>
       </div>
 
-      <!-- Hamburger Button (Mobile Only) -->
-      <button id="mobile-menu-btn"
-        class="md:hidden text-slate-300 hover:text-white focus:outline-none p-1.5 rounded-lg border border-slate-800"
-        aria-expanded="false" aria-label="Toggle navigation menu">
+      <!-- MOBILE MENU BUTTON -->
+      <button id="menu-toggle" class="lg:hidden text-gray-400 hover:text-white focus:outline-none premium-transition">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
       </button>
     </div>
-  </header>
 
-  <!-- Mobile Menu Drawer Overlay -->
-  <div id="mobile-menu"
-    class="fixed inset-0 bg-agencyDark/95 backdrop-blur-lg z-50 hidden flex-col justify-between p-6 animate-fade-in-up">
-    <div>
-      <div class="flex items-center justify-between pb-6 border-b border-slate-800">
-        <span class="text-xl font-bold font-heading text-white">AETHER<span
-            class="gradient-text-violet-cyan">FLOW</span></span>
-        <button id="mobile-menu-close"
-          class="text-slate-400 hover:text-white focus:outline-none p-1.5 border border-slate-800 rounded-lg">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
+    <!-- MOBILE DROPDOWN DRAWER -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-brand-darkBg border-b border-brand-borderGray px-6 py-6 space-y-4">
+      <a href="index.html" class="block text-xs uppercase font-semibold text-gray-400">Home</a>
+      <a href="about.html" class="block text-xs uppercase font-semibold text-gray-400">About Us</a>
+      <a href="portfolio.html" class="block text-xs uppercase font-semibold text-gray-400">Portfolio</a>
+      <a href="projects.html" class="block text-xs uppercase font-semibold text-gray-400">Projects</a>
+      <a href="courses.html" class="block text-xs uppercase font-bold text-brand-lightBlue">Courses</a>
+      <a href="booking.html" class="block text-xs uppercase font-bold text-gray-400">Services Booking</a>
+      <a href="contact.html" class="block text-xs uppercase font-semibold text-gray-400">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ========================================== -->
+  <!-- 2. COURSES HERO ACADEMICS SCREEN            -->
+  <!-- ========================================== -->
+  <section
+    class="relative pt-40 pb-16 bg-[radial-gradient(ellipse_60%_60%_at_50%_-10%,rgba(37,99,235,0.1),transparent_100%)]">
+    <div class="max-w-5xl mx-auto px-6 text-center space-y-4 animate-reveal">
+      <span class="text-brand-lightBlue text-xs uppercase tracking-[0.25em] font-extrabold block">// ELITE SKILL
+        LABS</span>
+      <h1 class="text-4xl sm:text-5xl font-black text-white tracking-tight">
+        Advanced Technical <span
+          class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">Training Blueprints</span>
+      </h1>
+      <p class="text-sm text-gray-400 max-w-2xl mx-auto leading-relaxed">
+        Direct deployment learning paths engineered and mentored by industry operators. Learn exact frameworks used to
+        scale real-world international enterprises.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 3. DETAILED COURSE BOX GRID                -->
+  <!-- ========================================== -->
+  <section class="py-16 bg-black border-t border-brand-borderGray">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- COURSE 1: TECHNICAL SEO -->
+      <div
+        class="bg-brand-darkBg border border-brand-borderGray rounded-xl p-6 space-y-6 premium-transition glow-card flex flex-col justify-between">
+        <div class="space-y-4">
+          <div class="flex items-center justify-between">
+            <span
+              class="text-brand-lightBlue text-[10px] uppercase font-black tracking-wider bg-blue-950/60 px-2.5 py-1 rounded">Advanced
+              Block</span>
+            <span class="text-gray-500 text-xs font-semibold">08 Weeks</span>
+          </div>
+          <h3 class="text-white text-lg font-extrabold tracking-tight">Technical SEO & Search Velocity Engineering</h3>
+          <p class="text-gray-500 text-xs leading-relaxed">
+            Master enterprise-level SEO auditing, semantic search graph mapping, absolute index structures, custom
+            schema configurations, and Google Search Console performance operations.
+          </p>
+          <ul class="text-xs text-gray-400 space-y-2 pt-2">
+            <li class="flex items-center space-x-2">
+              <span class="text-brand-blue font-bold">✓</span> <span>Core Web Vitals & Redirects</span>
+            </li>
+            <li class="flex items-center space-x-2">
+              <span class="text-brand-blue font-bold">✓</span> <span>RankMath & Yoast Architecture</span>
+            </li>
+          </ul>
+        </div>
+        <div class="pt-4 border-t border-gray-900 flex items-center justify-between">
+          <div>
+            <span class="text-gray-600 text-[10px] uppercase font-bold block">Tuition Metric</span>
+            <span class="text-white text-base font-black">Professional</span>
+          </div>
+          <a href="booking.html"
+            class="px-4 py-2 bg-brand-blue hover:bg-blue-700 text-white text-[11px] font-bold uppercase tracking-wider rounded premium-transition">Enroll
+            Portal</a>
+        </div>
       </div>
-      <nav class="flex flex-col space-y-5 mt-8 text-lg font-medium">
-        <a href="index.html" class="nav-link text-slate-300 hover:text-white py-2">Home</a>
-        <a href="about.html" class="nav-link text-slate-300 hover:text-white py-2">About Us</a>
-        <a href="services.html" class="nav-link text-slate-300 hover:text-white py-2">Services</a>
-        <a href="projects.html" class="nav-link text-slate-300 hover:text-white py-2">Case Studies</a>
-        <a href="courses.html" class="nav-link text-slate-300 hover:text-white py-2">Courses</a>
-        <a href="contact.html" class="nav-link text-slate-300 hover:text-white py-2">Contact Us</a>
-      </nav>
-    </div>
-    <div class="pt-6 border-t border-slate-800">
-      <a href="contact.html"
-        class="w-full block text-center bg-gradient-to-r from-agencyViolet to-agencyCyan text-white font-medium py-3 rounded-lg hover:shadow-cyan-400/20 transition-all">
-        Get a Proposal
-      </a>
-    </div>
-  </div>
 
-  <!-- ==========================================
-       MAIN CONTENT
-       ========================================== -->
-  <main class="pt-32 pb-24 animate-fade-in-up">
-    <section class="max-w-7xl mx-auto px-6">
+      <!-- COURSE 2: WEB DEVELOPMENT -->
+      <div
+        class="bg-brand-darkBg border border-brand-borderGray rounded-xl p-6 space-y-6 premium-transition glow-card flex flex-col justify-between">
+        <div class="space-y-4">
+          <div class="flex items-center justify-between">
+            <span
+              class="text-brand-lightBlue text-[10px] uppercase font-black tracking-wider bg-blue-950/60 px-2.5 py-1 rounded">Full
+              Stack</span>
+            <span class="text-gray-500 text-xs font-semibold">12 Weeks</span>
+          </div>
+          <h3 class="text-white text-lg font-extrabold tracking-tight">Enterprise Web Engineering & Custom Frontends
+          </h3>
+          <p class="text-gray-500 text-xs leading-relaxed">
+            Build modern scalable web interfaces using professional front-end tools like Tailwind CSS, corporate
+            WordPress core architecture, custom clean layouts, and deployment architectures.
+          </p>
+          <ul class="text-xs text-gray-400 space-y-2 pt-2">
+            <li class="flex items-center space-x-2">
+              <span class="text-brand-blue font-bold">✓</span> <span>Tailwind CSS & Utility Workflows</span>
+            </li>
+            <li class="flex items-center space-x-2">
+              <span class="text-brand-blue font-bold">✓</span> <span>Custom Code & Layout Structures</span>
+            </li>
+          </ul>
+        </div>
+        <div class="pt-4 border-t border-gray-900 flex items-center justify-between">
+          <div>
+            <span class="text-gray-600 text-[10px] uppercase font-bold block">Tuition Metric</span>
+            <span class="text-white text-base font-black">Elite Dev</span>
+          </div>
+          <a href="booking.html"
+            class="px-4 py-2 bg-brand-blue hover:bg-blue-700 text-white text-[11px] font-bold uppercase tracking-wider rounded premium-transition">Enroll
+            Portal</a>
+        </div>
+      </div>
 
-      <!-- Page Header -->
-      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-        <span
-          class="text-xs font-bold uppercase tracking-wider text-agencyCyan bg-agencyCyan/10 border border-agencyCyan/20 rounded-full px-4 py-1.5 inline-block">Growth
-          Academy</span>
-        <h1 class="text-3xl sm:text-5xl font-extrabold font-heading text-white">Digital Masterclasses</h1>
-        <p class="text-slate-400">
-          Learn the exact technical playbooks and scaling methods our agency engineers use daily to scale partner
-          brands.
+      <!-- COURSE 3: ADVERTISING & LOCAL REVENUE -->
+      <div
+        class="bg-brand-darkBg border border-brand-borderGray rounded-xl p-6 space-y-6 premium-transition glow-card flex flex-col justify-between">
+        <div class="space-y-4">
+          <div class="flex items-center justify-between">
+            <span
+              class="text-brand-lightBlue text-[10px] uppercase font-black tracking-wider bg-blue-950/60 px-2.5 py-1 rounded">Growth
+              Suite</span>
+            <span class="text-gray-500 text-xs font-semibold">06 Weeks</span>
+          </div>
+          <h3 class="text-white text-lg font-extrabold tracking-tight">Meta Ads Matrix & Google Business Domination</h3>
+          <p class="text-gray-500 text-xs leading-relaxed">
+            Learn to configure premium localized marketing strategies. Map exact ad set structures, optimize local
+            business listings (GMB), and capture organic local service search intent.
+          </p>
+          <ul class="text-xs text-gray-400 space-y-2 pt-2">
+            <li class="flex items-center space-x-2">
+              <span class="text-brand-blue font-bold">✓</span> <span>GMB Ranking Optimizations</span>
+            </li>
+            <li class="flex items-center space-x-2">
+              <span class="text-brand-blue font-bold">✓</span> <span>Meta Ad Set Strategy & Sourcing</span>
+            </li>
+          </ul>
+        </div>
+        <div class="pt-4 border-t border-gray-900 flex items-center justify-between">
+          <div>
+            <span class="text-gray-600 text-[10px] uppercase font-bold block">Tuition Metric</span>
+            <span class="text-white text-base font-black">Performance</span>
+          </div>
+          <a href="booking.html"
+            class="px-4 py-2 bg-brand-blue hover:bg-blue-700 text-white text-[11px] font-bold uppercase tracking-wider rounded premium-transition">Enroll
+            Portal</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 4. FOOTER SYSTEM                          -->
+  <!-- ========================================== -->
+  <footer class="bg-brand-darkBg border-t border-brand-borderGray pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+
+      <div class="space-y-4">
+        <span class="text-white font-black text-xl tracking-wider block">AITS</span>
+        <p class="text-gray-500 text-xs leading-relaxed">
+          High-performance corporate web systems, technical SEO graphs, and enterprise-scale digital marketing systems.
+          Engineered for international market leaders since 2023.
         </p>
       </div>
 
-      <!-- Courses Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-        <!-- Course Card 1 -->
-        <div
-          class="card-glass rounded-2xl overflow-hidden border border-slate-800 flex flex-col justify-between group glow-hover">
-          <!-- Thumbnail area -->
-          <div
-            class="h-48 w-full bg-gradient-to-br from-slate-900 to-slate-950 flex flex-col justify-between p-6 border-b border-slate-800 relative overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-tr from-agencyViolet/10 to-transparent"></div>
-            <div class="flex items-center justify-between z-10">
-              <span
-                class="text-[10px] text-agencyViolet font-extrabold uppercase tracking-widest bg-agencyViolet/10 border border-agencyViolet/20 px-2 py-1 rounded">Advanced</span>
-              <span class="text-xs text-slate-400 font-mono">18 Hours Video</span>
-            </div>
-            <div class="z-10">
-              <span class="text-[10px] text-cyan-400 font-bold tracking-widest uppercase block mb-1">Search
-                Engineering</span>
-              <h3 class="text-xl font-bold font-heading text-white group-hover:text-cyan-400 transition-colors">Advanced
-                SEO Blueprint</h3>
-            </div>
-          </div>
-
-          <!-- Description and details -->
-          <div class="p-6 flex flex-col justify-between flex-grow">
-            <div class="space-y-4">
-              <p class="text-slate-400 text-sm leading-relaxed">
-                A technical search optimization blueprint detailing server-side crawl configuration, entity data
-                structure injection, edge redirects, and international directory systems.
-              </p>
-
-              <div class="flex items-center space-x-3 text-xs text-slate-300">
-                <span class="flex items-center">
-                  <svg class="w-4 h-4 mr-1 text-agencyViolet" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                  </svg>
-                  42 Modules
-                </span>
-                <span class="w-1.5 h-1.5 bg-slate-800 rounded-full"></span>
-                <span>Lifetime Access</span>
-              </div>
-            </div>
-
-            <!-- Price & Button -->
-            <div class="pt-6 mt-6 border-t border-slate-850 flex items-center justify-between">
-              <span class="text-2xl font-extrabold text-white font-heading">$497</span>
-              <a href="contact.html?enroll=seo"
-                class="px-5 py-2.5 rounded-lg bg-gradient-to-r from-agencyViolet to-agencyCyan text-white text-xs font-bold hover:scale-[1.03] transition-transform">
-                Enroll Now
-              </a>
-            </div>
-          </div>
+      <!-- HARDLINKED CORE NAVIGATION -->
+      <div class="space-y-3">
+        <h4 class="text-white text-xs uppercase font-bold tracking-wider">Core Navigation</h4>
+        <div class="grid grid-cols-1 gap-2 text-xs">
+          <a href="index.html" class="hover:text-brand-lightBlue premium-transition">• Home</a>
+          <a href="about.html" class="hover:text-brand-lightBlue premium-transition">• About Us</a>
+          <a href="portfolio.html" class="hover:text-brand-lightBlue premium-transition">• Portfolio</a>
+          <a href="projects.html" class="hover:text-brand-lightBlue premium-transition">• Projects</a>
+          <a href="courses.html" class="hover:text-brand-lightBlue premium-transition">• Courses</a>
+          <a href="booking.html" class="hover:text-brand-lightBlue premium-transition font-bold text-gray-300">• Booking
+            Desk</a>
+          <a href="contact.html" class="hover:text-brand-lightBlue premium-transition">• Contact</a>
         </div>
+      </div>
 
-        <!-- Course Card 2 -->
-        <div
-          class="card-glass rounded-2xl overflow-hidden border border-slate-800 flex flex-col justify-between group glow-hover">
-          <!-- Thumbnail area -->
-          <div
-            class="h-48 w-full bg-gradient-to-br from-slate-900 to-slate-950 flex flex-col justify-between p-6 border-b border-slate-800 relative overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-tr from-agencyCyan/10 to-transparent"></div>
-            <div class="flex items-center justify-between z-10">
-              <span
-                class="text-[10px] text-agencyViolet font-extrabold uppercase tracking-widest bg-agencyViolet/10 border border-agencyViolet/20 px-2 py-1 rounded">Advanced</span>
-              <span class="text-xs text-slate-400 font-mono">14 Hours Video</span>
-            </div>
-            <div class="z-10">
-              <span class="text-[10px] text-cyan-400 font-bold tracking-widest uppercase block mb-1">Paid Ads</span>
-              <h3 class="text-xl font-bold font-heading text-white group-hover:text-cyan-400 transition-colors">Meta Ads
-                Mastery</h3>
-            </div>
-          </div>
-
-          <!-- Description and details -->
-          <div class="p-6 flex flex-col justify-between flex-grow">
-            <div class="space-y-4">
-              <p class="text-slate-400 text-sm leading-relaxed">
-                Master server-side conversion matching loops, offline lead signal feeds, machine learning optimization,
-                and dynamic testing matrices built to expand high scale targets.
-              </p>
-
-              <div class="flex items-center space-x-3 text-xs text-slate-300">
-                <span class="flex items-center">
-                  <svg class="w-4 h-4 mr-1 text-agencyViolet" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                  </svg>
-                  35 Modules
-                </span>
-                <span class="w-1.5 h-1.5 bg-slate-800 rounded-full"></span>
-                <span>Lifetime Access</span>
-              </div>
-            </div>
-
-            <!-- Price & Button -->
-            <div class="pt-6 mt-6 border-t border-slate-850 flex items-center justify-between">
-              <span class="text-2xl font-extrabold text-white font-heading">$397</span>
-              <a href="contact.html?enroll=meta"
-                class="px-5 py-2.5 rounded-lg bg-gradient-to-r from-agencyViolet to-agencyCyan text-white text-xs font-bold hover:scale-[1.03] transition-transform">
-                Enroll Now
-              </a>
-            </div>
-          </div>
+      <!-- ALL SERVICES ROUTING MAP -->
+      <div class="space-y-3">
+        <h4 class="text-white text-xs uppercase font-bold tracking-wider">All Services Pages</h4>
+        <div class="grid grid-cols-1 gap-2 text-xs text-gray-400">
+          <a href="booking.html" class="hover:text-brand-lightBlue premium-transition">// Premium Web Engineering</a>
+          <a href="booking.html" class="hover:text-brand-lightBlue premium-transition">// Technical SEO Domination</a>
+          <a href="booking.html" class="hover:text-brand-lightBlue premium-transition">// Google Business Profile
+            (GBP)</a>
+          <a href="booking.html" class="hover:text-brand-lightBlue premium-transition">// Google Ads Strategy</a>
+          <a href="booking.html" class="hover:text-brand-lightBlue premium-transition">// Shopify E-Commerce Scaling</a>
+          <a href="booking.html" class="hover:text-brand-lightBlue premium-transition">// WordPress Custom
+            Architecture</a>
         </div>
-
-        <!-- Course Card 3 -->
-        <div
-          class="card-glass rounded-2xl overflow-hidden border border-slate-800 flex flex-col justify-between group glow-hover">
-          <!-- Thumbnail area -->
-          <div
-            class="h-48 w-full bg-gradient-to-br from-slate-900 to-slate-950 flex flex-col justify-between p-6 border-b border-slate-800 relative overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-tr from-agencyViolet/10 to-transparent"></div>
-            <div class="flex items-center justify-between z-10">
-              <span
-                class="text-[10px] text-cyan-400 font-extrabold uppercase tracking-widest bg-cyan-500/10 border border-cyan-500/20 px-2 py-1 rounded">Intermediate</span>
-              <span class="text-xs text-slate-400 font-mono">10 Hours Video</span>
-            </div>
-            <div class="z-10">
-              <span class="text-[10px] text-cyan-400 font-bold tracking-widest uppercase block mb-1">Local
-                Authority</span>
-              <h3 class="text-xl font-bold font-heading text-white group-hover:text-cyan-400 transition-colors">Local
-                SEO & GMB Scaling</h3>
-            </div>
-          </div>
-
-          <!-- Description and details -->
-          <div class="p-6 flex flex-col justify-between flex-grow">
-            <div class="space-y-4">
-              <p class="text-slate-400 text-sm leading-relaxed">
-                A blueprints map for localized search layouts, geo-coordinates schemas, Map Pack local rank
-                calculations, and review loop software scripts.
-              </p>
-
-              <div class="flex items-center space-x-3 text-xs text-slate-300">
-                <span class="flex items-center">
-                  <svg class="w-4 h-4 mr-1 text-agencyViolet" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                  </svg>
-                  28 Modules
-                </span>
-                <span class="w-1.5 h-1.5 bg-slate-800 rounded-full"></span>
-                <span>Lifetime Access</span>
-              </div>
-            </div>
-
-            <!-- Price & Button -->
-            <div class="pt-6 mt-6 border-t border-slate-850 flex items-center justify-between">
-              <span class="text-2xl font-extrabold text-white font-heading">$297</span>
-              <a href="contact.html?enroll=local"
-                class="px-5 py-2.5 rounded-lg bg-gradient-to-r from-agencyViolet to-agencyCyan text-white text-xs font-bold hover:scale-[1.03] transition-transform">
-                Enroll Now
-              </a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-  </main>
-  <!-- Course Admission Form Section -->
-  <div class="card-glass border border-slate-800 rounded-xl p-6 lg:p-8 max-w-2xl mx-auto my-12 bg-slate-950/40">
-    <h3 class="text-2xl font-bold font-heading text-white mb-2 text-center">Course Admission Inquiry</h3>
-    <p class="text-slate-400 text-sm text-center mb-6">Fill out this form to secure your slot at Abdullah Institute of
-      Tech Skills (AITS).</p>
-
-    <form id="course-admission-form" class="space-y-5" action="https://api.web3forms.com/submit" method="POST">
-      <!-- Web3Forms Access Key -->
-      <input type="hidden" name="access_key" value="513870f7-f601-4fc9-b663-ed254760bea2">
-
-      <!-- Custom Subject Line for Gmail -->
-      <input type="hidden" name="subject" value="New Student Admission Inquiry - AITS">
-
-      <!-- Student Name -->
-      <div class="flex flex-col space-y-1.5">
-        <label for="student-name" class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Student Full
-          Name *</label>
-        <input type="text" id="student-name" name="student_name" placeholder="Ali Hamza" required
-          class="bg-slate-950/80 border border-slate-800 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-agencyViolet transition duration-300">
       </div>
 
-      <!-- Student Email -->
-      <div class="flex flex-col space-y-1.5">
-        <label for="student-email" class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Email Address
-          *</label>
-        <input type="email" id="student-email" name="student_email" placeholder="example@gmail.com" required
-          class="bg-slate-950/80 border border-slate-800 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-agencyViolet transition duration-300">
-      </div>
-
-      <!-- WhatsApp / Phone Number -->
-      <div class="flex flex-col space-y-1.5">
-        <label for="student-phone" class="text-xs font-semibold text-slate-400 uppercase tracking-wider">WhatsApp Number
-          *</label>
-        <input type="tel" id="student-phone" name="student_phone" placeholder="+92 300 1234567" required
-          class="bg-slate-950/80 border border-slate-800 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-agencyViolet transition duration-300">
-      </div>
-
-      <!-- Select Course -->
-      <div class="flex flex-col space-y-1.5">
-        <label for="student-course" class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Select Course
-          Interested In *</label>
-        <select id="student-course" name="selected_course" required
-          class="bg-slate-950/80 border border-slate-800 rounded-lg px-4 py-3 text-sm text-slate-300 focus:outline-none focus:border-agencyViolet transition duration-300 appearance-none cursor-pointer">
-          <option value="" disabled selected>Choose a course...</option>
-          <option value="technical_seo">Technical & On-Page SEO Masterclass</option>
-          <option value="local_seo">Local SEO & Google Map Pack Scaling</option>
-          <option value="digital_marketing">Performance Marketing (Meta & Google Ads)</option>
-          <option value="web_dev">AI-Powered Web Development (HTML/CSS/NextJS)</option>
-        </select>
-      </div>
-
-      <!-- Student Message / Goals -->
-      <div class="flex flex-col space-y-1.5">
-        <label for="student-message" class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Your Learning
-          Goals / Prior Experience *</label>
-        <textarea id="student-message" name="student_message" rows="4" required
-          placeholder="Tell us briefly about your background and what you want to achieve from this course..."
-          class="bg-slate-950/80 border border-slate-800 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-agencyViolet transition duration-300 resize-none"></textarea>
-      </div>
-
-      <!-- Submit Button -->
-      <button type="submit"
-        class="w-full py-4 rounded-xl bg-gradient-to-r from-agencyViolet to-agencyCyan text-white font-extrabold text-sm hover:scale-[1.01] active:scale-[0.99] transition shadow-lg shadow-agencyViolet/10 hover:shadow-cyan-500/20">
-        Submit Admission Request
-      </button>
-    </form>
-  </div>
-  <!-- ==========================================
-     GLOBAL FOOTER (PRESERVED DESIGN WITH CONTACTS)
-     ========================================== -->
-  <footer class="bg-[#0B0F19] border-t border-white/10 pt-12 pb-6">
-    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 items-start mb-8">
-
-      <!-- Column 1: Logo & Tagline (lg:col-span-4) -->
-      <div class="lg:col-span-4 space-y-4">
-        <a href="index.html" class="flex items-center gap-2">
-          <img src="assets/image/logo.jpg.jpeg" alt="AITS Logo" class="h-10 w-auto rounded bg-white p-1">
-          <span class="text-2xl font-bold tracking-tight text-white flex items-center">
-            AITS<span class="text-indigo-500 font-medium">OFFICIAL</span>
-          </span>
-        </a>
-        <p class="text-sm text-slate-400 leading-relaxed">
-          High-performance full-service digital marketing agency engineering organic traffic loops, local map scaling,
-          and high-converting advertising pipelines.
+      <!-- HQ CONTACT DATA -->
+      <div class="space-y-3 text-xs">
+        <h4 class="text-white text-xs uppercase font-bold tracking-wider">HQ Transmission</h4>
+        <p class="text-gray-500 leading-relaxed">
+          Ashianah Quaid Housing Scheme, A-Block Market, DHA Phase 9 Town, Lahore, Pakistan.
         </p>
-      </div>
-
-      <!-- Column 2: EXPERTISE (lg:col-span-2) -->
-      <div class="lg:col-span-2 space-y-3">
-        <h4 class="text-xs font-bold text-white uppercase tracking-wider">EXPERTISE</h4>
-        <ul class="space-y-2 text-sm text-slate-400">
-          <li><a href="#" class="hover:text-white transition">Search Engine Optimization</a></li>
-          <li><a href="#" class="hover:text-white transition">Meta & Paid Ads</a></li>
-          <li><a href="#" class="hover:text-white transition">Local GMB Scaling</a></li>
-          <li><a href="#" class="hover:text-white transition">Web Development</a></li>
-        </ul>
-      </div>
-
-      <!-- Column 3: AGENCY (lg:col-span-2) -->
-      <div class="lg:col-span-2 space-y-3">
-        <h4 class="text-xs font-bold text-white uppercase tracking-wider">AGENCY</h4>
-        <ul class="space-y-2 text-sm text-slate-400">
-          <li><a href="about.html" class="hover:text-white transition">Our Story</a></li>
-          <li><a href="courses.html" class="hover:text-white transition">AITS Courses</a></li>
-          <li><a href="projects.html" class="hover:text-white transition">Case Studies</a></li>
-          <li><a href="contact.html" class="hover:text-white transition">Get Proposal</a></li>
-        </ul>
-      </div>
-
-      <!-- Column 4: CONNECT (Updated with New Location) -->
-      <div class="lg:col-span-4 space-y-4">
-        <h4 class="text-xs font-bold text-white uppercase tracking-wider">CONNECT</h4>
-        <ul class="space-y-2 text-sm text-slate-400">
-          <li class="text-slate-300"><span class="font-semibold text-white">Owner:</span> Ali Hamza</li>
-          <li class="leading-relaxed">
-            <span class="font-semibold text-white">Location:</span> Ashianah Quaid Housing Scheme, A-Block Market DHA
-            Phase-9 town
-          </li>
-          <li>
-            <span class="font-semibold text-white">WhatsApp:</span>
-            <a href="https://wa.me/923225673641" target="_blank"
-              class="text-slate-400 hover:text-agencyCyan transition">+92 322 5673641</a>
-          </li>
-          <li>
-            <span class="font-semibold text-white">Email:</span>
-            <a href="mailto:ahamza.arshad100@gmail.com"
-              class="text-slate-400 hover:text-agencyCyan transition block md:inline overflow-hidden text-ellipsis">ahamza.arshad100@gmail.com</a>
-          </li>
-        </ul>
-
-        <!-- Social Icons Grid right inside Connect column -->
-        <div class="pt-2 flex items-center gap-4 text-lg">
-          <!-- LinkedIn -->
-          <a href="https://www.linkedin.com/in/ali-hamza-mk-77b809363/" target="_blank" title="LinkedIn"
-            class="text-slate-400 hover:text-[#0077B5] hover:scale-110 transition duration-300">
-            <i class="fa-brands fa-linkedin"></i>
-          </a>
-          <!-- Fiverr -->
-          <a href="https://www.fiverr.com/sellers/aits_official/" target="_blank" title="Fiverr Profile"
-            class="text-slate-400 hover:text-[#1dbf73] hover:scale-110 transition duration-300 font-extrabold text-sm tracking-tighter"
-            style="font-family: sans-serif;">
-            fiverr.
-          </a>
-          <!-- Twitter / X -->
-          <a href="https://x.com/AliHamza_SEO" target="_blank" title="Twitter / X"
-            class="text-slate-400 hover:text-white hover:scale-110 transition duration-300">
-            <i class="fa-brands fa-x-twitter"></i>
-          </a>
-          <!-- Instagram -->
-          <a href="https://www.instagram.com/ahamza.arshad100?igsh=MTRlaWt6OGVzemxjaQ==" target="_blank"
-            title="Instagram" class="text-slate-400 hover:text-[#E1306C] hover:scale-110 transition duration-300">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-          <!-- Facebook -->
-          <a href="https://www.facebook.com/share/18xs2PY3us/" target="_blank" title="Facebook"
-            class="text-slate-400 hover:text-[#1877F2] hover:scale-110 transition duration-300">
-            <i class="fa-brands fa-facebook"></i>
-          </a>
+        <div class="pt-1">
+          <a href="mailto:ahamza.arshad100@gmail.com"
+            class="text-brand-lightBlue block hover:underline">ahamza.arshad100@gmail.com</a>
+          <span class="text-gray-600 block mt-1">+92 322 5673641</span>
         </div>
       </div>
-
     </div>
 
-    <!-- Bottom Copyright Line -->
-    <div class="max-w-7xl mx-auto px-6 border-t border-white/5 pt-6 text-left">
-      <p class="text-xs text-slate-500">&copy; 2026 AITS OFFICIAL. All rights reserved. Built for high-ticket
-        performance.</p>
+    <div
+      class="max-w-7xl mx-auto px-6 pt-6 border-t border-gray-900 text-center md:text-left text-[10px] uppercase tracking-widest text-gray-600">
+      © 2026 AITS Corporate Network. All Rights Reserved.
     </div>
   </footer>
 
-  <!-- Main JS -->
-  <script src="assets/js/main.js"></script>
+  <!-- INTERACTIVE MENU LOGIC -->
+  <script>
+    const btn = document.getElementById('menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+    if (btn && menu) {
+      btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+    }
+  </script>
 </body>
 
 </html>

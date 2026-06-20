@@ -4,277 +4,304 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AITS — Operational Capability & Infrastructure</title>
+  <title>About Corporate — AITS Authority & Infrastructure History</title>
+
+  <!-- TAILWIND FRAMEWORK CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&family=Plus+Jakarta+Sans:wght@400;700;800&display=swap');
-
-    .font-mono {
-      font-family: 'JetBrains Mono', monospace;
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              blue: '#2563eb',
+              lightBlue: '#3b82f6',
+              darkBg: '#090d16',
+              cardBg: '#111827',
+              borderGray: '#1f2937'
+            }
+          },
+          animation: {
+            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'reveal': 'revealUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards'
+          },
+          keyframes: {
+            revealUp: {
+              '0%': { opacity: '0', transform: 'translateY(30px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            }
+          }
+        }
+      }
     }
+  </script>
 
-    .font-sans {
+  <!-- PREMIUM GOOGLE FONTS & STYLES -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=400;500;600;700;800&display=swap');
+
+    body {
       font-family: 'Plus Jakarta Sans', sans-serif;
     }
 
-    .text-glow {
-      text-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+    .premium-transition {
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Custom dynamic scroll reveal utilities */
+    .scroll-reveal {
+      opacity: 0;
+      transform: translateY(25px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .scroll-reveal.active {
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
 </head>
 
-<body class="bg-black text-zinc-400 font-sans antialiased overflow-x-hidden">
+<body class="bg-brand-darkBg text-gray-300 antialiased selection:bg-brand-blue selection:text-white overflow-x-hidden">
 
   <!-- ========================================== -->
-  <!-- INTERNAL FIXED LAYER NAV INFRASTRUCTURE    -->
+  <!-- 1. FIXED HEADER / NAVIGATION BAR          -->
   <!-- ========================================== -->
   <nav
-    class="fixed top-0 left-0 w-full z-50 bg-black/90 backdrop-blur-xl border-b border-zinc-900/60 h-20 flex items-center justify-between px-6 md:px-12">
-    <a href="index.html" class="flex items-center space-x-3 group">
-      <img src="images/logo.jpg.jpeg" alt="AITS Core Identity" class="h-10 w-auto object-contain filter brightness-110">
-      <div class="flex flex-col border-l border-zinc-800 pl-3">
-        <span class="text-white font-mono tracking-[0.3em] text-sm uppercase font-bold">AITS</span>
-        <span class="text-blue-500 tracking-[0.4em] text-[8px] uppercase font-bold mt-0.5">CORE LABS</span>
+    class="fixed top-0 left-0 w-full z-50 bg-brand-darkBg/80 backdrop-blur-md border-b border-brand-borderGray premium-transition">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+
+      <!-- SMART LOGO (VERIFIED FROM image_b25106.png) -->
+      <a href="index.html" class="flex items-center space-x-3 group">
+        <div
+          class="relative w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center font-bold text-white text-lg shadow-lg transform group-hover:scale-105 premium-transition">
+          A
+          <img src="images/logo.jpg" alt="AITS"
+            class="absolute inset-0 w-full h-full object-contain rounded-lg opacity-0" onload="this.style.opacity='1'"
+            onerror="this.src='images/logo.png'">
+        </div>
+        <div class="flex flex-col">
+          <span
+            class="text-white font-extrabold text-lg tracking-tight leading-none group-hover:text-brand-lightBlue premium-transition">AITS</span>
+          <span class="text-brand-lightBlue text-[10px] uppercase tracking-widest font-bold mt-1">Software House</span>
+        </div>
+      </a>
+
+      <!-- DESKTOP MENU LINKS -->
+      <div class="hidden lg:flex items-center space-x-8">
+        <a href="index.html"
+          class="text-xs uppercase tracking-wider font-semibold text-gray-400 hover:text-white transition-colors duration-200">Home</a>
+        <a href="about.html"
+          class="text-xs uppercase tracking-wider font-bold text-brand-lightBlue border-b-2 border-brand-blue pb-1 premium-transition">About
+          Us</a>
+        <a href="portfolio.html"
+          class="text-xs uppercase tracking-wider font-semibold text-gray-400 hover:text-white transition-colors duration-200">Portfolio</a>
+        <a href="projects.html"
+          class="text-xs uppercase tracking-wider font-semibold text-gray-400 hover:text-white transition-colors duration-200">Projects</a>
+        <a href="courses.html"
+          class="text-xs uppercase tracking-wider font-semibold text-gray-400 hover:text-white transition-colors duration-200">Courses</a>
+        <a href="booking.html"
+          class="text-xs uppercase tracking-wider font-bold text-gray-300 hover:text-brand-lightBlue transition-colors duration-200">Services
+          Booking</a>
+        <a href="contact.html"
+          class="text-xs uppercase tracking-wider font-semibold text-gray-400 hover:text-white transition-colors duration-200">Contact</a>
+
+        <a href="tel:+923225673641"
+          class="text-xs font-bold text-white border-l border-gray-800 pl-6 hover:text-brand-lightBlue transition-colors">
+          +92 322 5673641
+        </a>
       </div>
-    </a>
-    <div class="hidden xl:flex items-center space-x-8 font-mono text-[10px] tracking-[0.2em] uppercase">
-      <a href="index.html" class="text-zinc-500 hover:text-white transition">/HOME</a>
-      <a href="about.html" class="text-blue-500 font-bold">/ABOUT_US</a>
-      <a href="portfolio.html" class="text-zinc-500 hover:text-white transition">/PORTFOLIO</a>
-      <a href="projects.html" class="text-zinc-500 hover:text-white transition">/PROJECTS</a>
-      <a href="courses.html" class="text-zinc-500 hover:text-white transition">/COURSES</a>
-      <a href="booking.html" class="text-zinc-500 hover:text-white transition">/SERVICES_BOOKING</a>
-      <a href="contact.html" class="text-zinc-500 hover:text-white transition">/CONTACT</a>
-      <div id="google_translate_element" class="border-l border-zinc-900 pl-4"></div>
+
+      <!-- MOBILE MENU BUTTON -->
+      <button id="menu-toggle" class="lg:hidden text-gray-400 hover:text-white focus:outline-none premium-transition">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- MOBILE DROPDOWN DRAWER -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-brand-darkBg border-b border-brand-borderGray px-6 py-6 space-y-4">
+      <a href="index.html" class="block text-xs uppercase font-semibold text-gray-400">Home</a>
+      <a href="about.html" class="block text-xs uppercase font-bold text-brand-lightBlue">About Us</a>
+      <a href="portfolio.html" class="block text-xs uppercase font-semibold text-gray-400">Portfolio</a>
+      <a href="projects.html" class="block text-xs uppercase font-semibold text-gray-400">Projects</a>
+      <a href="courses.html" class="block text-xs uppercase font-semibold text-gray-400">Courses</a>
+      <a href="booking.html" class="block text-xs uppercase font-bold text-gray-400">Services Booking</a>
+      <a href="contact.html" class="block text-xs uppercase font-semibold text-gray-400">Contact</a>
     </div>
   </nav>
 
   <!-- ========================================== -->
-  <!-- HERO FRAME: RADICAL TRANSPARENCY           -->
+  <!-- 2. ABOUT HERO & HERO SCREEN (ANIMATED)     -->
   <!-- ========================================== -->
-  <section class="relative min-h-[60vh] flex items-center pt-32 pb-16 bg-black">
-    <div
-      class="absolute inset-0 bg-[linear-gradient(to_right,#141414_1px,transparent_1px),linear-gradient(to_bottom,#141414_1px,transparent_1px)] bg-[size:3rem_3rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_100%,#000_70%,transparent_100%)] opacity-40">
-    </div>
-
-    <div class="max-w-7xl mx-auto px-6 md:px-12 w-full relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8">
-      <div class="lg:col-span-8 flex flex-col space-y-4">
-        <div class="font-mono text-xs text-blue-500 tracking-[0.3em] uppercase" data-aos="fade-right">// CAPABILITY
-          ARCHIVE</div>
-        <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight uppercase leading-none"
-          data-aos="zoom-in-up">
-          WE DO NOT CLIENT-HUNT.<br><span
-            class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-indigo-500 text-glow">WE SELECT
-            PARTNERS.</span>
-        </h1>
-        <p class="text-sm max-w-xl text-zinc-500 font-mono pt-4 leading-relaxed" data-aos="fade-up">
-          ESTABLISHED IN 2023. AITS OPERATES AS A PRIVATE, DECENTRALIZED WEB INFRASTRUCTURE & DISCOVERY ENGINE
-          DEPLOYMENT DESK. WE BUILD ABSOLUTE DIGITAL MONOPOLIES.
-        </p>
-      </div>
-      <div
-        class="lg:col-span-4 flex items-end justify-start lg:justify-end font-mono text-[10px] text-zinc-600 border-l border-zinc-900 pl-6 lg:border-l-0"
-        data-aos="fade-left">
-        <div>
-          <span class="block text-white font-bold text-lg">LOCATIONS LAYER:</span>
-          <span class="block mt-1 text-zinc-400">ISB // LHR // DXB // LON // NYC</span>
-        </div>
-      </div>
+  <section
+    class="relative pt-40 pb-20 bg-[radial-gradient(ellipse_60%_60%_at_50%_-10%,rgba(37,99,235,0.1),transparent_100%)]">
+    <div class="max-w-5xl mx-auto px-6 text-center space-y-6 animate-reveal">
+      <span class="text-brand-lightBlue text-xs uppercase tracking-[0.25em] font-extrabold block">// CORPORATE
+        OVERVIEW</span>
+      <h1 class="text-4xl sm:text-5xl font-black text-white tracking-tight leading-none">
+        The Architects of <span
+          class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">Technical Visibility</span>
+      </h1>
+      <p class="text-base text-gray-400 max-w-3xl mx-auto leading-relaxed">
+        Founded in 2023, AITS was engineered to fill a deep industry void: the complete absence of rigorous scientific
+        technical execution in web design and search infrastructure. We build high-yield nodes that bridge pure code
+        with global market velocity.
+      </p>
     </div>
   </section>
 
   <!-- ========================================== -->
-  <!-- CORE MISSION: THE DECREE OF EXECUTION      -->
+  <!-- 3. DETAILED HISTORY & REAL INFRASTRUCTURE  -->
   <!-- ========================================== -->
-  <section class="py-24 bg-[#050505] border-t border-zinc-900/60">
-    <div class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12">
-      <div class="lg:col-span-4 font-mono" data-aos="fade-right">
-        <span class="text-xs text-zinc-600 tracking-widest block">// CORE DECREE</span>
-        <h2 class="text-white text-xl font-bold uppercase mt-2">THE INFRASTRUCTURE MISSION Framework</h2>
-      </div>
-      <div class="lg:col-span-8 space-y-8 font-sans text-sm sm:text-base leading-relaxed text-zinc-400"
-        data-aos="fade-up">
-        <p>
-          Most agencies promise traffic; we handle algorithm alignment. Founded in 2023, AITS was engineered to bridge
-          the gap between heavy software house deployment and precision consumer acquisition. We do not design simple
-          web layouts—we build bulletproof technical ecosystems engineered to capture dominance across international
-          digital spaces.
+  <section class="py-20 bg-black border-t border-brand-borderGray">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+      <!-- LEFT CONTENT PANEL (SCROLL REVEAL) -->
+      <div class="space-y-6 scroll-reveal">
+        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Our Operational Philosophy</h2>
+        <div class="h-[2px] w-12 bg-brand-blue"></div>
+        <p class="text-sm text-gray-400 leading-relaxed">
+          We operate entirely within high-end enterprise disciplines. From executing deep performance cleanups on core
+          structural architectures to indexing high-velocity schema graphs, our work is defined by precision metrics.
         </p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6 font-mono text-xs">
-          <div class="border border-zinc-900 p-6 bg-black/40">
-            <span class="text-blue-500 block font-bold">01 / GLOBAL SYSTEMS INTEGRATION</span>
-            <p class="text-zinc-600 mt-2 text-[11px]">Deploying hyper-optimized web assets designed strictly for
-              enterprise speed, clean source parsing, and multi-currency structural scaling.</p>
+        <p class="text-sm text-gray-400 leading-relaxed">
+          Our team relies on dedicated infrastructure workflows, using robust layout frameworks and analytical platforms
+          to ensure zero-latency deployment and uninterrupted global retention.
+        </p>
+
+        <!-- OPERATIONAL REAL UNITS (MAPPED ASSETS) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+          <div
+            class="p-4 bg-brand-darkBg border border-brand-borderGray rounded-lg flex items-center space-x-4 hover:border-brand-blue/40 premium-transition">
+            <div class="w-12 h-12 rounded-full overflow-hidden border border-brand-blue shrink-0 bg-brand-cardBg">
+              <!-- CEO REAL IMAGE FROM FOLDER -->
+              <img src="images/ceo ali hamza.jpg" alt="Ali Hamza Arshad - CEO"
+                class="w-full h-full object-cover object-top" onerror="this.src='images/ceo ali hamza.png'">
+            </div>
+            <div>
+              <span class="text-white font-bold text-sm block">Ali Hamza Arshad</span>
+              <span class="text-gray-500 text-[11px] mt-0.5 block">CEO & Founder</span>
+            </div>
           </div>
-          <div class="border border-zinc-900 p-6 bg-black/40">
-            <span class="text-blue-500 block font-bold">02 / SEARCH CONSOLE ALGORITHM DOMINANCE</span>
-            <p class="text-zinc-600 mt-2 text-[11px]">Deep infrastructure engineering. Advanced schema markup arrays,
-              dynamic local network ranking matrices, and algorithmic capture protocols.</p>
+          <div
+            class="p-4 bg-brand-darkBg border border-brand-borderGray rounded-lg hover:border-brand-blue/40 premium-transition flex flex-col justify-center">
+            <span class="text-white font-bold text-sm block">Core Technical Unit</span>
+            <span class="text-gray-500 text-xs mt-1 block">4-Person Specialist Remote Operation Team</span>
           </div>
         </div>
       </div>
+
+      <!-- RIGHT GRAPHIC PANEL (TEAM REAL PICTURE) -->
+      <div class="relative scroll-reveal" style="transition-delay: 150ms;">
+        <div
+          class="aspect-[4/3] rounded-xl overflow-hidden border border-brand-borderGray bg-brand-cardBg relative group shadow-2xl">
+          <!-- TEAM OFFICE WORK REAL IMAGE FROM FOLDER -->
+          <img src="images/team office work.jpg" alt="AITS Team Operations"
+            class="w-full h-full object-cover transform group-hover:scale-105 premium-transition opacity-90"
+            onerror="this.src='images/team office work.png'">
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+        </div>
+      </div>
+
     </div>
   </section>
 
   <!-- ========================================== -->
-  <!-- THE REMOTE HIGH-PERFORMANCE WORKFORCE UNIT -->
+  <!-- 4. FOOTER SYSTEM                          -->
   <!-- ========================================== -->
-  <section class="py-24 bg-black border-t border-zinc-900/60">
-    <div class="max-w-7xl mx-auto px-6 md:px-12">
+  <footer class="bg-brand-darkBg border-t border-brand-borderGray pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
 
-      <div class="flex flex-col space-y-2 mb-16 font-mono">
-        <span class="text-xs text-blue-500 tracking-widest">// DEPLOYED HUMAN CAPITAL</span>
-        <h2 class="text-2xl text-white uppercase font-bold tracking-tight">OPERATIONAL COMMANDERS [CORE UNIT]</h2>
+      <div class="space-y-4">
+        <span class="text-white font-black text-xl tracking-wider block">AITS</span>
+        <p class="text-gray-500 text-xs leading-relaxed">
+          High-performance corporate web systems, technical SEO graphs, and enterprise-scale digital marketing systems.
+          Engineered for international market leaders since 2023.
+        </p>
       </div>
 
-      <!-- 4 REMOTE EXPERTS MATRIX GRID -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
-        <!-- COMMANDER 1: AGENCY CHIEF EXECUTOR -->
-        <div
-          class="border border-zinc-900 bg-[#030303] p-6 transition-all duration-300 hover:border-blue-500/40 group relative"
-          data-aos="fade-up" data-aos-delay="100">
-          <span
-            class="absolute top-4 right-4 font-mono text-[9px] text-zinc-700 group-hover:text-blue-500 transition">ID //
-            01</span>
-          <div
-            class="w-12 h-12 rounded-none bg-zinc-900 border border-zinc-800 mb-6 flex items-center justify-center text-white font-mono font-bold text-sm uppercase">
-            AH</div>
-          <h3 class="text-white font-mono font-bold text-sm tracking-wide uppercase">Ali Hamza</h3>
-          <span class="text-[10px] uppercase font-mono tracking-widest text-blue-500 block mt-1">Chief Executive &
-            Architect</span>
-          <p class="text-[11px] text-zinc-600 mt-4 leading-relaxed font-sans">Directs enterprise strategy, algorithm
-            command protocols, and multi-tier global tech scaling models.</p>
+      <!-- HARDLINKED CORE NAVIGATION -->
+      <div class="space-y-3">
+        <h4 class="text-white text-xs uppercase font-bold tracking-wider">Core Navigation</h4>
+        <div class="grid grid-cols-1 gap-2 text-xs">
+          <a href="index.html" class="hover:text-brand-lightBlue premium-transition">• Home</a>
+          <a href="about.html" class="hover:text-brand-lightBlue premium-transition">• About Us</a>
+          <a href="portfolio.html" class="hover:text-brand-lightBlue premium-transition">• Portfolio</a>
+          <a href="projects.html" class="hover:text-brand-lightBlue premium-transition">• Projects</a>
+          <a href="courses.html" class="hover:text-brand-lightBlue premium-transition">• Courses</a>
+          <a href="booking.html" class="hover:text-brand-lightBlue premium-transition font-bold text-gray-300">• Booking
+            Desk</a>
+          <a href="contact.html" class="hover:text-brand-lightBlue premium-transition">• Contact</a>
         </div>
+      </div>
 
-        <!-- COMMANDER 2: WEB ENGINEER DESK -->
-        <div
-          class="border border-zinc-900 bg-[#030303] p-6 transition-all duration-300 hover:border-blue-500/40 group relative"
-          data-aos="fade-up" data-aos-delay="200">
-          <span
-            class="absolute top-4 right-4 font-mono text-[9px] text-zinc-700 group-hover:text-blue-500 transition">ID //
-            02</span>
-          <div
-            class="w-12 h-12 rounded-none bg-zinc-900 border border-zinc-800 mb-6 flex items-center justify-center text-zinc-500 font-mono font-bold text-sm uppercase">
-            WE</div>
-          <h3 class="text-white font-mono font-bold text-sm tracking-wide uppercase">Core Dev Unit</h3>
-          <span class="text-[10px] uppercase font-mono tracking-widest text-zinc-500 block mt-1">Lead Full-Stack Web
-            Engineer</span>
-          <p class="text-[11px] text-zinc-600 mt-4 leading-relaxed font-sans">Engineers low-latency clean-code
-            frameworks, asynchronous rendering pathways, and high-security structural components.</p>
+      <!-- ALL SERVICES ROUTING MAP -->
+      <div class="space-y-3">
+        <h4 class="text-white text-xs uppercase font-bold tracking-wider">All Services Pages</h4>
+        <div class="grid grid-cols-1 gap-2 text-xs text-gray-400">
+          <a href="booking.html" class="hover:text-brand-lightBlue premium-transition">// Premium Web Engineering</a>
+          <a href="booking.html" class="hover:text-brand-lightBlue premium-transition">// Technical SEO Domination</a>
+          <a href="booking.html" class="hover:text-brand-lightBlue premium-transition">// Google Business Profile
+            (GBP)</a>
+          <a href="booking.html" class="hover:text-brand-lightBlue premium-transition">// Google Ads Strategy</a>
+          <a href="booking.html" class="hover:text-brand-lightBlue premium-transition">// Shopify E-Commerce Scaling</a>
+          <a href="booking.html" class="hover:text-brand-lightBlue premium-transition">// WordPress Custom
+            Architecture</a>
         </div>
+      </div>
 
-        <!-- COMMANDER 3: TECHNICAL SEO STACK -->
-        <div
-          class="border border-zinc-900 bg-[#030303] p-6 transition-all duration-300 hover:border-blue-500/40 group relative"
-          data-aos="fade-up" data-aos-delay="300">
-          <span
-            class="absolute top-4 right-4 font-mono text-[9px] text-zinc-700 group-hover:text-blue-500 transition">ID //
-            03</span>
-          <div
-            class="w-12 h-12 rounded-none bg-zinc-900 border border-zinc-800 mb-6 flex items-center justify-center text-zinc-500 font-mono font-bold text-sm uppercase">
-            SE</div>
-          <h3 class="text-white font-mono font-bold text-sm tracking-wide uppercase">SEO Control Unit</h3>
-          <span class="text-[10px] uppercase font-mono tracking-widest text-zinc-500 block mt-1">Technical SEO
-            Specialist</span>
-          <p class="text-[11px] text-zinc-600 mt-4 leading-relaxed font-sans">Monitors entity networks, JSON-LD
-            structured graph schemas, index pipelines, and global algorithm alignment matrices.</p>
+      <!-- HQ CONTACT DATA -->
+      <div class="space-y-3 text-xs">
+        <h4 class="text-white text-xs uppercase font-bold tracking-wider">HQ Transmission</h4>
+        <p class="text-gray-500 leading-relaxed">
+          Ashianah Quaid Housing Scheme, A-Block Market, DHA Phase 9 Town, Lahore, Pakistan.
+        </p>
+        <div class="pt-1">
+          <a href="mailto:ahamza.arshad100@gmail.com"
+            class="text-brand-lightBlue block hover:underline">ahamza.arshad100@gmail.com</a>
+          <span class="text-gray-600 block mt-1">+92 322 5673641</span>
         </div>
-
-        <!-- COMMANDER 4: MEDIA ACQUISITION DESK -->
-        <div
-          class="border border-zinc-900 bg-[#030303] p-6 transition-all duration-300 hover:border-blue-500/40 group relative"
-          data-aos="fade-up" data-aos-delay="400">
-          <span
-            class="absolute top-4 right-4 font-mono text-[9px] text-zinc-700 group-hover:text-blue-500 transition">ID //
-            04</span>
-          <div
-            class="w-12 h-12 rounded-none bg-zinc-900 border border-zinc-800 mb-6 flex items-center justify-center text-zinc-500 font-mono font-bold text-sm uppercase">
-            MA</div>
-          <h3 class="text-white font-mono font-bold text-sm tracking-wide uppercase">Acquisition Node</h3>
-          <span class="text-[10px] uppercase font-mono tracking-widest text-zinc-500 block mt-1">Google & Meta Ads
-            Strategist</span>
-          <p class="text-[11px] text-zinc-600 mt-4 leading-relaxed font-sans">Optimizes conversion infrastructure, pixel
-            data capture tracking, global retargeting channels, and budget efficiency protocols.</p>
-        </div>
-
       </div>
     </div>
-  </section>
 
-  <!-- ========================================== -->
-  <!-- AITS RAW OPERATIONAL STATUS ARCHIVE        -->
-  <!-- ========================================== -->
-  <section class="py-24 bg-[#050505] border-t border-zinc-900/60 font-mono text-xs">
-    <div class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
-      <div class="border-l-2 border-blue-500 pl-4" data-aos="fade-up" data-aos-delay="100">
-        <span class="text-zinc-600 block">// ALGORITHM METRIC</span>
-        <span class="text-2xl font-bold text-white block mt-1">GLOBAL CAPTURE</span>
-        <p class="text-zinc-500 mt-2 text-[11px] font-sans">Handling live advanced visibility networks across US, UK,
-          London, UAE, and Pakistan market channels.</p>
-      </div>
-      <div class="border-l-2 border-zinc-800 pl-4" data-aos="fade-up" data-aos-delay="200">
-        <span class="text-zinc-600 block">// INFRASTRUCTURE RETENTION</span>
-        <span class="text-2xl font-bold text-white block mt-1">99.4% CORE STABILITY</span>
-        <p class="text-zinc-500 mt-2 text-[11px] font-sans">Our engineered digital architecture frameworks scale without
-          layout collapse, server fatigue, or authority drops.</p>
-      </div>
-      <div class="border-l-2 border-zinc-800 pl-4" data-aos="fade-up" data-aos-delay="300">
-        <span class="text-zinc-600 block">// VELOCITY MATRIX</span>
-        <span class="text-2xl font-bold text-white block mt-1">&lt; 1.2s LATENCY LEVEL</span>
-        <p class="text-zinc-500 mt-2 text-[11px] font-sans">Custom-compiled, static server structures built to clear
-          Google Core Web Vitals checks instantly.</p>
-      </div>
-      <div class="border-l-2 border-zinc-800 pl-4" data-aos="fade-up" data-aos-delay="400">
-        <span class="text-zinc-600 block">// SYSTEM STATUS</span>
-        <span class="text-2xl font-bold text-emerald-500 block mt-1">OPERATIONAL / ACTIVE</span>
-        <p class="text-zinc-500 mt-2 text-[11px] font-sans">Accepting exactly 3 high-scale enterprise partner intakes
-          per fiscal quarter via structural booking protocols.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================== -->
-  <!-- AITS PRESTIGE FOOTER                       -->
-  <!-- ========================================== -->
-  <footer class="bg-black border-t border-zinc-900/80 text-zinc-500 pt-16 pb-8 text-xs font-mono">
-    <div class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
-      <div>
-        <span class="text-white font-bold tracking-widest uppercase block mb-3">AITS INSTABILITY CONTROL</span>
-        <p class="text-[11px] leading-relaxed text-zinc-600 font-sans">Elite web design, full-scale search
-          infrastructure engine, and optimization node systems. Running globally since 2023.</p>
-      </div>
-      <div>
-        <span class="text-white font-bold tracking-widest uppercase block mb-3">SYSTEM HQ DIRECTORY</span>
-        <p class="text-[11px] leading-relaxed text-zinc-600 font-sans">Ashianah Quaid Housing Scheme, A-Block Market,
-          DHA Phase 9 Town, Lahore, Pakistan.</p>
-      </div>
-      <div>
-        <span class="text-white font-bold tracking-widest uppercase block mb-3">SECURE TRANSMISSION NODE</span>
-        <a href="mailto:ahamza.arshad100@gmail.com"
-          class="text-blue-500 block hover:underline">ahamza.arshad100@gmail.com</a>
-        <span class="block mt-1 text-zinc-600 font-mono">+92 322 5673641</span>
-      </div>
-    </div>
     <div
-      class="max-w-7xl mx-auto px-6 md:px-12 pt-6 border-t border-zinc-900/40 text-center sm:text-left text-[9px] uppercase tracking-widest text-zinc-700">
-      <span>© 2026 AITS OPERATIONAL NETWORK. SECURE NODE ENCRYPTED.</span>
+      class="max-w-7xl mx-auto px-6 pt-6 border-t border-gray-900 text-center md:text-left text-[10px] uppercase tracking-widest text-gray-600">
+      © 2026 AITS Corporate Network. All Rights Reserved.
     </div>
   </footer>
 
-  <!-- DYNAMIC TRANSLATOR CODES -->
-  <script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false }, 'google_translate_element');
-    }
-  </script>
-  <script type="text/javascript"
-    src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <!-- INTERACTIVE ANIMATIONS & LOGIC SCRIPT -->
   <script>
-    AOS.init({ duration: 900, once: true });
+    // Toggle mobile drawer
+    const btn = document.getElementById('menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+    if (btn && menu) {
+      btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+    }
+
+    // Lightweight High-Performance Scroll Reveal Observer
+    const revealElements = document.querySelectorAll('.scroll-reveal');
+    const observerOptions = {
+      root: null,
+      threshold: 0.15
+    };
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          observer.unobserve(entry.target); // Once animated, stay persistent
+        }
+      });
+    }, observerOptions);
+
+    revealElements.forEach(element => {
+      revealObserver.observe(element);
+    });
   </script>
 </body>
 
