@@ -49,13 +49,11 @@
 
 <body class="bg-brand-darkBg text-gray-300 antialiased selection:bg-brand-blue selection:text-white overflow-x-hidden">
 
-  <!-- NAVIGATION HEADER WITH LOGO & TRANSLATOR LAYER -->
-  <nav class="fixed top-0 left-0 w-full z-50 bg-brand-darkBg/90 backdrop-blur-md border-b border-brand-borderGray">
+  <nav class="fixed top-0 left-0 w-full z-50 bg-brand-darkBg/95 backdrop-blur-md border-b border-brand-borderGray">
     <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
 
-      <!-- LOGO INTEGRATION -->
-      <a href="index.html" class="flex items-center space-x-3 shrink-0">
-        <img src="logo.jpeg" alt="AITS Logo"
+      <a href="/" class="flex items-center space-x-3 shrink-0">
+        <img src="assets/image/logo.jpeg" alt="AITS Logo"
           class="w-11 h-11 rounded-xl object-cover border border-brand-borderGray shadow-md shadow-blue-500/10">
         <div class="flex flex-col">
           <span class="text-white font-extrabold text-lg tracking-tight leading-none">AITS</span>
@@ -63,37 +61,33 @@
         </div>
       </a>
 
-      <!-- CENTRAL ROUTER LINKS -->
       <div class="hidden lg:flex items-center space-x-6 xl:space-x-8">
-        <a href="index.html"
-          class="text-xs uppercase tracking-wider font-semibold text-gray-400 hover:text-white transition-colors">Home</a>
+        <a href="/"
+          class="nav-link text-xs uppercase tracking-wider font-semibold text-gray-400 hover:text-white transition-colors">Home</a>
         <a href="about.html"
-          class="text-xs uppercase tracking-wider font-semibold text-gray-400 hover:text-white transition-colors">About
+          class="nav-link text-xs uppercase tracking-wider font-semibold text-gray-400 hover:text-white transition-colors">About
           Us</a>
         <a href="portfolio.html"
-          class="text-xs uppercase tracking-wider font-semibold text-gray-400 hover:text-white transition-colors">Portfolio</a>
+          class="nav-link text-xs uppercase tracking-wider font-semibold text-gray-400 hover:text-white transition-colors">Portfolio</a>
         <a href="projects.html"
-          class="text-xs uppercase tracking-wider font-semibold text-gray-400 hover:text-white transition-colors">Projects</a>
+          class="nav-link text-xs uppercase tracking-wider font-semibold text-gray-400 hover:text-white transition-colors">Projects</a>
         <a href="packages.html"
-          class="text-xs uppercase tracking-wider font-semibold text-gray-400 hover:text-white transition-colors">Packages</a>
+          class="nav-link text-xs uppercase tracking-wider font-semibold text-gray-400 hover:text-white transition-colors">Packages</a>
         <a href="services.html"
-          class="text-xs uppercase tracking-wider font-bold text-brand-lightBlue border-b-2 border-brand-blue pb-1">Services</a>
+          class="nav-link text-xs uppercase tracking-wider font-semibold text-gray-400 hover:text-white transition-colors">Services</a>
         <a href="booking.html"
-          class="text-xs uppercase tracking-wider font-semibold text-gray-400 hover:text-white transition-colors">Booking
+          class="nav-link text-xs uppercase tracking-wider font-semibold text-gray-400 hover:text-white transition-colors">Booking
           Portal</a>
         <a href="contact.html"
-          class="text-xs uppercase tracking-wider font-semibold text-gray-400 hover:text-white transition-colors">Contact</a>
+          class="nav-link text-xs uppercase tracking-wider font-semibold text-gray-400 hover:text-white transition-colors">Contact</a>
       </div>
 
-      <!-- RIGHT SIDE: TRANSLATOR & PHONE CONTACT -->
       <div class="flex items-center space-x-4">
-        <!-- GOOGLE TRANSLATOR DROPDOWN CONTAINER -->
         <div id="google_element_wrapper"
-          class="relative bg-brand-cardBg border border-brand-borderGray rounded-xl px-2 py-1.5 flex items-center max-w-[130px] sm:max-w-none overflow-hidden">
+          class="relative bg-brand-cardBg border border-brand-borderGray rounded-xl px-2 py-1.5 flex items-center min-w-[140px] overflow-visible z-[9999]">
           <div id="google_translate_element"></div>
         </div>
 
-        <!-- CONTACT PHONE MATRIX -->
         <a href="tel:+923225673641"
           class="hidden sm:block text-xs font-bold text-white tracking-wider font-mono border-l border-brand-borderGray pl-4 hover:opacity-80 transition-opacity">
           +92 322 5673641
@@ -103,9 +97,8 @@
     </div>
   </nav>
 
-  <!-- GOOGLE TRANSLATOR DARK THEME CONFIGURATOR -->
   <style>
-    .skiptranslate {
+    iframe.goog-te-banner-frame {
       display: none !important;
     }
 
@@ -124,16 +117,30 @@
       letter-spacing: 0.05em !important;
       outline: none !important;
       cursor: pointer;
-      padding: 2px 4px !important;
+      padding: 4px 6px !important;
+      visibility: visible !important;
+      display: block !important;
     }
 
     .goog-te-gadget {
       color: transparent !important;
       font-size: 0px !important;
     }
+
+    .goog-te-gadget span {
+      display: none !important;
+    }
+
+    /* Premium dynamic selector highlights */
+    .nav-link.active-node {
+      color: #3b82f6 !important;
+      /* brand-blue / lightBlue */
+      font-weight: 700 !important;
+      border-bottom: 2px solid #3b82f6;
+      padding-bottom: 4px;
+    }
   </style>
 
-  <!-- GOOGLE TRANSLATOR ENGINE SCRIPTS -->
   <script type="text/javascript">
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({
@@ -142,9 +149,26 @@
         layout: google.translate.TranslateElement.InlineLayout.SIMPLE
       }, 'google_translate_element');
     }
+
+    // Auto Highlighting Logic based on current page location
+    document.addEventListener("DOMContentLoaded", function () {
+      let currentPath = window.location.pathname.split("/").pop();
+      let navLinks = document.querySelectorAll(".nav-link");
+
+      if (currentPath === "" || currentPath === "index.html") {
+        navLinks[0].classList.add("active-node"); // Highlights Home
+      } else {
+        navLinks.forEach(link => {
+          if (link.getAttribute("href") === currentPath) {
+            link.classList.add("active-node");
+            link.classList.remove("text-gray-400");
+          }
+        });
+      }
+    });
   </script>
   <script type="text/javascript"
-    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
   <section class="relative pt-48 pb-28 bg-cover bg-center bg-no-repeat animate-reveal"
     style="background-image: linear-gradient(to bottom, rgba(9, 13, 22, 0.85), rgba(9, 13, 22, 1)), url('assets/image/team office work.jpeg'), url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200');">
@@ -309,7 +333,6 @@
 
   <!-- FLOATING COMMUNICATION SYNC WIDGET (STAYS EVERYWHERE ON THE SCREEN) -->
   <div class="fixed bottom-6 right-6 z-50 flex flex-col items-center space-y-3">
-    <!-- Floating WhatsApp Node -->
     <a href="https://wa.me/923225673641" target="_blank" rel="noopener noreferrer"
       class="w-14 h-14 bg-emerald-600 hover:bg-emerald-700 text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 group relative">
       <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -317,34 +340,24 @@
           d="M12 2C6.477 2 2 6.484 2 12.017c0 1.764.463 3.418 1.27 4.86L2 22l5.316-1.39A9.94 9.94 0 0012 22c5.523 0 10-4.483 10-10.017C22 6.484 17.522 2 12 2zm4.795 13.54c-.228.626-1.312 1.151-1.794 1.206-.46.053-.94.075-1.58-.124-2.585-.805-4.24-3.418-4.37-3.591-.127-.174-1.042-1.39-1.042-2.652 0-1.263.662-1.884.9-.214.23-.33.294-.393.442-.1.147-.2.294-.2.443 0 .147-.074.275-.11.392-.037.117-.294.733-.294.733s-.368-.442-.515-.698c-.147-.256-.258-.553-.258-.87 0-.626.49-1.127 1.104-1.127h.01c.203 0 .385.053.515.152.147.104.307.275.393.453l.972 2.348c.074.174.037.368-.098.514l-.54.673c-.11.137-.123.33-.037.472.454.753 1.018 1.39 1.693 1.884.147.104.343.085.454-.05l.503-.63c.123-.153.33-.215.515-.138l2.257 1.054c.209.1.33.226.38.403.056.177-.024.636-.252 1.262z"
           clip-rule="evenodd" />
       </svg>
-      <span
-        class="absolute right-16 bg-brand-cardBg border border-brand-borderGray text-white text-[10px] font-mono font-bold tracking-wider px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap shadow-xl">WhatsApp
-        Chat</span>
     </a>
 
-    <!-- Floating Direct Voice Node -->
     <a href="tel:+923225673641"
-      class="w-14 h-14 bg-brand-blue hover:bg-blue-700 text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 group relative">
+      class="w-14 h-14 bg-blue-600 hover:bg-blue-700 text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 group relative">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
           d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
       </svg>
-      <span
-        class="absolute right-16 bg-brand-cardBg border border-brand-borderGray text-white text-[10px] font-mono font-bold tracking-wider px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap shadow-xl">Direct
-        Call</span>
     </a>
   </div>
 
-  <!-- MAIN CORPORATE FOOTER LINK MATRIX -->
   <footer class="bg-brand-darkBg border-t border-brand-borderGray pt-16 pb-8 relative overflow-hidden">
     <div
       class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 border-b border-brand-borderGray/60 pb-12">
 
-      <!-- SEGMENT 01: CORE ARCHITECTURE INDEX & LOGO -->
       <div class="space-y-5">
-        <a href="index.html" class="flex items-center space-x-3">
-          <!-- Loaded via custom jpeg specifications as requested -->
-          <img src="logo.jpeg" alt="AITS Logo"
+        <a href="/" class="flex items-center space-x-3">
+          <img src="assets/image/logo.jpeg" alt="AITS Logo"
             class="w-11 h-11 rounded-xl object-cover shadow-md shadow-blue-500/10 border border-brand-borderGray">
           <div class="flex flex-col">
             <span class="text-white font-extrabold text-lg tracking-tight">AITS</span>
@@ -355,32 +368,25 @@
           Engineering optimized software pipelines, performance data automation grids, and high-fidelity technical SEO
           layers globally.
         </p>
-        <!-- EXTERNAL VERIFIED SOCIAL NETWORKS -->
         <div class="flex items-center space-x-3 pt-2">
-          <!-- Facebook -->
           <a href="https://www.facebook.com/profile.php?id=61575574237994" target="_blank" rel="noopener noreferrer"
             class="w-8 h-8 bg-brand-cardBg border border-brand-borderGray hover:border-brand-blue rounded-lg flex items-center justify-center text-xs text-gray-400 hover:text-white transition-all duration-200">FB</a>
-          <!-- LinkedIn -->
           <a href="https://www.linkedin.com/in/ali-hamza-mk-77b809363/" target="_blank" rel="noopener noreferrer"
             class="w-8 h-8 bg-brand-cardBg border border-brand-borderGray hover:border-brand-blue rounded-lg flex items-center justify-center text-xs text-gray-400 hover:text-white transition-all duration-200">LN</a>
-          <!-- Twitter/X -->
           <a href="https://x.com/AliHamza_SEO" target="_blank" rel="noopener noreferrer"
             class="w-8 h-8 bg-brand-cardBg border border-brand-borderGray hover:border-brand-blue rounded-lg flex items-center justify-center text-xs text-gray-400 hover:text-white transition-all duration-200">𝕏</a>
-          <!-- Instagram -->
           <a href="https://www.instagram.com/ahamza.arshad100?igsh=MTRlaWt6OGVzemxjaQ==" target="_blank"
             rel="noopener noreferrer"
             class="w-8 h-8 bg-brand-cardBg border border-brand-borderGray hover:border-brand-blue rounded-lg flex items-center justify-center text-xs text-gray-400 hover:text-white transition-all duration-200">IG</a>
-          <!-- Fiverr -->
           <a href="https://www.fiverr.com/users/aits_official/" target="_blank" rel="noopener noreferrer"
             class="w-8 h-8 bg-brand-cardBg border border-brand-borderGray hover:border-brand-blue rounded-lg flex items-center justify-center text-[9px] font-mono font-bold text-gray-400 hover:text-emerald-400 transition-all duration-200">FI</a>
         </div>
       </div>
 
-      <!-- SEGMENT 02: PRIMARY NAVIGATION MATRICES -->
       <div class="space-y-4">
         <h4 class="text-white text-xs font-bold uppercase tracking-widest font-mono">// System Router</h4>
         <ul class="space-y-2 text-xs">
-          <li><a href="index.html" class="text-gray-400 hover:text-brand-lightBlue transition-colors block">System Base
+          <li><a href="/" class="text-gray-400 hover:text-brand-lightBlue transition-colors block">System Base
               (Home)</a></li>
           <li><a href="about.html" class="text-gray-400 hover:text-brand-lightBlue transition-colors block">Our
               Operations (About)</a></li>
@@ -392,7 +398,6 @@
         </ul>
       </div>
 
-      <!-- SEGMENT 03: COMMERCIAL CORE ARCHITECTURE -->
       <div class="space-y-4">
         <h4 class="text-white text-xs font-bold uppercase tracking-widest font-mono">// Operational Nodes</h4>
         <ul class="space-y-2 text-xs">
@@ -408,36 +413,24 @@
         </ul>
       </div>
 
-      <!-- SEGMENT 04: DIRECT HARDCODED COORDINATES -->
       <div class="space-y-4">
         <h4 class="text-white text-xs font-bold uppercase tracking-widest font-mono">// Terminal Coordinates</h4>
         <ul class="space-y-3 text-xs">
-          <li class="flex items-start space-x-2.5">
-            <span class="text-brand-lightBlue text-[11px]">📞</span>
-            <span class="text-gray-400 font-mono">+92 322 5673641</span>
-          </li>
-          <li class="flex items-start space-x-2.5">
-            <span class="text-brand-lightBlue text-[11px]">✉️</span>
-            <span class="text-gray-400 font-mono">ahamza.arshad100@gmail.com</span>
-          </li>
-          <li class="flex items-start space-x-2.5">
-            <span class="text-brand-lightBlue text-[11px]">🏢</span>
-            <span class="text-gray-300 leading-relaxed">AITS Tech Zone, Software House Cluster, Lahore,DHA Phase-9 Town,
-              Pakistan</span>
-          </li>
+          <li class="flex items-start space-x-2.5"><span class="text-brand-lightBlue text-[11px]">📞</span><span
+              class="text-gray-400 font-mono">+92 322 5673641</span></li>
+          <li class="flex items-start space-x-2.5"><span class="text-brand-lightBlue text-[11px]">✉️</span><span
+              class="text-gray-400 font-mono">ahamza.arshad100@gmail.com.com</span></li>
+          <li class="flex items-start space-x-2.5"><span class="text-brand-lightBlue text-[11px]">🏢</span><span
+              class="text-gray-300 leading-relaxed">AITS Tech Zone, Software House Cluster, Lahore, Pakistan</span></li>
         </ul>
       </div>
-
     </div>
-
-    <!-- LOWER COPYRIGHT SECURITY STAMP -->
     <div
       class="max-w-7xl mx-auto px-6 pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-gray-500 font-mono">
       <p>© 2026 AITS Engineering Network. All rights reserved.</p>
       <p class="pt-2 sm:pt-0 text-gray-600">Secure Network Connectivity Active // TLS v1.3</p>
     </div>
   </footer>
-
 </body>
 
 </html>
