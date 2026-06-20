@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enterprise Agency Packages — AITS Official</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              blue: '#2563eb',
+              lightBlue: '#3b82f6',
+              darkBg: '#070a12',
+              cardBg: '#0f1626',
+              borderGray: '#1e293b'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=400;500;600;700;800&display=swap');
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .premium-transition {
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .tab-btn.active {
+      background-color: #2563eb;
+      color: white;
+      border-color: #2563eb;
+    }
+
+    .pricing-grid {
+      display: grid;
+    }
+  </style>
+</head>
+
+<body class="bg-brand-darkBg text-gray-300 antialiased selection:bg-brand-blue selection:text-white overflow-x-hidden">
+
+  <!-- NAVIGATION HEADER WITH LOGO & TRANSLATOR LAYER -->
+  <nav class="fixed top-0 left-0 w-full z-50 bg-brand-darkBg/90 backdrop-blur-md border-b border-brand-borderGray">
+    <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+
+      <!-- LOGO INTEGRATION -->
+      <a href="index.html" class="flex items-center space-x-3 shrink-0">
+        <img src="logo.jpeg" alt="AITS Logo"
+          class="w-11 h-11 rounded-xl object-cover border border-brand-borderGray shadow-md shadow-blue-500/10">
+        <div class="flex flex-col">
+          <span class="text-white font-extrabold text-lg tracking-tight leading-none">AITS</span>
+          <span class="text-brand-lightBlue text-[10px] uppercase tracking-widest font-bold mt-1">Software House</span>
+        </div>
+      </a>
+
+      <!-- CENTRAL ROUTER LINKS -->
+      <div class="hidden lg:flex items-center space-x-6 xl:space-x-8">
+        <a href="index.html"
+          class="text-xs uppercase tracking-wider font-semibold text-gray-400 hover:text-white transition-colors">Home</a>
+        <a href="about.html"
+          class="text-xs uppercase tracking-wider font-semibold text-gray-400 hover:text-white transition-colors">About
+          Us</a>
+        <a href="portfolio.html"
+          class="text-xs uppercase tracking-wider font-semibold text-gray-400 hover:text-white transition-colors">Portfolio</a>
+        <a href="projects.html"
+          class="text-xs uppercase tracking-wider font-semibold text-gray-400 hover:text-white transition-colors">Projects</a>
+        <a href="packages.html"
+          class="text-xs uppercase tracking-wider font-semibold text-gray-400 hover:text-white transition-colors">Packages</a>
+        <a href="services.html"
+          class="text-xs uppercase tracking-wider font-bold text-brand-lightBlue border-b-2 border-brand-blue pb-1">Services</a>
+        <a href="booking.html"
+          class="text-xs uppercase tracking-wider font-semibold text-gray-400 hover:text-white transition-colors">Booking
+          Portal</a>
+        <a href="contact.html"
+          class="text-xs uppercase tracking-wider font-semibold text-gray-400 hover:text-white transition-colors">Contact</a>
+      </div>
+
+      <!-- RIGHT SIDE: TRANSLATOR & PHONE CONTACT -->
+      <div class="flex items-center space-x-4">
+        <!-- GOOGLE TRANSLATOR DROPDOWN CONTAINER -->
+        <div id="google_element_wrapper"
+          class="relative bg-brand-cardBg border border-brand-borderGray rounded-xl px-2 py-1.5 flex items-center max-w-[130px] sm:max-w-none overflow-hidden">
+          <div id="google_translate_element"></div>
+        </div>
+
+        <!-- CONTACT PHONE MATRIX -->
+        <a href="tel:+923225673641"
+          class="hidden sm:block text-xs font-bold text-white tracking-wider font-mono border-l border-brand-borderGray pl-4 hover:opacity-80 transition-opacity">
+          +92 322 5673641
+        </a>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- GOOGLE TRANSLATOR DARK THEME CONFIGURATOR -->
+  <style>
+    .skiptranslate {
+      display: none !important;
+    }
+
+    body {
+      top: 0px !important;
+    }
+
+    #google_translate_element select {
+      background-color: #0f1626 !important;
+      color: #d1d5db !important;
+      border: none !important;
+      font-size: 11px !important;
+      font-weight: 700 !important;
+      font-family: sans-serif !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.05em !important;
+      outline: none !important;
+      cursor: pointer;
+      padding: 2px 4px !important;
+    }
+
+    .goog-te-gadget {
+      color: transparent !important;
+      font-size: 0px !important;
+    }
+  </style>
+
+  <!-- GOOGLE TRANSLATOR ENGINE SCRIPTS -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,ur,ar,es,de,fr,zh-CN,tr',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript"
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <section class="pt-36 pb-16 bg-gradient-to-b from-black to-brand-darkBg text-center border-b border-brand-borderGray">
+    <div class="max-w-4xl mx-auto px-6 space-y-6">
+      <span class="text-brand-lightBlue text-xs uppercase tracking-[0.3em] font-black block">// FLEXIBLE ENGINE
+        PRICING</span>
+      <h1 class="text-4xl sm:text-6xl font-black text-white tracking-tight leading-none">
+        Scalable Growth & <br><span
+          class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-500 to-indigo-500">Performance
+          Packages</span>
+      </h1>
+      <p class="text-xs sm:text-sm text-gray-400 max-w-2xl mx-auto leading-relaxed">
+        Choose between optimized international structures or high-velocity localized target matrices engineered for
+        conversions.
+      </p>
+
+      <div class="flex items-center justify-center gap-3 pt-6">
+        <button onclick="switchRegion('international')" id="btn-intl"
+          class="tab-btn active px-6 py-2.5 bg-brand-cardBg border border-brand-borderGray rounded-xl text-xs font-bold uppercase tracking-wider premium-transition">Global
+          / International</button>
+        <button onclick="switchRegion('local')" id="btn-local"
+          class="tab-btn px-6 py-2.5 bg-brand-cardBg border border-brand-borderGray rounded-xl text-xs font-bold uppercase tracking-wider text-gray-400 hover:text-white premium-transition">Local
+          (PKR Matrix)</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="intl-section" class="py-16 bg-brand-darkBg space-y-24">
+
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="mb-10 text-center lg:text-left">
+        <span class="text-brand-lightBlue text-xs font-mono tracking-widest uppercase">// PERFORMANCE MATRIX</span>
+        <h2 class="text-2xl font-black text-white tracking-tight mt-1">Digital Marketing Services (International)</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div
+          class="bg-brand-cardBg border border-brand-borderGray rounded-2xl p-6 flex flex-col justify-between premium-transition hover:border-blue-500/30">
+          <div class="space-y-4">
+            <h4 class="text-gray-400 text-xs font-bold uppercase">Starter Block</h4>
+            <div class="text-3xl font-black text-white">$499 <span class="text-xs font-normal text-gray-500">/mo</span>
+            </div>
+            <ul class="space-y-2 text-xs text-gray-400 border-t border-brand-borderGray/50 pt-4">
+              <li>• 12 Premium Custom Posts</li>
+              <li>• 8 High-Convert Videos (3D / Reels)</li>
+              <li>• 8 Strategic Shares Matrix</li>
+              <li>• Profile Vector Architecture</li>
+              <li>• Meta Ads Asset Deployment</li>
+            </ul>
+          </div>
+          <button onclick="scrollToQuote('Digital Marketing - International Starter')"
+            class="mt-6 w-full py-3 bg-brand-darkBg hover:bg-brand-blue text-white rounded-xl text-xs font-bold uppercase tracking-wider border border-brand-borderGray premium-transition">Get
+            In Touch</button>
+        </div>
+        <div
+          class="bg-brand-cardBg border-2 border-brand-blue rounded-2xl p-6 flex flex-col justify-between relative premium-transition">
+          <span
+            class="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-blue text-white text-[9px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Most
+            Popular</span>
+          <div class="space-y-4">
+            <h4 class="text-brand-lightBlue text-xs font-bold uppercase">Growth Suite</h4>
+            <div class="text-3xl font-black text-white">$1,299 <span
+                class="text-xs font-normal text-gray-500">/mo</span></div>
+            <ul class="space-y-2 text-xs text-gray-400 border-t border-brand-borderGray/50 pt-4">
+              <li>• 24 Targeted Posts Matrix</li>
+              <li>• 12 Advanced Motion Videos</li>
+              <li>• 15 Organic Group Distribution</li>
+              <li>• 1 Deep Corporate Profile Blueprint</li>
+              <li>• Multi-Set Meta Optimization Funnels</li>
+            </ul>
+          </div>
+          <button onclick="scrollToQuote('Digital Marketing - International Growth')"
+            class="mt-6 w-full py-3 bg-brand-blue hover:bg-blue-700 text-white rounded-xl text-xs font-bold uppercase tracking-wider premium-transition">Get
+            In Touch</button>
+        </div>
+        <div
+          class="bg-brand-cardBg border border-brand-borderGray rounded-2xl p-6 flex flex-col justify-between premium-transition hover:border-blue-500/30">
+          <div class="space-y-4">
+            <h4 class="text-gray-400 text-xs font-bold uppercase">Enterprise Tier</h4>
+            <div class="text-3xl font-black text-white">$2,499 <span
+                class="text-xs font-normal text-gray-500">/mo</span></div>
+            <ul class="space-y-2 text-xs text-gray-400 border-t border-brand-borderGray/50 pt-4">
+              <li>• 30 Ultra-Premium Posts Matrix</li>
+              <li>• 18 High-End Visual/3D Productions</li>
+              <li>• 24 Omnichannel Authority Syndications</li>
+              <li>• Full Architecture Profile Injections</li>
+              <li>• Custom Lookalike & Omnipresent Meta Funnels</li>
+            </ul>
+          </div>
+          <button onclick="scrollToQuote('Digital Marketing - International Enterprise')"
+            class="mt-6 w-full py-3 bg-brand-darkBg hover:bg-brand-blue text-white rounded-xl text-xs font-bold uppercase tracking-wider border border-brand-borderGray premium-transition">Get
+            In Touch</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="mb-10 text-center lg:text-left">
+        <span class="text-brand-lightBlue text-xs font-mono tracking-widest uppercase">// INDEX RANK ENGINE</span>
+        <h2 class="text-2xl font-black text-white tracking-tight mt-1">Search Engine Optimization (SEO International)
+        </h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div
+          class="bg-brand-cardBg border border-brand-borderGray rounded-2xl p-6 flex flex-col justify-between premium-transition hover:border-blue-500/30">
+          <div class="space-y-4">
+            <h4 class="text-gray-400 text-xs font-bold uppercase">SEO Starter</h4>
+            <div class="text-3xl font-black text-white">$199 <span class="text-xs font-normal text-gray-500">/mo</span>
+            </div>
+            <ul class="space-y-2 text-xs text-gray-400 border-t border-brand-borderGray/50 pt-4">
+              <li>• Keyword Research (Up to 12 Targets)</li>
+              <li>• On-Page Blueprint (5 Core Pages)</li>
+              <li>• Basic Technical Site Health Audit</li>
+              <li>• Search Console & Analytics Injection</li>
+              <li>• 2 Optimized Inbound Blog Posts</li>
+            </ul>
+          </div>
+          <button onclick="scrollToQuote('SEO - International Starter')"
+            class="mt-6 w-full py-3 bg-brand-darkBg hover:bg-brand-blue text-white rounded-xl text-xs font-bold uppercase tracking-wider border border-brand-borderGray premium-transition">Get
+            In Touch</button>
+        </div>
+        <div
+          class="bg-brand-cardBg border border-brand-borderGray rounded-2xl p-6 flex flex-col justify-between premium-transition hover:border-blue-500/30">
+          <div class="space-y-4">
+            <h4 class="text-brand-lightBlue text-xs font-bold uppercase">SEO Growth</h4>
+            <div class="text-3xl font-black text-white">$499 <span class="text-xs font-normal text-gray-500">/mo</span>
+            </div>
+            <ul class="space-y-2 text-xs text-gray-400 border-t border-brand-borderGray/50 pt-4">
+              <li>• Advanced Clusters (Up to 25 Page Targets)</li>
+              <li>• Full On-Page Structural Tuning (15 Pages)</li>
+              <li>• Schema Markup & Entity Mapping</li>
+              <li>• Mobile Core Web Vitals Optimization</li>
+              <li>• Competitor Rank Analytics Reports</li>
+            </ul>
+          </div>
+          <button onclick="scrollToQuote('SEO - International Growth')"
+            class="mt-6 w-full py-3 bg-brand-blue hover:bg-blue-700 text-white rounded-xl text-xs font-bold uppercase tracking-wider premium-transition">Get
+            In Touch</button>
+        </div>
+        <div
+          class="bg-brand-cardBg border border-brand-borderGray rounded-2xl p-6 flex flex-col justify-between premium-transition hover:border-blue-500/30">
+          <div class="space-y-4">
+            <h4 class="text-gray-400 text-xs font-bold uppercase">SEO Enterprise</h4>
+            <div class="text-3xl font-black text-white">$899 <span class="text-xs font-normal text-gray-500">/mo</span>
+            </div>
+            <ul class="space-y-2 text-xs text-gray-400 border-t border-brand-borderGray/50 pt-4">
+              <li>• Unlimited High-Intent Keyword Matrix</li>
+              <li>• Complete Site Architecture Remediation</li>
+              <li>• Complex Crawl & 301 Migration Tuning</li>
+              <li>• Premium Backlink Matrix (High DA Loops)</li>
+              <li>• Dedicated Account System Analytics Manager</li>
+            </ul>
+          </div>
+          <button onclick="scrollToQuote('SEO - International Enterprise')"
+            class="mt-6 w-full py-3 bg-brand-darkBg hover:bg-brand-blue text-white rounded-xl text-xs font-bold uppercase tracking-wider border border-brand-borderGray premium-transition">Get
+            In Touch</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="mb-10 text-center lg:text-left">
+        <span class="text-brand-lightBlue text-xs font-mono tracking-widest uppercase">// ARCHITECTURE SUITE</span>
+        <h2 class="text-2xl font-black text-white tracking-tight mt-1">Web Development & Front-End Engines
+          (International)</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div
+          class="bg-brand-cardBg border border-brand-borderGray rounded-2xl p-6 flex flex-col justify-between premium-transition hover:border-blue-500/30">
+          <div class="space-y-4">
+            <h4 class="text-gray-400 text-xs font-bold uppercase">Business Landing Page</h4>
+            <div class="text-3xl font-black text-white">$799 <span
+                class="text-xs font-normal text-gray-500">One-time</span></div>
+            <ul class="space-y-2 text-xs text-gray-400 border-t border-brand-borderGray/50 pt-4">
+              <li>• Custom High-Converting Landing Section</li>
+              <li>• Fully Responsive Tailwind / CSS System</li>
+              <li>• Contact Form & API Configuration</li>
+              <li>• Absolute Zero-Latency Vercel/GitHub Push</li>
+            </ul>
+          </div>
+          <button onclick="scrollToQuote('Web Dev - International Startup')"
+            class="mt-6 w-full py-3 bg-brand-darkBg hover:bg-brand-blue text-white rounded-xl text-xs font-bold uppercase tracking-wider border border-brand-borderGray premium-transition">Get
+            In Touch</button>
+        </div>
+        <div
+          class="bg-brand-cardBg border border-brand-borderGray rounded-2xl p-6 flex flex-col justify-between premium-transition hover:border-blue-500/30">
+          <div class="space-y-4">
+            <h4 class="text-brand-lightBlue text-xs font-bold uppercase">Corporate Platform</h4>
+            <div class="text-3xl font-black text-white">$1,899 <span
+                class="text-xs font-normal text-gray-500">One-time</span></div>
+            <ul class="space-y-2 text-xs text-gray-400 border-t border-brand-borderGray/50 pt-4">
+              <li>• Up to 10 Premium Corporate Pages</li>
+              <li>• Dynamic Booking & Content Architecture</li>
+              <li>• Advanced CMS / WordPress Headless Setup</li>
+              <li>• Fully Blazing Speed & SEO Structural Ready</li>
+            </ul>
+          </div>
+          <button onclick="scrollToQuote('Web Dev - International Corporate')"
+            class="mt-6 w-full py-3 bg-brand-blue hover:bg-blue-700 text-white rounded-xl text-xs font-bold uppercase tracking-wider premium-transition">Get
+            In Touch</button>
+        </div>
+        <div
+          class="bg-brand-cardBg border border-brand-borderGray rounded-2xl p-6 flex flex-col justify-between premium-transition hover:border-blue-500/30">
+          <div class="space-y-4">
+            <h4 class="text-gray-400 text-xs font-bold uppercase">E-Commerce Engine</h4>
+            <div class="text-3xl font-black text-white">$2,999 <span
+                class="text-xs font-normal text-gray-500">One-time</span></div>
+            <ul class="space-y-2 text-xs text-gray-400 border-t border-brand-borderGray/50 pt-4">
+              <li>• Complete Premium E-Store Configuration</li>
+              <li>• Secure Checkout & Multiple Payment Loops</li>
+              <li>• Advanced Product Variant Control & Grid</li>
+              <li>• Speed Optimization & Analytics Trackers</li>
+            </ul>
+          </div>
+          <button onclick="scrollToQuote('Web Dev - International Enterprise')"
+            class="mt-6 w-full py-3 bg-brand-darkBg hover:bg-brand-blue text-white rounded-xl text-xs font-bold uppercase tracking-wider border border-brand-borderGray premium-transition">Get
+            In Touch</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="local-section" class="py-16 bg-brand-darkBg space-y-24 hidden">
+
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="mb-10 text-center lg:text-left">
+        <span class="text-brand-lightBlue text-xs font-mono tracking-widest uppercase">// LOCAL RETAIL SYSTEMS</span>
+        <h2 class="text-2xl font-black text-white tracking-tight mt-1">Digital Marketing Retainers (Pakistan Local)</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div
+          class="bg-brand-cardBg border border-brand-borderGray rounded-2xl p-6 flex flex-col justify-between premium-transition hover:border-blue-500/30">
+          <div class="space-y-4">
+            <h4 class="text-gray-400 text-xs font-bold uppercase">Local Starter</h4>
+            <div class="text-3xl font-black text-white">45,000 <span class="text-xs font-normal text-gray-500">PKR
+                /mo</span></div>
+            <ul class="space-y-2 text-xs text-gray-400 border-t border-brand-borderGray/50 pt-4">
+              <li>• 12 Target Social Graphics</li>
+              <li>• Local Reach Meta Campaign Configuration</li>
+              <li>• Graphic Asset Vector Mapping (Canva Layout)</li>
+              <li>• Monthly Brief Performance Output Report</li>
+            </ul>
+          </div>
+          <button onclick="scrollToQuote('Digital Marketing - Local Starter')"
+            class="mt-6 w-full py-3 bg-brand-darkBg hover:bg-brand-blue text-white rounded-xl text-xs font-bold uppercase tracking-wider border border-brand-borderGray premium-transition">Get
+            In Touch</button>
+        </div>
+        <div
+          class="bg-brand-cardBg border border-brand-blue rounded-2xl p-6 flex flex-col justify-between premium-transition">
+          <div class="space-y-4">
+            <h4 class="text-brand-lightBlue text-xs font-bold uppercase">Growth Retainer</h4>
+            <div class="text-3xl font-black text-white">85,000 <span class="text-xs font-normal text-gray-500">PKR
+                /mo</span></div>
+            <ul class="space-y-2 text-xs text-gray-400 border-t border-brand-borderGray/50 pt-4">
+              <li>• 20 Custom Brand Identity Posts</li>
+              <li>• Local Reach + Conversion Facebook Layouts</li>
+              <li>• Video Asset Sourcing & Motion Loops</li>
+              <li>• Target Competitor Visibility Reports</li>
+            </ul>
+          </div>
+          <button onclick="scrollToQuote('Digital Marketing - Local Growth')"
+            class="mt-6 w-full py-3 bg-brand-blue hover:bg-blue-700 text-white rounded-xl text-xs font-bold uppercase tracking-wider premium-transition">Get
+            In Touch</button>
+        </div>
+        <div
+          class="bg-brand-cardBg border border-brand-borderGray rounded-2xl p-6 flex flex-col justify-between premium-transition hover:border-blue-500/30">
+          <div class="space-y-4">
+            <h4 class="text-gray-400 text-xs font-bold uppercase">Enterprise Domination</h4>
+            <div class="text-3xl font-black text-white">125,000 <span class="text-xs font-normal text-gray-500">PKR
+                /mo</span></div>
+            <ul class="space-y-2 text-xs text-gray-400 border-t border-brand-borderGray/50 pt-4">
+              <li>• Full-Scale Multi-Channel Management</li>
+              <li>• Intensive Video Production & Strategy Hooks</li>
+              <li>• High-Intent Lead Ingestion Models</li>
+              <li>• Complete Retainer Synergy Setup Package</li>
+            </ul>
+          </div>
+          <button onclick="scrollToQuote('Digital Marketing - Local Retainer')"
+            class="mt-6 w-full py-3 bg-brand-darkBg hover:bg-brand-blue text-white rounded-xl text-xs font-bold uppercase tracking-wider border border-brand-borderGray premium-transition">Get
+            In Touch</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="mb-10 text-center lg:text-left">
+        <span class="text-brand-lightBlue text-[10px] font-mono tracking-widest uppercase">// LOCAL MAP SERP</span>
+        <h2 class="text-2xl font-black text-white tracking-tight mt-1">Search Engine Optimization (SEO Local Matrix)
+        </h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div
+          class="bg-brand-cardBg border border-brand-borderGray rounded-2xl p-6 flex flex-col justify-between premium-transition hover:border-blue-500/30">
+          <div class="space-y-4">
+            <h4 class="text-gray-400 text-xs font-bold uppercase">GMB Domination</h4>
+            <div class="text-3xl font-black text-white">35,000 <span class="text-xs font-normal text-gray-500">PKR
+                /mo</span></div>
+            <ul class="space-y-2 text-xs text-gray-400 border-t border-brand-borderGray/50 pt-4">
+              <li>• Google Business Profile Optimization</li>
+              <li>• Local Citation Building (Top Directories)</li>
+              <li>• Local Map Pack Ranking Strategy</li>
+            </ul>
+          </div>
+          <button onclick="scrollToQuote('SEO - Local GMB')"
+            class="mt-6 w-full py-3 bg-brand-darkBg hover:bg-brand-blue text-white rounded-xl text-xs font-bold uppercase tracking-wider border border-brand-borderGray premium-transition">Get
+            In Touch</button>
+        </div>
+        <div
+          class="bg-brand-cardBg border border-brand-borderGray rounded-2xl p-6 flex flex-col justify-between premium-transition hover:border-blue-500/30">
+          <div class="space-y-4">
+            <h4 class="text-brand-lightBlue text-xs font-bold uppercase">Full Scale On-Page</h4>
+            <div class="text-3xl font-black text-white">65,000 <span class="text-xs font-normal text-gray-500">PKR
+                /mo</span></div>
+            <ul class="space-y-2 text-xs text-gray-400 border-t border-brand-borderGray/50 pt-4">
+              <li>• Full Content Structural Tweaks & RankMath</li>
+              <li>• High-Intent Local Keyword Integration</li>
+              <li>• Index Monitoring & Search Console Setup</li>
+            </ul>
+          </div>
+          <button onclick="scrollToQuote('SEO - Local Full')"
+            class="mt-6 w-full py-3 bg-brand-blue hover:bg-blue-700 text-white rounded-xl text-xs font-bold uppercase tracking-wider premium-transition">Get
+            In Touch</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="mb-10 text-center lg:text-left">
+        <span class="text-brand-lightBlue text-xs font-mono tracking-widest uppercase">// STABLE WEB COMPILER</span>
+        <h2 class="text-2xl font-black text-white tracking-tight mt-1">Web Development (Pakistan Local Layouts)</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div
+          class="bg-brand-cardBg border border-brand-borderGray rounded-2xl p-6 flex flex-col justify-between premium-transition hover:border-blue-500/30">
+          <div class="space-y-4">
+            <h4 class="text-gray-400 text-xs font-bold uppercase">Basic WordPress</h4>
+            <div class="text-3xl font-black text-white">35,000 <span
+                class="text-xs font-normal text-gray-500">PKR</span></div>
+            <ul class="space-y-2 text-xs text-gray-400 border-t border-brand-borderGray/50 pt-4">
+              <li>• Responsive Dynamic Layout Framework</li>
+              <li>• Standard Elements & Dynamic Form</li>
+              <li>• Fully Operational Elementor Integration</li>
+            </ul>
+          </div>
+          <button onclick="scrollToQuote('Web Dev - Local WP')"
+            class="mt-6 w-full py-3 bg-brand-darkBg hover:bg-brand-blue text-white rounded-xl text-xs font-bold uppercase tracking-wider border border-brand-borderGray premium-transition">Get
+            In Touch</button>
+        </div>
+        <div
+          class="bg-brand-cardBg border border-brand-borderGray rounded-2xl p-6 flex flex-col justify-between premium-transition hover:border-blue-500/30">
+          <div class="space-y-4">
+            <h4 class="text-brand-lightBlue text-xs font-bold uppercase">Custom Frontend Web</h4>
+            <div class="text-3xl font-black text-white">80,000 <span
+                class="text-xs font-normal text-gray-500">PKR</span></div>
+            <ul class="space-y-2 text-xs text-gray-400 border-t border-brand-borderGray/50 pt-4">
+              <li>• Hardcoded Fast Tailwind CSS Configuration</li>
+              <li>• Premium User Interface Mechanics</li>
+              <li>• Fully Managed Vercel Architecture Engine</li>
+            </ul>
+          </div>
+          <button onclick="scrollToQuote('Web Dev - Local Custom')"
+            class="mt-6 w-full py-3 bg-brand-blue hover:bg-blue-700 text-white rounded-xl text-xs font-bold uppercase tracking-wider premium-transition">Get
+            In Touch</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="quote-section" class="py-20 bg-black border-t border-brand-borderGray">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="text-center mb-10 space-y-2">
+        <span class="text-brand-lightBlue text-xs font-mono tracking-widest uppercase">// SECURE ACQUISITION LINK</span>
+        <h2 class="text-3xl font-black text-white tracking-tight">Initiate Custom Matrix Quote</h2>
+        <p class="text-xs text-gray-400">Fill in your corporate parameters and our engineering division will generate a
+          proposal sequence.</p>
+      </div>
+      <form onsubmit="handleQuoteSubmit(event)"
+        class="bg-brand-cardBg border border-brand-borderGray rounded-2xl p-8 space-y-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div class="space-y-2">
+            <label class="text-xs font-bold uppercase tracking-wider text-gray-400">Full Name</label>
+            <input type="text" required
+              class="w-full bg-brand-darkBg border border-brand-borderGray rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-blue premium-transition">
+          </div>
+          <div class="space-y-2">
+            <label class="text-xs font-bold uppercase tracking-wider text-gray-400">Corporate Email</label>
+            <input type="email" required
+              class="w-full bg-brand-darkBg border border-brand-borderGray rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-blue premium-transition">
+          </div>
+        </div>
+        <div class="space-y-2">
+          <label class="text-xs font-bold uppercase tracking-wider text-gray-400">Selected Blueprint Package</label>
+          <input type="text" id="selected-package" placeholder="e.g. SEO - International Growth"
+            class="w-full bg-brand-darkBg border border-brand-borderGray rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-blue premium-transition">
+        </div>
+        <div class="space-y-2">
+          <label class="text-xs font-bold uppercase tracking-wider text-gray-400">Operational Target
+            Requirements</label>
+          <textarea rows="4" placeholder="Describe your web scaling objectives..."
+            class="w-full bg-brand-darkBg border border-brand-borderGray rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-blue premium-transition"></textarea>
+        </div>
+        <button type="submit"
+          class="w-full py-4 bg-brand-blue hover:bg-blue-700 text-white font-bold text-xs uppercase tracking-wider rounded-xl premium-transition shadow-lg shadow-blue-500/10">
+          Submit Proposal Parameters
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- ENTERPRISE CORE FOOTER & FLOATING CONNECTORS -->
+  <!-- ========================================== -->
+
+  <!-- FLOATING COMMUNICATION SYNC WIDGET (STAYS EVERYWHERE ON THE SCREEN) -->
+  <div class="fixed bottom-6 right-6 z-50 flex flex-col items-center space-y-3">
+    <!-- Floating WhatsApp Node -->
+    <a href="https://wa.me/923225673641" target="_blank" rel="noopener noreferrer"
+      class="w-14 h-14 bg-emerald-600 hover:bg-emerald-700 text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 group relative">
+      <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path fill-rule="evenodd"
+          d="M12 2C6.477 2 2 6.484 2 12.017c0 1.764.463 3.418 1.27 4.86L2 22l5.316-1.39A9.94 9.94 0 0012 22c5.523 0 10-4.483 10-10.017C22 6.484 17.522 2 12 2zm4.795 13.54c-.228.626-1.312 1.151-1.794 1.206-.46.053-.94.075-1.58-.124-2.585-.805-4.24-3.418-4.37-3.591-.127-.174-1.042-1.39-1.042-2.652 0-1.263.662-1.884.9-.214.23-.33.294-.393.442-.1.147-.2.294-.2.443 0 .147-.074.275-.11.392-.037.117-.294.733-.294.733s-.368-.442-.515-.698c-.147-.256-.258-.553-.258-.87 0-.626.49-1.127 1.104-1.127h.01c.203 0 .385.053.515.152.147.104.307.275.393.453l.972 2.348c.074.174.037.368-.098.514l-.54.673c-.11.137-.123.33-.037.472.454.753 1.018 1.39 1.693 1.884.147.104.343.085.454-.05l.503-.63c.123-.153.33-.215.515-.138l2.257 1.054c.209.1.33.226.38.403.056.177-.024.636-.252 1.262z"
+          clip-rule="evenodd" />
+      </svg>
+      <span
+        class="absolute right-16 bg-brand-cardBg border border-brand-borderGray text-white text-[10px] font-mono font-bold tracking-wider px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap shadow-xl">WhatsApp
+        Chat</span>
+    </a>
+
+    <!-- Floating Direct Voice Node -->
+    <a href="tel:+923225673641"
+      class="w-14 h-14 bg-brand-blue hover:bg-blue-700 text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 group relative">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+      </svg>
+      <span
+        class="absolute right-16 bg-brand-cardBg border border-brand-borderGray text-white text-[10px] font-mono font-bold tracking-wider px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap shadow-xl">Direct
+        Call</span>
+    </a>
+  </div>
+
+  <!-- MAIN CORPORATE FOOTER LINK MATRIX -->
+  <footer class="bg-brand-darkBg border-t border-brand-borderGray pt-16 pb-8 relative overflow-hidden">
+    <div
+      class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 border-b border-brand-borderGray/60 pb-12">
+
+      <!-- SEGMENT 01: CORE ARCHITECTURE INDEX & LOGO -->
+      <div class="space-y-5">
+        <a href="index.html" class="flex items-center space-x-3">
+          <!-- Loaded via custom jpeg specifications as requested -->
+          <img src="logo.jpeg" alt="AITS Logo"
+            class="w-11 h-11 rounded-xl object-cover shadow-md shadow-blue-500/10 border border-brand-borderGray">
+          <div class="flex flex-col">
+            <span class="text-white font-extrabold text-lg tracking-tight">AITS</span>
+            <span class="text-brand-lightBlue text-[10px] uppercase tracking-widest font-black">Software House</span>
+          </div>
+        </a>
+        <p class="text-xs text-gray-400 leading-relaxed">
+          Engineering optimized software pipelines, performance data automation grids, and high-fidelity technical SEO
+          layers globally.
+        </p>
+        <!-- EXTERNAL VERIFIED SOCIAL NETWORKS -->
+        <div class="flex items-center space-x-3 pt-2">
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/profile.php?id=61575574237994" target="_blank" rel="noopener noreferrer"
+            class="w-8 h-8 bg-brand-cardBg border border-brand-borderGray hover:border-brand-blue rounded-lg flex items-center justify-center text-xs text-gray-400 hover:text-white transition-all duration-200">FB</a>
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/ali-hamza-mk-77b809363/" target="_blank" rel="noopener noreferrer"
+            class="w-8 h-8 bg-brand-cardBg border border-brand-borderGray hover:border-brand-blue rounded-lg flex items-center justify-center text-xs text-gray-400 hover:text-white transition-all duration-200">LN</a>
+          <!-- Twitter/X -->
+          <a href="https://x.com/AliHamza_SEO" target="_blank" rel="noopener noreferrer"
+            class="w-8 h-8 bg-brand-cardBg border border-brand-borderGray hover:border-brand-blue rounded-lg flex items-center justify-center text-xs text-gray-400 hover:text-white transition-all duration-200">𝕏</a>
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/ahamza.arshad100?igsh=MTRlaWt6OGVzemxjaQ==" target="_blank"
+            rel="noopener noreferrer"
+            class="w-8 h-8 bg-brand-cardBg border border-brand-borderGray hover:border-brand-blue rounded-lg flex items-center justify-center text-xs text-gray-400 hover:text-white transition-all duration-200">IG</a>
+          <!-- Fiverr -->
+          <a href="https://www.fiverr.com/users/aits_official/" target="_blank" rel="noopener noreferrer"
+            class="w-8 h-8 bg-brand-cardBg border border-brand-borderGray hover:border-brand-blue rounded-lg flex items-center justify-center text-[9px] font-mono font-bold text-gray-400 hover:text-emerald-400 transition-all duration-200">FI</a>
+        </div>
+      </div>
+
+      <!-- SEGMENT 02: PRIMARY NAVIGATION MATRICES -->
+      <div class="space-y-4">
+        <h4 class="text-white text-xs font-bold uppercase tracking-widest font-mono">// System Router</h4>
+        <ul class="space-y-2 text-xs">
+          <li><a href="index.html" class="text-gray-400 hover:text-brand-lightBlue transition-colors block">System Base
+              (Home)</a></li>
+          <li><a href="about.html" class="text-gray-400 hover:text-brand-lightBlue transition-colors block">Our
+              Operations (About)</a></li>
+          <li><a href="portfolio.html" class="text-gray-400 hover:text-brand-lightBlue transition-colors block">Case
+              Studies (Portfolio)</a></li>
+          <li><a href="projects.html"
+              class="text-gray-400 hover:text-brand-lightBlue transition-colors block">Production Index (Projects)</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- SEGMENT 03: COMMERCIAL CORE ARCHITECTURE -->
+      <div class="space-y-4">
+        <h4 class="text-white text-xs font-bold uppercase tracking-widest font-mono">// Operational Nodes</h4>
+        <ul class="space-y-2 text-xs">
+          <li><a href="services.html"
+              class="text-gray-400 hover:text-brand-lightBlue transition-colors block">Architecture Verticals
+              (Services)</a></li>
+          <li><a href="packages.html" class="text-gray-400 hover:text-brand-lightBlue transition-colors block">Pricing
+              Metrics (Packages)</a></li>
+          <li><a href="booking.html" class="text-gray-400 hover:text-brand-lightBlue transition-colors block">Automated
+              Onboarding (Booking)</a></li>
+          <li><a href="contact.html" class="text-gray-400 hover:text-brand-lightBlue transition-colors block">Feedback &
+              Comms (Contact)</a></li>
+        </ul>
+      </div>
+
+      <!-- SEGMENT 04: DIRECT HARDCODED COORDINATES -->
+      <div class="space-y-4">
+        <h4 class="text-white text-xs font-bold uppercase tracking-widest font-mono">// Terminal Coordinates</h4>
+        <ul class="space-y-3 text-xs">
+          <li class="flex items-start space-x-2.5">
+            <span class="text-brand-lightBlue text-[11px]">📞</span>
+            <span class="text-gray-400 font-mono">+92 322 5673641</span>
+          </li>
+          <li class="flex items-start space-x-2.5">
+            <span class="text-brand-lightBlue text-[11px]">✉️</span>
+            <span class="text-gray-400 font-mono">ahamza.arshad100@gmail.com</span>
+          </li>
+          <li class="flex items-start space-x-2.5">
+            <span class="text-brand-lightBlue text-[11px]">🏢</span>
+            <span class="text-gray-300 leading-relaxed">AITS Tech Zone, Software House Cluster, Lahore, DHA Phase-9
+              Town, Pakistan</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- LOWER COPYRIGHT SECURITY STAMP -->
+    <div
+      class="max-w-7xl mx-auto px-6 pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-gray-500 font-mono">
+      <p>© 2026 AITS Engineering Network. All rights reserved.</p>
+      <p class="pt-2 sm:pt-0 text-gray-600">Secure Network Connectivity Active // TLS v1.3</p>
+    </div>
+  </footer>
+
+  <script>
+    function switchRegion(region) {
+      const intlSection = document.getElementById('intl-section');
+      const localSection = document.getElementById('local-section');
+      const btnIntl = document.getElementById('btn-intl');
+      const btnLocal = document.getElementById('btn-local');
+
+      if (region === 'international') {
+        intlSection.classList.remove('hidden');
+        localSection.classList.add('hidden');
+        btnIntl.classList.add('active');
+        btnLocal.classList.remove('active');
+        btnLocal.classList.add('text-gray-400');
+      } else {
+        intlSection.classList.add('hidden');
+        localSection.classList.remove('hidden');
+        btnLocal.classList.add('active');
+        btnIntl.classList.remove('active');
+        btnIntl.classList.add('text-gray-400');
+      }
+    }
+
+    function scrollToQuote(packageName) {
+      document.getElementById('selected-package').value = packageName;
+      document.getElementById('quote-section').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function handleQuoteSubmit(e) {
+      e.preventDefault();
+      alert('Proposal request logged successfully. AITS validation unit will contact you inside 12 hours.');
+      e.target.reset();
+    }
+  </script>
+
+</body>
+
+</html>

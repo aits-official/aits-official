@@ -4,9 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Corporate — AITS Authority & Infrastructure History</title>
+  <title>Our History & Philosophy — Ali Hamza (AITS Official)</title>
 
-  <!-- TAILWIND FRAMEWORK CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -22,8 +21,7 @@
             }
           },
           animation: {
-            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-            'reveal': 'revealUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards'
+            'reveal': 'revealUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards'
           },
           keyframes: {
             revealUp: {
@@ -36,7 +34,6 @@
     }
   </script>
 
-  <!-- PREMIUM GOOGLE FONTS & STYLES -->
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=400;500;600;700;800&display=swap');
 
@@ -45,264 +42,402 @@
     }
 
     .premium-transition {
-      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    /* Custom dynamic scroll reveal utilities */
-    .scroll-reveal {
-      opacity: 0;
-      transform: translateY(25px);
-      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .scroll-reveal.active {
-      opacity: 1;
-      transform: translateY(0);
+      transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
     }
   </style>
 </head>
 
 <body class="bg-brand-darkBg text-gray-300 antialiased selection:bg-brand-blue selection:text-white overflow-x-hidden">
 
-  <!-- ========================================== -->
-  <!-- 1. FIXED HEADER / NAVIGATION BAR          -->
-  <!-- ========================================== -->
-  <nav
-    class="fixed top-0 left-0 w-full z-50 bg-brand-darkBg/80 backdrop-blur-md border-b border-brand-borderGray premium-transition">
-    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+  <!-- NAVIGATION HEADER WITH LOGO & TRANSLATOR LAYER -->
+  <nav class="fixed top-0 left-0 w-full z-50 bg-brand-darkBg/90 backdrop-blur-md border-b border-brand-borderGray">
+    <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
 
-      <!-- SMART LOGO (VERIFIED FROM image_b25106.png) -->
-      <a href="index.html" class="flex items-center space-x-3 group">
-        <div
-          class="relative w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center font-bold text-white text-lg shadow-lg transform group-hover:scale-105 premium-transition">
-          A
-          <img src="images/logo.jpg" alt="AITS"
-            class="absolute inset-0 w-full h-full object-contain rounded-lg opacity-0" onload="this.style.opacity='1'"
-            onerror="this.src='images/logo.png'">
-        </div>
+      <!-- LOGO INTEGRATION -->
+      <a href="index.html" class="flex items-center space-x-3 shrink-0">
+        <img src="logo.jpeg" alt="AITS Logo"
+          class="w-11 h-11 rounded-xl object-cover border border-brand-borderGray shadow-md shadow-blue-500/10">
         <div class="flex flex-col">
-          <span
-            class="text-white font-extrabold text-lg tracking-tight leading-none group-hover:text-brand-lightBlue premium-transition">AITS</span>
+          <span class="text-white font-extrabold text-lg tracking-tight leading-none">AITS</span>
           <span class="text-brand-lightBlue text-[10px] uppercase tracking-widest font-bold mt-1">Software House</span>
         </div>
       </a>
 
-      <!-- DESKTOP MENU LINKS -->
-      <div class="hidden lg:flex items-center space-x-8">
+      <!-- CENTRAL ROUTER LINKS -->
+      <div class="hidden lg:flex items-center space-x-6 xl:space-x-8">
         <a href="index.html"
-          class="text-xs uppercase tracking-wider font-semibold text-gray-400 hover:text-white transition-colors duration-200">Home</a>
+          class="text-xs uppercase tracking-wider font-semibold text-gray-400 hover:text-white transition-colors">Home</a>
         <a href="about.html"
-          class="text-xs uppercase tracking-wider font-bold text-brand-lightBlue border-b-2 border-brand-blue pb-1 premium-transition">About
+          class="text-xs uppercase tracking-wider font-semibold text-gray-400 hover:text-white transition-colors">About
           Us</a>
         <a href="portfolio.html"
-          class="text-xs uppercase tracking-wider font-semibold text-gray-400 hover:text-white transition-colors duration-200">Portfolio</a>
+          class="text-xs uppercase tracking-wider font-semibold text-gray-400 hover:text-white transition-colors">Portfolio</a>
         <a href="projects.html"
-          class="text-xs uppercase tracking-wider font-semibold text-gray-400 hover:text-white transition-colors duration-200">Projects</a>
-        <a href="courses.html"
-          class="text-xs uppercase tracking-wider font-semibold text-gray-400 hover:text-white transition-colors duration-200">Courses</a>
+          class="text-xs uppercase tracking-wider font-semibold text-gray-400 hover:text-white transition-colors">Projects</a>
+        <a href="packages.html"
+          class="text-xs uppercase tracking-wider font-semibold text-gray-400 hover:text-white transition-colors">Packages</a>
+        <a href="services.html"
+          class="text-xs uppercase tracking-wider font-bold text-brand-lightBlue border-b-2 border-brand-blue pb-1">Services</a>
         <a href="booking.html"
-          class="text-xs uppercase tracking-wider font-bold text-gray-300 hover:text-brand-lightBlue transition-colors duration-200">Services
-          Booking</a>
+          class="text-xs uppercase tracking-wider font-semibold text-gray-400 hover:text-white transition-colors">Booking
+          Portal</a>
         <a href="contact.html"
-          class="text-xs uppercase tracking-wider font-semibold text-gray-400 hover:text-white transition-colors duration-200">Contact</a>
+          class="text-xs uppercase tracking-wider font-semibold text-gray-400 hover:text-white transition-colors">Contact</a>
+      </div>
 
+      <!-- RIGHT SIDE: TRANSLATOR & PHONE CONTACT -->
+      <div class="flex items-center space-x-4">
+        <!-- GOOGLE TRANSLATOR DROPDOWN CONTAINER -->
+        <div id="google_element_wrapper"
+          class="relative bg-brand-cardBg border border-brand-borderGray rounded-xl px-2 py-1.5 flex items-center max-w-[130px] sm:max-w-none overflow-hidden">
+          <div id="google_translate_element"></div>
+        </div>
+
+        <!-- CONTACT PHONE MATRIX -->
         <a href="tel:+923225673641"
-          class="text-xs font-bold text-white border-l border-gray-800 pl-6 hover:text-brand-lightBlue transition-colors">
+          class="hidden sm:block text-xs font-bold text-white tracking-wider font-mono border-l border-brand-borderGray pl-4 hover:opacity-80 transition-opacity">
           +92 322 5673641
         </a>
       </div>
 
-      <!-- MOBILE MENU BUTTON -->
-      <button id="menu-toggle" class="lg:hidden text-gray-400 hover:text-white focus:outline-none premium-transition">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-      </button>
-    </div>
-
-    <!-- MOBILE DROPDOWN DRAWER -->
-    <div id="mobile-menu" class="hidden lg:hidden bg-brand-darkBg border-b border-brand-borderGray px-6 py-6 space-y-4">
-      <a href="index.html" class="block text-xs uppercase font-semibold text-gray-400">Home</a>
-      <a href="about.html" class="block text-xs uppercase font-bold text-brand-lightBlue">About Us</a>
-      <a href="portfolio.html" class="block text-xs uppercase font-semibold text-gray-400">Portfolio</a>
-      <a href="projects.html" class="block text-xs uppercase font-semibold text-gray-400">Projects</a>
-      <a href="courses.html" class="block text-xs uppercase font-semibold text-gray-400">Courses</a>
-      <a href="booking.html" class="block text-xs uppercase font-bold text-gray-400">Services Booking</a>
-      <a href="contact.html" class="block text-xs uppercase font-semibold text-gray-400">Contact</a>
     </div>
   </nav>
 
-  <!-- ========================================== -->
-  <!-- 2. ABOUT HERO & HERO SCREEN (ANIMATED)     -->
-  <!-- ========================================== -->
-  <section
-    class="relative pt-40 pb-20 bg-[radial-gradient(ellipse_60%_60%_at_50%_-10%,rgba(37,99,235,0.1),transparent_100%)]">
-    <div class="max-w-5xl mx-auto px-6 text-center space-y-6 animate-reveal">
-      <span class="text-brand-lightBlue text-xs uppercase tracking-[0.25em] font-extrabold block">// CORPORATE
-        OVERVIEW</span>
-      <h1 class="text-4xl sm:text-5xl font-black text-white tracking-tight leading-none">
-        The Architects of <span
-          class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">Technical Visibility</span>
+  <!-- GOOGLE TRANSLATOR DARK THEME CONFIGURATOR -->
+  <style>
+    .skiptranslate {
+      display: none !important;
+    }
+
+    body {
+      top: 0px !important;
+    }
+
+    #google_translate_element select {
+      background-color: #0f1626 !important;
+      color: #d1d5db !important;
+      border: none !important;
+      font-size: 11px !important;
+      font-weight: 700 !important;
+      font-family: sans-serif !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.05em !important;
+      outline: none !important;
+      cursor: pointer;
+      padding: 2px 4px !important;
+    }
+
+    .goog-te-gadget {
+      color: transparent !important;
+      font-size: 0px !important;
+    }
+  </style>
+
+  <!-- GOOGLE TRANSLATOR ENGINE SCRIPTS -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,ur,ar,es,de,fr,zh-CN,tr',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript"
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <section class="relative pt-48 pb-28 bg-cover bg-center bg-no-repeat animate-reveal"
+    style="background-image: linear-gradient(to bottom, rgba(9, 13, 22, 0.85), rgba(9, 13, 22, 1)), url('assets/image/team office work.jpeg'), url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200');">
+    <div class="max-w-4xl mx-auto px-6 text-center space-y-6 relative z-10">
+      <span class="text-brand-lightBlue text-xs uppercase tracking-[0.3em] font-black block">// ARCHITECTURAL HISTORIC
+        GRID</span>
+      <h1 class="text-4xl sm:text-6xl font-black text-white tracking-tight leading-none">
+        The Heritage & Strategic <span
+          class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">Evolution of AITS</span>
       </h1>
-      <p class="text-base text-gray-400 max-w-3xl mx-auto leading-relaxed">
-        Founded in 2023, AITS was engineered to fill a deep industry void: the complete absence of rigorous scientific
-        technical execution in web design and search infrastructure. We build high-yield nodes that bridge pure code
-        with global market velocity.
+      <p class="text-sm sm:text-base text-gray-400 max-w-2xl mx-auto leading-relaxed">
+        From a local computer science initiative to an FBR-registered global software consultancy, training framework,
+        and high-velocity asset management house.
       </p>
     </div>
   </section>
 
-  <!-- ========================================== -->
-  <!-- 3. DETAILED HISTORY & REAL INFRASTRUCTURE  -->
-  <!-- ========================================== -->
   <section class="py-20 bg-black border-t border-brand-borderGray">
-    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
-      <!-- LEFT CONTENT PANEL (SCROLL REVEAL) -->
-      <div class="space-y-6 scroll-reveal">
-        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Our Operational Philosophy</h2>
-        <div class="h-[2px] w-12 bg-brand-blue"></div>
-        <p class="text-sm text-gray-400 leading-relaxed">
+      <div class="lg:col-span-7 space-y-6">
+        <h2 class="text-3xl font-extrabold text-white tracking-tight">Our Operational Philosophy</h2>
+        <div class="w-16 h-[2px] bg-brand-blue"></div>
+        <p class="text-gray-400 text-sm leading-relaxed">
           We operate entirely within high-end enterprise disciplines. From executing deep performance cleanups on core
           structural architectures to indexing high-velocity schema graphs, our work is defined by precision metrics.
         </p>
-        <p class="text-sm text-gray-400 leading-relaxed">
+        <p class="text-gray-400 text-sm leading-relaxed">
           Our team relies on dedicated infrastructure workflows, using robust layout frameworks and analytical platforms
           to ensure zero-latency deployment and uninterrupted global retention.
         </p>
 
-        <!-- OPERATIONAL REAL UNITS (MAPPED ASSETS) -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
-          <div
-            class="p-4 bg-brand-darkBg border border-brand-borderGray rounded-lg flex items-center space-x-4 hover:border-brand-blue/40 premium-transition">
-            <div class="w-12 h-12 rounded-full overflow-hidden border border-brand-blue shrink-0 bg-brand-cardBg">
-              <!-- CEO REAL IMAGE FROM FOLDER -->
-              <img src="images/ceo ali hamza.jpg" alt="Ali Hamza Arshad - CEO"
-                class="w-full h-full object-cover object-top" onerror="this.src='images/ceo ali hamza.png'">
+          <div class="bg-brand-darkBg p-4 rounded-xl border border-brand-borderGray flex items-center space-x-4">
+            <div class="w-10 h-10 rounded-full bg-brand-blue/20 border border-brand-blue overflow-hidden">
+              <img src="assets/image/ceo ali hamza.jpeg" alt="Ali Hamza" class="w-full h-full object-cover"
+                onerror="this.src='assets/image/ceo.jpg'">
             </div>
             <div>
-              <span class="text-white font-bold text-sm block">Ali Hamza Arshad</span>
-              <span class="text-gray-500 text-[11px] mt-0.5 block">CEO & Founder</span>
+              <h4 class="text-white font-bold text-xs">Ali Hamza Arshad</h4>
+              <p class="text-gray-500 text-[10px] uppercase tracking-wider">CEO & Founder</p>
             </div>
           </div>
-          <div
-            class="p-4 bg-brand-darkBg border border-brand-borderGray rounded-lg hover:border-brand-blue/40 premium-transition flex flex-col justify-center">
-            <span class="text-white font-bold text-sm block">Core Technical Unit</span>
-            <span class="text-gray-500 text-xs mt-1 block">4-Person Specialist Remote Operation Team</span>
+          <div class="bg-brand-darkBg p-4 rounded-xl border border-brand-borderGray flex items-center space-x-4">
+            <div
+              class="w-10 h-10 rounded-full bg-blue-950 flex items-center justify-center border border-blue-800 text-brand-lightBlue text-xs font-mono">
+              4-P
+            </div>
+            <div>
+              <h4 class="text-white font-bold text-xs">Core Technical Unit</h4>
+              <p class="text-gray-500 text-[10px] uppercase tracking-wider">4-Person Specialist Remote Team</p>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- RIGHT GRAPHIC PANEL (TEAM REAL PICTURE) -->
-      <div class="relative scroll-reveal" style="transition-delay: 150ms;">
-        <div
-          class="aspect-[4/3] rounded-xl overflow-hidden border border-brand-borderGray bg-brand-cardBg relative group shadow-2xl">
-          <!-- TEAM OFFICE WORK REAL IMAGE FROM FOLDER -->
-          <img src="images/team office work.jpg" alt="AITS Team Operations"
-            class="w-full h-full object-cover transform group-hover:scale-105 premium-transition opacity-90"
-            onerror="this.src='images/team office work.png'">
-          <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
-        </div>
+      <div
+        class="lg:col-span-5 h-80 rounded-2xl bg-brand-cardBg border border-brand-borderGray shadow-2xl relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-tr from-brand-blue/10 to-transparent"></div>
+        <img src="assets/image/thunmb1.jpg" alt="AITS Core Analytics" class="w-full h-full object-cover opacity-40"
+          onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=500'">
       </div>
 
     </div>
   </section>
 
-  <!-- ========================================== -->
-  <!-- 4. FOOTER SYSTEM                          -->
-  <!-- ========================================== -->
-  <footer class="bg-brand-darkBg border-t border-brand-borderGray pt-16 pb-8">
-    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-
-      <div class="space-y-4">
-        <span class="text-white font-black text-xl tracking-wider block">AITS</span>
-        <p class="text-gray-500 text-xs leading-relaxed">
-          High-performance corporate web systems, technical SEO graphs, and enterprise-scale digital marketing systems.
-          Engineered for international market leaders since 2023.
-        </p>
+  <section class="py-20 bg-brand-darkBg border-t border-brand-borderGray relative">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center space-y-2 mb-16">
+        <span class="text-brand-lightBlue text-xs font-bold tracking-widest uppercase">// ARCHIVE MAP</span>
+        <h2 class="text-3xl font-black text-white tracking-tight">Chronological Framework Timeline</h2>
       </div>
 
-      <!-- HARDLINKED CORE NAVIGATION -->
-      <div class="space-y-3">
-        <h4 class="text-white text-xs uppercase font-bold tracking-wider">Core Navigation</h4>
-        <div class="grid grid-cols-1 gap-2 text-xs">
-          <a href="index.html" class="hover:text-brand-lightBlue premium-transition">• Home</a>
-          <a href="about.html" class="hover:text-brand-lightBlue premium-transition">• About Us</a>
-          <a href="portfolio.html" class="hover:text-brand-lightBlue premium-transition">• Portfolio</a>
-          <a href="projects.html" class="hover:text-brand-lightBlue premium-transition">• Projects</a>
-          <a href="courses.html" class="hover:text-brand-lightBlue premium-transition">• Courses</a>
-          <a href="booking.html" class="hover:text-brand-lightBlue premium-transition font-bold text-gray-300">• Booking
-            Desk</a>
-          <a href="contact.html" class="hover:text-brand-lightBlue premium-transition">• Contact</a>
-        </div>
-      </div>
+      <div class="relative border-l-2 border-brand-borderGray ml-4 md:ml-32 space-y-12">
 
-      <!-- ALL SERVICES ROUTING MAP -->
-      <div class="space-y-3">
-        <h4 class="text-white text-xs uppercase font-bold tracking-wider">All Services Pages</h4>
-        <div class="grid grid-cols-1 gap-2 text-xs text-gray-400">
-          <a href="booking.html" class="hover:text-brand-lightBlue premium-transition">// Premium Web Engineering</a>
-          <a href="booking.html" class="hover:text-brand-lightBlue premium-transition">// Technical SEO Domination</a>
-          <a href="booking.html" class="hover:text-brand-lightBlue premium-transition">// Google Business Profile
-            (GBP)</a>
-          <a href="booking.html" class="hover:text-brand-lightBlue premium-transition">// Google Ads Strategy</a>
-          <a href="booking.html" class="hover:text-brand-lightBlue premium-transition">// Shopify E-Commerce Scaling</a>
-          <a href="booking.html" class="hover:text-brand-lightBlue premium-transition">// WordPress Custom
-            Architecture</a>
+        <div class="relative pl-8 md:pl-12 group">
+          <div
+            class="absolute -left-[9px] top-1.5 w-4 h-4 bg-brand-blue rounded-full border-4 border-brand-darkBg group-hover:scale-125 premium-transition">
+          </div>
+          <div class="absolute left-[-110px] top-1 hidden md:block text-right w-24">
+            <span class="text-white font-mono font-black text-xs block">Oct 2023</span>
+            <span class="text-gray-500 text-[10px] tracking-wider uppercase">Present</span>
+          </div>
+          <div class="bg-brand-cardBg border border-brand-borderGray p-6 rounded-2xl space-y-2">
+            <span class="text-brand-lightBlue text-[10px] font-mono uppercase font-bold tracking-wider">AITS Official
+              Execution</span>
+            <h3 class="text-white font-bold text-lg">Founded Abdullah Institute of Tech Skills</h3>
+            <p class="text-gray-400 text-xs leading-relaxed">
+              Integrated an FBR-registered academic training institute and digital marketing execution agency in Lahore.
+              Spearheaded client account onboarding, optimized performance budgets, and directed multi-channel
+              advertising frameworks.
+            </p>
+          </div>
         </div>
-      </div>
 
-      <!-- HQ CONTACT DATA -->
-      <div class="space-y-3 text-xs">
-        <h4 class="text-white text-xs uppercase font-bold tracking-wider">HQ Transmission</h4>
-        <p class="text-gray-500 leading-relaxed">
-          Ashianah Quaid Housing Scheme, A-Block Market, DHA Phase 9 Town, Lahore, Pakistan.
-        </p>
-        <div class="pt-1">
-          <a href="mailto:ahamza.arshad100@gmail.com"
-            class="text-brand-lightBlue block hover:underline">ahamza.arshad100@gmail.com</a>
-          <span class="text-gray-600 block mt-1">+92 322 5673641</span>
+        <div class="relative pl-8 md:pl-12 group">
+          <div
+            class="absolute -left-[9px] top-1.5 w-4 h-4 bg-brand-lightBlue rounded-full border-4 border-brand-darkBg group-hover:scale-125 premium-transition">
+          </div>
+          <div class="absolute left-[-110px] top-1 hidden md:block text-right w-24">
+            <span class="text-white font-mono font-black text-xs block">Nov 2025</span>
+            <span class="text-gray-500 text-[10px] tracking-wider uppercase">March 2026</span>
+          </div>
+          <div class="bg-brand-cardBg border border-brand-borderGray p-6 rounded-2xl space-y-2">
+            <span class="text-brand-lightBlue text-[10px] font-mono uppercase font-bold tracking-wider">Sofill Solution
+              • Software House</span>
+            <h3 class="text-white font-bold text-lg">Core SEO Infrastructure Engineering</h3>
+            <p class="text-gray-400 text-xs leading-relaxed">
+              Formulated end-to-end Technical, On-Page, and Off-Page conversion pipelines. Maintained organic
+              link-building vectors and ranking configurations for major properties including rsyyacht.com and
+              luxehome.com.
+            </p>
+          </div>
         </div>
+
+        <div class="relative pl-8 md:pl-12 group">
+          <div
+            class="absolute -left-[9px] top-1.5 w-4 h-4 bg-blue-600 rounded-full border-4 border-brand-darkBg group-hover:scale-125 premium-transition">
+          </div>
+          <div class="absolute left-[-110px] top-1 hidden md:block text-right w-24">
+            <span class="text-white font-mono font-black text-xs block">Nov 2025</span>
+            <span class="text-gray-500 text-[10px] tracking-wider uppercase">Present</span>
+          </div>
+          <div class="bg-brand-cardBg border border-brand-borderGray p-6 rounded-2xl space-y-2">
+            <span class="text-brand-lightBlue text-[10px] font-mono uppercase font-bold tracking-wider">Prestige
+              Chauffeur • London Niche</span>
+            <h3 class="text-white font-bold text-lg">Senior Freelance Web & Search Deployment</h3>
+            <p class="text-gray-400 text-xs leading-relaxed">
+              Successfully architected and deployed londonprestigechauffeur.com for high-ticket clients in the UK.
+              Developed ranking engines optimized for competitive organic search matrices inside the luxury
+              transportation sector.
+            </p>
+          </div>
+        </div>
+
+        <div class="relative pl-8 md:pl-12 group">
+          <div
+            class="absolute -left-[9px] top-1.5 w-4 h-4 bg-gray-600 rounded-full border-4 border-brand-darkBg group-hover:scale-125 premium-transition">
+          </div>
+          <div class="absolute left-[-110px] top-1 hidden md:block text-right w-24">
+            <span class="text-white font-mono font-black text-xs block">Feb 2023</span>
+            <span class="text-gray-500 text-[10px] tracking-wider uppercase">Oct 2023</span>
+          </div>
+          <div class="bg-brand-cardBg border border-brand-borderGray p-6 rounded-2xl space-y-2">
+            <span class="text-brand-lightBlue text-[10px] font-mono uppercase font-bold tracking-wider">DPO Software
+              House</span>
+            <h3 class="text-white font-bold text-lg">Digital Marketing Execution</h3>
+            <p class="text-gray-400 text-xs leading-relaxed">
+              Managed global advertising portfolios for high-end international networks including NBR UK, RSY Yachts
+              Dubai, and Tulip City. Configured targeted pixel arrays and conversion marketing setups.
+            </p>
+          </div>
+        </div>
+
       </div>
     </div>
+  </section>
 
+  <!-- ========================================== -->
+  <!-- ENTERPRISE CORE FOOTER & FLOATING CONNECTORS -->
+  <!-- ========================================== -->
+
+  <!-- FLOATING COMMUNICATION SYNC WIDGET (STAYS EVERYWHERE ON THE SCREEN) -->
+  <div class="fixed bottom-6 right-6 z-50 flex flex-col items-center space-y-3">
+    <!-- Floating WhatsApp Node -->
+    <a href="https://wa.me/923225673641" target="_blank" rel="noopener noreferrer"
+      class="w-14 h-14 bg-emerald-600 hover:bg-emerald-700 text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 group relative">
+      <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path fill-rule="evenodd"
+          d="M12 2C6.477 2 2 6.484 2 12.017c0 1.764.463 3.418 1.27 4.86L2 22l5.316-1.39A9.94 9.94 0 0012 22c5.523 0 10-4.483 10-10.017C22 6.484 17.522 2 12 2zm4.795 13.54c-.228.626-1.312 1.151-1.794 1.206-.46.053-.94.075-1.58-.124-2.585-.805-4.24-3.418-4.37-3.591-.127-.174-1.042-1.39-1.042-2.652 0-1.263.662-1.884.9-.214.23-.33.294-.393.442-.1.147-.2.294-.2.443 0 .147-.074.275-.11.392-.037.117-.294.733-.294.733s-.368-.442-.515-.698c-.147-.256-.258-.553-.258-.87 0-.626.49-1.127 1.104-1.127h.01c.203 0 .385.053.515.152.147.104.307.275.393.453l.972 2.348c.074.174.037.368-.098.514l-.54.673c-.11.137-.123.33-.037.472.454.753 1.018 1.39 1.693 1.884.147.104.343.085.454-.05l.503-.63c.123-.153.33-.215.515-.138l2.257 1.054c.209.1.33.226.38.403.056.177-.024.636-.252 1.262z"
+          clip-rule="evenodd" />
+      </svg>
+      <span
+        class="absolute right-16 bg-brand-cardBg border border-brand-borderGray text-white text-[10px] font-mono font-bold tracking-wider px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap shadow-xl">WhatsApp
+        Chat</span>
+    </a>
+
+    <!-- Floating Direct Voice Node -->
+    <a href="tel:+923225673641"
+      class="w-14 h-14 bg-brand-blue hover:bg-blue-700 text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 group relative">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+      </svg>
+      <span
+        class="absolute right-16 bg-brand-cardBg border border-brand-borderGray text-white text-[10px] font-mono font-bold tracking-wider px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap shadow-xl">Direct
+        Call</span>
+    </a>
+  </div>
+
+  <!-- MAIN CORPORATE FOOTER LINK MATRIX -->
+  <footer class="bg-brand-darkBg border-t border-brand-borderGray pt-16 pb-8 relative overflow-hidden">
     <div
-      class="max-w-7xl mx-auto px-6 pt-6 border-t border-gray-900 text-center md:text-left text-[10px] uppercase tracking-widest text-gray-600">
-      © 2026 AITS Corporate Network. All Rights Reserved.
+      class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 border-b border-brand-borderGray/60 pb-12">
+
+      <!-- SEGMENT 01: CORE ARCHITECTURE INDEX & LOGO -->
+      <div class="space-y-5">
+        <a href="index.html" class="flex items-center space-x-3">
+          <!-- Loaded via custom jpeg specifications as requested -->
+          <img src="logo.jpeg" alt="AITS Logo"
+            class="w-11 h-11 rounded-xl object-cover shadow-md shadow-blue-500/10 border border-brand-borderGray">
+          <div class="flex flex-col">
+            <span class="text-white font-extrabold text-lg tracking-tight">AITS</span>
+            <span class="text-brand-lightBlue text-[10px] uppercase tracking-widest font-black">Software House</span>
+          </div>
+        </a>
+        <p class="text-xs text-gray-400 leading-relaxed">
+          Engineering optimized software pipelines, performance data automation grids, and high-fidelity technical SEO
+          layers globally.
+        </p>
+        <!-- EXTERNAL VERIFIED SOCIAL NETWORKS -->
+        <div class="flex items-center space-x-3 pt-2">
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/profile.php?id=61575574237994" target="_blank" rel="noopener noreferrer"
+            class="w-8 h-8 bg-brand-cardBg border border-brand-borderGray hover:border-brand-blue rounded-lg flex items-center justify-center text-xs text-gray-400 hover:text-white transition-all duration-200">FB</a>
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/ali-hamza-mk-77b809363/" target="_blank" rel="noopener noreferrer"
+            class="w-8 h-8 bg-brand-cardBg border border-brand-borderGray hover:border-brand-blue rounded-lg flex items-center justify-center text-xs text-gray-400 hover:text-white transition-all duration-200">LN</a>
+          <!-- Twitter/X -->
+          <a href="https://x.com/AliHamza_SEO" target="_blank" rel="noopener noreferrer"
+            class="w-8 h-8 bg-brand-cardBg border border-brand-borderGray hover:border-brand-blue rounded-lg flex items-center justify-center text-xs text-gray-400 hover:text-white transition-all duration-200">𝕏</a>
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/ahamza.arshad100?igsh=MTRlaWt6OGVzemxjaQ==" target="_blank"
+            rel="noopener noreferrer"
+            class="w-8 h-8 bg-brand-cardBg border border-brand-borderGray hover:border-brand-blue rounded-lg flex items-center justify-center text-xs text-gray-400 hover:text-white transition-all duration-200">IG</a>
+          <!-- Fiverr -->
+          <a href="https://www.fiverr.com/users/aits_official/" target="_blank" rel="noopener noreferrer"
+            class="w-8 h-8 bg-brand-cardBg border border-brand-borderGray hover:border-brand-blue rounded-lg flex items-center justify-center text-[9px] font-mono font-bold text-gray-400 hover:text-emerald-400 transition-all duration-200">FI</a>
+        </div>
+      </div>
+
+      <!-- SEGMENT 02: PRIMARY NAVIGATION MATRICES -->
+      <div class="space-y-4">
+        <h4 class="text-white text-xs font-bold uppercase tracking-widest font-mono">// System Router</h4>
+        <ul class="space-y-2 text-xs">
+          <li><a href="index.html" class="text-gray-400 hover:text-brand-lightBlue transition-colors block">System Base
+              (Home)</a></li>
+          <li><a href="about.html" class="text-gray-400 hover:text-brand-lightBlue transition-colors block">Our
+              Operations (About)</a></li>
+          <li><a href="portfolio.html" class="text-gray-400 hover:text-brand-lightBlue transition-colors block">Case
+              Studies (Portfolio)</a></li>
+          <li><a href="projects.html"
+              class="text-gray-400 hover:text-brand-lightBlue transition-colors block">Production Index (Projects)</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- SEGMENT 03: COMMERCIAL CORE ARCHITECTURE -->
+      <div class="space-y-4">
+        <h4 class="text-white text-xs font-bold uppercase tracking-widest font-mono">// Operational Nodes</h4>
+        <ul class="space-y-2 text-xs">
+          <li><a href="services.html"
+              class="text-gray-400 hover:text-brand-lightBlue transition-colors block">Architecture Verticals
+              (Services)</a></li>
+          <li><a href="packages.html" class="text-gray-400 hover:text-brand-lightBlue transition-colors block">Pricing
+              Metrics (Packages)</a></li>
+          <li><a href="booking.html" class="text-gray-400 hover:text-brand-lightBlue transition-colors block">Automated
+              Onboarding (Booking)</a></li>
+          <li><a href="contact.html" class="text-gray-400 hover:text-brand-lightBlue transition-colors block">Feedback &
+              Comms (Contact)</a></li>
+        </ul>
+      </div>
+
+      <!-- SEGMENT 04: DIRECT HARDCODED COORDINATES -->
+      <div class="space-y-4">
+        <h4 class="text-white text-xs font-bold uppercase tracking-widest font-mono">// Terminal Coordinates</h4>
+        <ul class="space-y-3 text-xs">
+          <li class="flex items-start space-x-2.5">
+            <span class="text-brand-lightBlue text-[11px]">📞</span>
+            <span class="text-gray-400 font-mono">+92 322 5673641</span>
+          </li>
+          <li class="flex items-start space-x-2.5">
+            <span class="text-brand-lightBlue text-[11px]">✉️</span>
+            <span class="text-gray-400 font-mono">ahamza.arshad100@gmail.com</span>
+          </li>
+          <li class="flex items-start space-x-2.5">
+            <span class="text-brand-lightBlue text-[11px]">🏢</span>
+            <span class="text-gray-300 leading-relaxed">AITS Tech Zone, Software House Cluster, Lahore,DHA Phase-9 Town,
+              Pakistan</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- LOWER COPYRIGHT SECURITY STAMP -->
+    <div
+      class="max-w-7xl mx-auto px-6 pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-gray-500 font-mono">
+      <p>© 2026 AITS Engineering Network. All rights reserved.</p>
+      <p class="pt-2 sm:pt-0 text-gray-600">Secure Network Connectivity Active // TLS v1.3</p>
     </div>
   </footer>
 
-  <!-- INTERACTIVE ANIMATIONS & LOGIC SCRIPT -->
-  <script>
-    // Toggle mobile drawer
-    const btn = document.getElementById('menu-toggle');
-    const menu = document.getElementById('mobile-menu');
-    if (btn && menu) {
-      btn.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
-      });
-    }
-
-    // Lightweight High-Performance Scroll Reveal Observer
-    const revealElements = document.querySelectorAll('.scroll-reveal');
-    const observerOptions = {
-      root: null,
-      threshold: 0.15
-    };
-
-    const revealObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-          observer.unobserve(entry.target); // Once animated, stay persistent
-        }
-      });
-    }, observerOptions);
-
-    revealElements.forEach(element => {
-      revealObserver.observe(element);
-    });
-  </script>
 </body>
 
 </html>
